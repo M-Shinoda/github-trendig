@@ -107,7 +107,7 @@ python3 .claude/skills/github-trending-analysis/scripts/build_report.py \
 Step 2〜3で生成された新規ファイル(`data/analysis/<since>/...`)を、**確認を挟まず自動で** commit・pushする。
 
 ```bash
-git add data/analysis
+git add .claude/skills/github-trending/data/analysis
 git commit -m "Add trend analysis for <since> (<timestamp>)"
 git push origin main
 ```

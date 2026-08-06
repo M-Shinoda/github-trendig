@@ -121,7 +121,7 @@ conda run -n github-trending python3 scripts/merge_enriched.py \
 Step 1〜3で生成された新規ファイル(`data/intermediate/<since>/...` と `data/final/<since>/...` の新規分)を、**確認を挟まず自動で** commit・pushする。
 
 ```bash
-git add data/intermediate data/final
+git add .claude/skills/github-trending/data/intermediate .claude/skills/github-trending/data/final
 git commit -m "Add <since> trending data (<language_filter>, <timestamp>)"
 git push origin main
 ```
