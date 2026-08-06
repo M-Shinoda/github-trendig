@@ -1,0 +1,6 @@
+name: github-trending
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - beautifulsoup4
