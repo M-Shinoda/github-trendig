@@ -102,6 +102,18 @@ python3 .claude/skills/github-trending-analysis/scripts/build_report.py \
 - CSVに含まれるリポジトリのうち、いずれのフラグメントにも `## owner/repo` セクションが無いものがあれば標準エラーに警告を出す(調査漏れの検出)。逆にCSVに存在しないリポジトリの見出しがあれば、それも警告する(誤ったリポジトリ名などのタイプミス検出)。
 - `_fragments/` ディレクトリは中間生成物置き場なので、最終レポート完成後に残しておいても消してもよいが、`data/analysis/<since>/` 直下に置く最終成果物は常にこの `*_analysis.md` 1本にすること。
 
+### Step 4: 生成物のコミット・プッシュ(決定的、ユーザー方針により自動実行)
+
+Step 2〜3で生成された新規ファイル(`data/analysis/<since>/...`)を、**確認を挟まず自動で** commit・pushする。
+
+```bash
+git add data/analysis
+git commit -m "Add trend analysis for <since> (<timestamp>)"
+git push origin main
+```
+
+- `git push` が失敗した場合は、そこで止めずにユーザーに失敗内容を報告する(ローカルのコミット自体は成功しているはずなので、その旨も伝える)。
+
 ## ユーザーへの報告
 
 - レポートファイルの保存先パスを伝える。
@@ -114,3 +126,4 @@ python3 .claude/skills/github-trending-analysis/scripts/build_report.py \
 - 類似サービスとの比較は、実在する具体的なプロダクト・OSS名を挙げて行う。比較対象が思いつかない場合は無理に挙げず、「直接の競合となる著名なOSSは確認できなかった」のように書く。
 - CSVに既にある「概要」列は調査の出発点として使ってよいが、`trend_reason`・`differentiation` はそれを言い換えるだけでなく、新たな調査に基づいて掘り下げること。
 - Web検索・ページ取得は各リポジトリにつき数回程度に留め、過度なリクエストを避ける。
+- Step 4のcommit/pushは**ユーザーへの確認なしに自動で実行してよい**(2026-08-06にユーザーから明示的に指示された運用方針)。ただし `git push --force` など履歴を書き換える操作は行わない。

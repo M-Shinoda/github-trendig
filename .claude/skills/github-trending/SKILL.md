@@ -116,6 +116,20 @@ conda run -n github-trending python3 scripts/merge_enriched.py \
 - 9列の最終CSV(日本語ヘッダー)を `data/final/<since>/` 配下に出力する。
 - enrichment JSONに存在しないリポジトリがあれば、該当3列は空欄のまま出力し、標準エラーに警告を出す(生成漏れがないか必ず確認すること)。
 
+### Step 4: 生成物のコミット・プッシュ(決定的、ユーザー方針により自動実行)
+
+Step 1〜3で生成された新規ファイル(`data/intermediate/<since>/...` と `data/final/<since>/...` の新規分)を、**確認を挟まず自動で** commit・pushする。
+
+```bash
+git add data/intermediate data/final
+git commit -m "Add <since> trending data (<language_filter>, <timestamp>)"
+git push origin main
+```
+
+- コミットメッセージには since(daily/weekly/monthly)・言語フィルタ・収集タイムスタンプが分かるように含める。
+- `git push` が認証エラーやコンフリクトなどで失敗した場合は、そこで止めずにユーザーに失敗内容を報告する(ローカルのコミット自体は成功しているはずなので、その旨も伝える)。
+- リモート `origin` が未設定、あるいはpush用の認証(SSH鍵等)が使えない状態の場合は、コミットまでは行い、pushできない旨と対処方法をユーザーに報告する。
+
 ## セットアップ(conda環境)
 
 ```bash
@@ -131,4 +145,5 @@ conda env create -f environment.yml
 - トレンドページへの短時間の大量リクエストは避ける(1回の実行で最大3リクエスト程度)。
 - `GITHUB_TOKEN`/`GH_TOKEN`は**ユーザーの意向で使用しない**。`first_commit_date`はGitHub APIのレート制限(未認証60回/時間)を受けるため、現状は `--skip-first-commit` を付けて取得自体を省略する運用とする。`license`はHTMLスクレイピングなのでレート制限を受けず、通常通り取得する。
 - Step 2(AI生成)を省略・簡略化しない。概要や所感を機械的なテンプレート文で済ませず、実際にリポジトリ内容を踏まえた生成をサブエージェントに行わせること。
-- 実行後は最終CSVのパスと件数、enrichment漏れの有無を必ずユーザーに報告する。
+- 実行後は最終CSVのパスと件数、enrichment漏れの有無、Step 4のコミット・プッシュ結果(コミットハッシュや失敗時のエラー)を必ずユーザーに報告する。
+- Step 4のcommit/pushは**ユーザーへの確認なしに自動で実行してよい**(2026-08-06にユーザーから明示的に指示された運用方針)。ただし `git push --force` など履歴を書き換える操作は行わない。
