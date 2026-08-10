@@ -1,0 +1,37 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+PrimeIntellect-ai/prime-agent,TypeScript,PrimeIntellect社が開発するオープンソースのコーディングエージェント。RLM(Recursive Language Model)という仕組みでコンテキストを変数として扱い、永続的なPython(IPython)REPL環境上でツール呼び出しをコードとして実行する。長時間稼働する自律タスクやコーディングワークフローに特化している。,https://github.com/PrimeIntellect-ai/prime-agent,2356,"・RLMとContinual Harnessという2つの抽象化により、メモリやスキル記述を証拠に基づいて自己更新(自己改善)できる
+・rlm()関数によるサブエージェント生成、/refineコマンドによる軌跡レビュー、デーモン常駐によるセッション永続化など高度な自律機能を搭載
+・繰り返しワークフローをPythonパッケージ化して再利用できる「実行可能スキル」機構を持つ",長時間の自律的なコーディングタスクや、セッションをまたいで状態を保持したいエージェント運用に向く。既存のチャット型コーディングアシスタントが持つ単発セッション性の限界を超えようとする試みとして注目でき、自己改善型エージェント基盤の設計を学ぶ上でも参考になる。,MIT,
+vitali87/code-graph-rag,Python,マルチ言語のモノレポをTree-sitterで解析し、Memgraphにコード構造のナレッジグラフを構築するツール。自然言語での問い合わせをCypherクエリに変換し、コードの理解・検索・編集を行えるRAGパイプラインを提供する。,https://github.com/vitali87/code-graph-rag,96,"・Python、TypeScript、Rust、Go、Java、C++、PHPなど13以上の言語に対応し、ast-grepのYAMLパターン追加だけで新言語(Rubyなど)へも拡張可能
+・呼び出しグラフを辿るデッドコード検出、AST差分プレビュー付きの安全なコード編集(surgical editing)など検索を超えた機能を持つ
+・Model Context Protocol(MCP)サーバーとして動作し、Claude Codeなど他のAIツールから直接呼び出せる",大規模モノレポでの依存関係把握やリファクタリング、未使用コードの棚卸しに活用できる。コードをファイル単位ではなくグラフとして扱うことで、AIエージェントによるコード編集の精度と説明可能性を高めるアプローチとして参考になる。,MIT,
+msitarzewski/agency-agents,Shell,Claude Codeなど各種AIコーディングツール向けに、エンジニアリングからマーケティング、デザインまで18以上の職能をカバーする230以上の「専門家人格」を持つエージェント集を提供するリポジトリ。各エージェントは人格・使命・具体的な成果物テンプレート・ワークフローを備える。,https://github.com/msitarzewski/agency-agents,858,"・汎用プロンプトではなく、役割ごとに個性と成功指標を持たせた「パーソナリティ駆動」設計
+・Claude Code、GitHub Copilot、Cursor、Windsurfなど10以上のツールへ変換・導入できるスクリプトとデスクトップアプリを同梱
+・DouyinやWeChat、小紅書向けSNS戦略やGISなどニッチ領域まで幅広い専門分野をカバー",小規模チームや個人開発者が「AIエージェンシー」として複数職能を疑似的に揃えたい場合に有用。エージェントに具体的な人格と成果物テンプレートを紐づけることで、汎用的すぎる指示より実務的なアウトプットを引き出そうとする設計思想が特徴的で、マルチエージェント運用のテンプレート集として参考になる。,MIT,
+pranshuparmar/witr,Go,プロセス・ポート・コンテナ・ファイルのいずれを指定しても、それを起動した親プロセスやサービスマネージャまで遡って「なぜ動いているか」を可視化するCLI/TUIツール。psやlsofのような断片的な情報ではなく、原因までの因果関係チェーンを提示する。,https://github.com/pranshuparmar/witr,210,"・systemd、cron、SSHセッション、PM2、tmuxなどのスーパーバイザーやDocker/Podman/Kubernetesのコンテナ文脈を自動検出
+・標準出力/--short/--tree/--jsonの複数出力形式と、リアルタイムでソート可能なインタラクティブTUIダッシュボードを両立
+・Linux/macOS/Windows/FreeBSDに対応し、危険な権限や公開ポート、削除済みバイナリなどのセキュリティ的警告も表示",「このポートを誰が掴んでいるのか」「このコンテナはどこから起動されたか」といったインシデント対応時の原因調査を大幅に効率化できる。単一ツールで複数ユーティリティの手動突き合わせを代替できる点が、SREやインフラエンジニアにとって実務的な価値を持つ。,Apache-2.0,
+google-deepmind/weathernext,Python,Google DeepMindが公開する大気・サイクロン予測AIモデル群のリポジトリ。0.25度(約30km)解像度の決定論的モデル「WeatherNext 2」、2025年大西洋ハリケーンシーズンで運用実績のある台風専用モデル「WeatherNext Cyclones」、その軽量版「Cyclones Mini」に加え、旧モデルのGraphCast/GenCastも含む。,https://github.com/google-deepmind/weathernext,86,"・グラフニューラルネットワークや拡散モデルによる確率的アンサンブル予測など、機械学習気象予測の最先端手法を採用
+・Google Cloud、OpenMeteo、WeatherLab APIなど複数の配信経路と学習済み重み、Colabノートブックを提供し追試・再学習が容易
+・Nature誌等での論文発表に加え、実運用での台風進路予測という実績を持つ",気象予測の研究・検証や、独自データでのファインチューニングによる地域特化予報の構築に活用できる。物理シミュレーションベースの数値予報モデルに対し、AIモデルが精度・速度の両面で代替になりつつある潮流を象徴する事例として注目される。,Apache-2.0,
+addyosmani/agent-skills,JavaScript,AIコーディングエージェント向けに、シニアエンジニアが実践する開発ワークフローや品質ゲートを「スキル」として体系化したリポジトリ。要件定義から計画・実装・検証・レビュー・出荷までの6フェーズに沿って24個のスキルを収録している。,https://github.com/addyosmani/agent-skills,680,"・/spec, /plan, /build, /test, /review, /shipなど開発ライフサイクルに対応したコマンド群と、各スキルに「言い訳とその反証」を明記したanti-rationalizationテーブル
+・Claude Code、Cursor、Codex、GitHub Copilot、Clineなど70以上のエージェント環境にインストール可能
+・code-reviewer、security-auditor、performance-auditorなど専門ペルソナのサブエージェントや、/build autoによる計画承認後の自動連続実行に対応",AIにコードを書かせる際に「動けばよい」ではなく本番品質の規律(テスト駆動開発、セキュリティレビュー、CI/CD)を持たせたいチームに有用。Google流のソフトウェアエンジニアリング実践をAIエージェントのワークフローに落とし込んだ試みとして、社内のエージェント運用ルール整備の参考になる。,MIT,
+ZhuLinsen/daily_stock_analysis,Python,LLMを活用して中国A株・香港株・米国株・日本株・韓国株・台湾株・ETFなど複数市場を横断的に分析する株式分析システム。TickFlowやAkShare、Tushare、YFinanceなどの市場データとSerpAPIやTavilyなどのニュース・検索APIを組み合わせ、売買判断ダッシュボードを毎日自動生成する。GitHub Actionsを使えば無料でスケジュール実行できるほか、ローカル実行・Docker・FastAPIサーバーなど複数のデプロイ方法にも対応する。,https://github.com/ZhuLinsen/daily_stock_analysis,306,"・移動平均やエリオット波動など15種類の組み込み戦略によるエージェント型のマルチターン銘柄調査機能
+・Gemini、OpenAI互換API、Claude、ローカルOllamaなど複数LLMプロバイダーへのルーティングに対応
+・WeChat Work、Feishu、Telegram、Discord、Slack、メールなど多様なチャネルへの自動通知機能",個人投資家が複数市場の銘柄を毎朝自動でスクリーニング・分析させ、リスクアラートや売買シグナルを通知アプリで受け取る、といった使い方が想定される。GitHub Actionsによる「ゼロコスト運用」を前面に打ち出している点が、個人開発者やコスト意識の高い投資家に刺さり、急速にスター数を伸ばした要因と考えられる。,MIT,
+goauthentik/authentik,Python,authentikはSAML、OAuth2/OIDC、LDAP、RADIUSなど複数のプロトコルに対応したオープンソースのID管理基盤(IdP)で、OktaやAuth0のセルフホスト版代替として、複数アプリケーション間のシングルサインオン(SSO)と認可を一元管理できる。Docker Composeでの小規模検証からKubernetes/Helm、AWS CloudFormationを使った本番運用まで、規模に応じたデプロイ方法を選べる。,https://github.com/goauthentik/authentik,310,"・SAML/OAuth2/OIDC/LDAP/RADIUSという幅広いプロトコルを単一プラットフォームでサポート
+・Python(バックエンド)・TypeScript(フロントエンド)・Go・Rustを組み合わせたポリグロット構成で、コアOutpostやWebのCIが独立して整備されている
+・コアはMIT、ドキュメントはCC BY-SA 4.0で公開しつつ、エンタープライズ版も用意するデュアル路線",社内システムや複数SaaSの認証を自社管理下に置きたい企業・チームにとって、商用IdPの代替として有力な選択肢になる。レガシーなLDAP連携から最新のOIDCまで一つの基盤でカバーできるため、段階的なID基盤の統合・移行プロジェクトにも活用しやすい。,,
+google/skills,Python,GoogleがGoogle CloudやFirebase、Gemini APIなど自社製品・技術向けに公式配布する「Agent Skills」集で、GKE、BigQuery、Spanner、AlloyDB、Cloud Run、Google Ads APIなど幅広いプロダクト領域をMarkdownベースのスキルとして整理している。`npx skills add google/skills`のようなコマンドで必要なスキルを選んでインストールし、Claude CodeやCodexなど複数のエージェントハーネスから利用できる。,https://github.com/google/skills,528,"・GKEのクラスタ/ネットワーキング/AI推論ワークロードからBigQuery・Bigtableなどデータベース領域まで公式カバレッジが広い
+・Claude CodeやCodexなど複数のエージェント実行環境を横断してスキルを再利用できる設計
+・Apache 2.0ライセンスでコミュニティ貢献を受け付けるオープンな運営体制",GoogleクラウドやFirebaseを扱う開発者が、AIコーディングエージェントにGoogle製品特有のベストプラクティスやAPI仕様を注入する目的で導入できる。大手ベンダーが自社エコシステム向けにAgent Skillsという新しい配布形式を採用した点が、他社のスキル配布モデルの標準化の流れを象徴していて注目度が高い。,Apache-2.0,
+Comfy-Org/ComfyUI,Python,ComfyUIは拡散モデルなどの生成AIをノードベースのグラフインターフェースで操作できる、コード不要のモジュール式GUI/API/バックエンドである。Flux、SDXL、SD3.5などの画像生成モデルに加え、LTX-VideoやHunyuanVideoといった動画生成、Stable Audioなどの音声生成、3D/視覚モデルまで幅広くサポートし、ワークフローを再利用可能なノードグラフとして組み立てられる。,https://github.com/Comfy-Org/ComfyUI,365,"・変更のあったグラフ部分のみを再実行する差分実行と非同期キューによる効率的なローカル実行
+・NVIDIA/AMD/Intel/Apple SiliconなどマルチGPUベンダーとWindows/Linux/macOSに対応した高い可搬性
+・カスタムノードによる拡張性とLoRA・ControlNet・モデル量子化など実運用向け機能を標準搭載",画像・動画・音声生成を含むクリエイティブワークフローを、コードを書かずに細かく制御したいクリエイターやAIエンジニアに向く。週次リリースという開発速度と対応モデルの広さから、生成AIの実験・プロダクション両方の現場でデファクトのワークフローツールとして使われている印象。,GPL-3.0,
+harveyai/harvey-labs,Python,"Harvey LABは、AIエージェントが実務的な法律業務をどれだけこなせるかを評価・改善するためのオープンソースベンチマークで、契約書対応など24以上の法務実務領域にまたがる1,671件のタスク(指示・関連文書・評価ルーブリック付き)と、それらを実行・採点する実行ハーネスを提供する。",https://github.com/harveyai/harvey-labs,47,"・M&Aデータルーム対応など実際の法務ワークに近いタスクを収録し、簡略化されたシナリオを避けている
+・「オールパス・ルーブリック採点」とLLM審査員による評価という二段構えの評価手法
+・モデルアダプター、比較ダッシュボード、評価スイープ機能を備え、複数LLMの横並び比較がしやすい",リーガルテック企業やAIベンダーが、自社のエージェントが専門家レベルの法務品質を満たせているかを定量的に検証する用途に向く。法律業界特化のLLM企業であるHarveyが自らベンチマークを公開した点は、専門領域でのAIエージェント評価基準づくりという新しい潮流を示していて興味深い。,MIT,
+pingdotgg/t3code,TypeScript,t3codeはClaude Code、Codex、Cursor、Grok Build、OpenCodeなど複数のAIコーディングエージェントを一つのインターフェースから横断的に操作できる「エージェントハーネス制御サーフェス」で、iOS/Android向けモバイルアプリ、Webアプリ、Electron製デスクトップクライアントを提供する。,https://github.com/pingdotgg/t3code,163,"・複数のAIコーディングツールプロバイダーに対応した統一コントロールレイヤーという新しい発想
+・スマートフォンなど手元の端末からリモートでコーディングエージェントを操作できる機能
+・`npx t3@latest`でインストール不要にすぐ試せる手軽さとpnpmモノレポ/Viteによるモダンな開発基盤",複数のAIコーディングエージェントを併用する開発者が、ツールごとにターミナルを切り替えずに一元管理・外出先からの進捗確認に使える。既存ツールの使い勝手に満足できず自作したという経緯が示す通り、エージェント運用の「メタツール」需要の高まりを反映していると考えられる。,MIT,
