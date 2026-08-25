@@ -1,0 +1,58 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+Alishahryar1/free-claude-code,Python,Claude Code、Codex、Pi、OpenCodeなど複数のAIコーディングエージェントを、50以上のプロバイダー(NVIDIA NIM、OpenRouter、Groqなど)を横断して無料・低コストで利用できるようにするローカルプロキシツール。ターミナル、IDE、Discord/Telegramなど様々な環境から同じインターフェースでエージェントを呼び出せる。,https://github.com/Alishahryar1/free-claude-code,891,"・ローカルプロキシサーバー(fcc-server)が複数プロバイダーへのリクエストを自動ルーティングし、障害時は設定済みのフォールバックモデルへ自動切り替えする設計
+・RTKフィルタリングによりターミナル出力のトークン数を最大90%削減できる最適化機能
+・「月間13億トークン以上を無料枠で利用可能」という訴求が話題になりトレンド入り",Claude Code等の有料エージェントを個人開発やOSS貢献で試したいが料金がネックという層に刺さりやすいツール。複数プロバイダーのAPIキー管理やフォールバック設定を一元化できるため、既存のAIコーディングツールチェーンの前段にプロキシとして組み込む使い方が考えられる。,MIT License,
+openai/codex,Rust,OpenAIが開発する、ターミナル上で動作する軽量なコーディングエージェント。ローカル環境で直接コードを読み書きし、ChatGPTアカウントまたはAPIキーで認証して利用する。,https://github.com/openai/codex,1994,"・ターミナルCLIに加えVS Code/Cursor/Windsurf拡張、デスクトップアプリ、Web版(chatgpt.com/codex)など複数のインターフェースを提供
+・npm/Homebrew/公式インストールスクリプトなど導入手段が充実し、Rustで実装されている
+・11万を超えるスターと1.8万超のforkを集めるOpenAI公式のコーディングエージェントとして高い注目度",Claude CodeやOpenCodeなど他のターミナル型コーディングエージェントと直接競合・比較対象になるツール。ChatGPT Plus/Pro/Business等のプランを持つユーザーはAPIキー不要で使える点が導入障壁を下げており、既存のOpenAI系ワークフローに統合しやすい。,Apache License 2.0,
+MadsLorentzen/ai-job-search,Python,Claude Code上に構築された、求人検索から応募書類作成・面接準備までを自動化するAIエージェントフレームワーク。ローカルマシン上で動作し、プロフィール構築からCV/カバーレター生成、面接対策までをコマンドベースで支援する。,https://github.com/MadsLorentzen/ai-job-search,434,"・/setup、/scrape、/apply、/interviewなどのコマンド群と、ドラフター/レビュワーの2エージェント構成でCV・カバーレターの品質を担保
+・LaTeXでPDFを生成し、pdftotextでテキスト抽出してATS(応募者追跡システム)互換性を検証する凝った出力パイプライン
+・デンマークの求人ポータル(Jobindex、Jobnetなど)に加えLinkedIn等汎用ポータルにも対応し、/add-portalで独自ポータルへ拡張可能",Claude Code CLIを使いこなす開発者向けの実用的な就職活動支援ツールで、既存の履歴書作成SaaSに対するローカル完結・オープンソースの代替となり得る。LaTeXやBunなど環境構築の手間はあるが、候補者情報との整合性チェックまで自動で行う点は既存ツールとの差別化ポイントと言える。,MIT License,
+multica-ai/andrej-karpathy-skills,,Andrej Karpathy氏によるLLMコーディングの落とし穴に関する指摘を、Claude Codeの挙動改善のためのガイドラインとしてまとめた単一のCLAUDE.mdファイル(およびプラグイン)。,https://github.com/multica-ai/andrej-karpathy-skills,588,"・「まず考えてからコードを書く」「シンプルさ優先」「外科的な変更のみ行う」「ゴール駆動で実行する」という4原則に凝縮
+・CLAUDE.mdへの追記、Claude Codeプラグイン、Cursorのプロジェクトルール(.cursor/rules)という複数形態で配布され導入コストが低い
+・LLMが誤った前提を勝手に置いて突き進む、過剰に複雑な実装をする、といったKarpathy氏の観察に基づく実践的な対策集である点が話題に",既存のClaude Code/Cursorプロジェクトにファイルを1つ追加するだけで導入できる手軽さが受けており、プロンプトエンジニアリング的なノウハウをコード資産として配布する動きの一例と言える。個人のCLAUDE.md運用をより体系立てたい開発者に向いている。,MIT,
+makeplane/plane,TypeScript,Jira、Linear、Monday.com、ClickUpの代替となるオープンソースのプロジェクト管理プラットフォーム。タスク管理、スプリント(サイクル)、ドキュメント、トリアージなどをセルフホストまたはクラウドで利用できる。,https://github.com/makeplane/plane,243,"・React Router/Vite/TypeScriptのフロントエンドとDjango/Node.jsのバックエンド、Docker/Kubernetes/PostgreSQL/Redisという本格的な構成
+・Cycles(バーンダウンチャート付きスプリント管理)、Modules、AI機能を備えたPagesなど、SaaS型プロジェクト管理ツールに匹敵する機能を実装
+・Docker Compose/Kubernetes/マネージドホスティング(Zenith)など柔軟なデプロイ手段を持ち、5.8万超のスターを集める成熟したOSSプロジェクト",Jira/Linear等のSaaS費用やベンダーロックインを避けたいチームにとって現実的な代替候補となる。AGPL-3.0のため商用展開時はライセンス条件の確認が必要だが、セルフホストでデータを完全に手元に置きたい組織との親和性が高い。,GNU Affero General Public License v3.0,
+NousResearch/hermes-agent,Python,Nous Researchが開発する自己改善型のAIエージェント。経験からスキルを生成・洗練し、セッションをまたいで永続的な記憶を保持しながら、ターミナルやTelegram、Discordなど複数プラットフォームで動作する。,https://github.com/NousResearch/hermes-agent,896,"・「学習ループ」により使用中にスキルを自動生成・改善し、過去の会話をFTS5検索とLLM要約でセッション横断的に想起する高度なメモリ機構
+・Nous Portal、OpenRouter、OpenAIなど多様なモデルプロバイダーに対応しベンダーロックインを回避、Modal/Daytona等のサーバーレス基盤やDockerなど多様な実行バックエンドをサポート
+・40以上の統合ツール、MCP対応、cronによるスケジュール自動化、並列サブエージェント起動など機能が豊富",単発タスクをこなすエージェントではなく、長期的にユーザーの好みや過去のやり取りを学習し続けるパーソナルアシスタントを志向している点が特徴。Claude Code等の他のエージェントと組み合わせ、複数プラットフォームをまたぐ常駐アシスタントとして運用するユースケースが考えられる。,MIT License,
+anthropics/claude-plugins-community,Python,Claude CoworkおよびClaude Code向けコミュニティプラグインマーケットプレイスの公式リードオンリーミラーリポジトリ。Anthropicのセキュリティレビューを通過したプラグインの一覧を`.claude-plugin/marketplace.json`として管理・配信する。,https://github.com/anthropics/claude-plugins-community,489,"・Anthropic内部のレビューパイプラインから毎晩同期され、直接のPRは自動クローズされるなどガバナンスが徹底されている
+・`claude plugin marketplace add`/`claude plugin install`コマンドで簡単に導入できるプラグイン配信の公式チャネル
+・Claude Cowork/Claude Codeの両プラットフォームに対応し、コミュニティ発の拡張機能を安全に流通させる仕組み",Claude Codeのエコシステムが拡大する中で、サードパーティ製プラグインを安全に見つけ・導入するための事実上の公式レジストリとして機能する。自作プラグインを公開したい開発者は提出ポータル(clau.de/plugin-directory-submission)経由の申請フローを理解しておく必要がある。,Apache License 2.0,
+AprilNEA/OpenLogi,Rust,Logitech Options+のネイティブかつローカルファーストな代替アプリで、Rustで実装されている。アカウント登録やテレメトリなしに、マウス・キーボード・ウェブカメラの設定(ボタン割り当て、DPI、SmartShiftなど)を行える。,https://github.com/AprilNEA/OpenLogi,1097,"・HID++プロトコルとUVC規格を用いてデバイスに直接アクセスし、GPUIによるネイティブGUIを実現
+・アプリケーションごとに自動切り替わるプロファイルオーバーレイ、Actions Ringオーバーレイ、ジェスチャー割り当てなど純正ソフト以上に踏み込んだカスタマイズ機能
+・Logitechの公式ソフトを避けたいLinuxユーザー等にとって長年望まれていたクロスプラットフォーム(macOS/Linux/Windows)対応である点が話題に",LogitechデバイスをLinux環境で使う開発者やプライバシーを重視するユーザーにとって、公式Options+の代替として直接使える実用ツール。Rust製のHIDデバイスドライバ実装の参考例としても有用。,Apache License 2.0 / MIT License(デュアルライセンス),
+apache/maka,TypeScript,Apache Software Foundationのインキュベータープロジェクトとして開発される、ローカルファーストのAIエージェントワークスペース。モデルとのやり取り、ツール呼び出し、実行結果などをイミュータブルなログとしてローカルに記録する。,https://github.com/apache/maka,411,"・Desktop(Electron+React)、TUI、CLI、評価フレームワークなど複数のインターフェースを備えたSpineアーキテクチャ
+・セッション・設定・実行記録がデフォルトでローカルに保存され、モデルへのアクセスはユーザー自身のAPIキーやローカルモデルで行うプライバシー重視の設計
+・Read/Write/Edit/Bash/Glob/Grepなどの組み込みツールに加えComputer Use等のオプション機能を持ち、ASF傘下のインキュベーション案件として企業からの信頼を得やすい",Claude Code等のAIコーディングエージェントと同様のワークスペースを、ASFのガバナンス下でベンダーニュートラルに使いたい組織に向く。監査ログが残る点は企業導入時のコンプライアンス要件との相性が良い。,Apache License 2.0,
+PostHog/posthog,Python,PostHogは、プロダクト分析・セッションリプレイ・機能フラグ・A/Bテスト・エラートラッキング・データウェアハウス連携などを単一プラットフォームに統合したオープンソースの「プロダクトOS」です。近年はLLMアプリケーション向けのAIオブザーバビリティ(トレース・レイテンシ・コスト計測)を強化し、AIエージェントがプロダクトデータをもとに課題発見からPR生成まで担う「self-driving product」を目指しています。,https://github.com/PostHog/posthog,83,"・プロダクト分析、セッションリプレイ、実験(A/Bテスト)、CDP/データウェアハウス連携までを1つのプラットフォームに統合する設計
+・LLMアプリのトレース・コスト・レイテンシを追跡するAIオブザーバビリティ機能を新設し、AIエージェント活用トレンドに合致
+・JS/Python/Node/Go/.NET等の豊富なSDKと、Docker等によるセルフホスト対応で幅広い開発者層に採用",自社プロダクトのユーザー行動分析やA/Bテスト基盤として即座に導入でき、LLMを組み込んだ機能のコストやレイテンシの監視にも活用できます。セルフホスト版であればデータを自社インフラ内に留められるため、プライバシー要件の強いプロジェクトにも適しています。,MIT License,
+openclaw/openclaw,TypeScript,OpenClawは、WhatsApp・Telegram・Slack・Discord・Signal・iMessageなど既存のメッセージングアプリ経由で利用できるパーソナルAIアシスタントのOSSプロジェクトです。ローカルで動くGateway(制御プレーン)がセッションやチャネル接続を管理し、クラウド/ローカルの好きなモデルプロバイダーを選んで動かせます。,https://github.com/openclaw/openclaw,173,"・単一のGatewayがセッション・ツール・チャネル接続を統括し、CLI/TUI/Control UIなど複数のインターフェースを提供
+・多数のメッセージングチャネルに対応し、普段使っているチャットアプリからそのままAIアシスタントを呼び出せる
+・ClawHubというプラグインマーケットプレイスとプラグインSDKにより、コミュニティ主導の機能拡張エコシステムが形成されつつある",個人用のAI秘書として、既に使っているチャットアプリ経由でタスク管理やリマインダー、情報検索を行わせる用途に向いています。ローカルモデル対応のためプライバシーを重視しつつ、自宅サーバーやRaspberry Piなどで常時稼働させる個人インフラとしての活用も考えられます。,MIT License,
+AgriciDaniel/claude-obsidian,Python,Claude CodeとObsidianを組み合わせ、記事・PDF・会話などあらゆる情報源を取り込んでナレッジグラフ化する「自己組織化するAIセカンドブレイン」です。トランザクション型の書き込みと出典(provenance)管理により、AIによる自動編集でもVaultの整合性を壊さない設計になっています。,https://github.com/AgriciDaniel/claude-obsidian,310,"・原子的なトランザクション処理、SHA-256検証、承認ハッシュなど、AIによるファイル操作の安全性を重視した堅牢な設計
+・BM25による決定論的な検索とソース/主張の来歴管理により、AIが生成したノートの根拠を追跡可能にしている
+・Zettelkasten、PARA、LYTなど複数のナレッジ管理手法(15種のスキル)に対応し、Claude Code・Cursor・Windsurf等複数のAgent Skillsホストで動作",日々の記事や論文、会議メモなどを放り込むだけでObsidian上に自動的にリンクされた知識ベースを構築でき、個人の研究ノートやセカンドブレイン運用を大幅に効率化できます。既存のPARAやZettelkasten実践者にとっては、手動運用をAIに肩代わりさせる移行先として魅力的です。,MIT License,
+rohitg00/ai-engineering-from-scratch,Python,数学基礎から本番デプロイまでを扱う、無料でオープンソースのAIエンジニアリング学習カリキュラムです。20フェーズ・511レッスン(合計約329時間相当)で構成され、Python/TypeScript/Rust/Juliaを用いた実装と、プロンプトやスキル、MCPサーバーなどの成果物を伴います。,https://github.com/rohitg00/ai-engineering-from-scratch,349,"・数式導出→コード実装→本番ライブラリ利用→成果物公開という一貫したレッスン構成で、理論と実践を橋渡ししている
+・LLMアプリ開発、RAG、マルチエージェントシステム、MCP、Agent Skillsなど最新のAIエンジニアリング実務トピックを広くカバー
+・Claude Code/Codexなどのエージェント環境にインストールできる学習用スキル(start-learning、learn等)を提供し、AIと対話しながら学習を進められる",AIエンジニアを目指す学習者が体系的にロードマップを追う教材として使えるほか、企業の新人研修用カリキュラムのベースとしても流用できそうです。各レッスンの成果物(スキルやMCPサーバー)はそのまま自分のプロジェクトに組み込める点も実用的です。,MIT License,
+basecamp/omarchy,Shell,37signals(Basecamp)のDHHが開発した、Arch LinuxとHyprland(Wayland)をベースにしたモダンで美しいデスクトップ環境ディストリビューションです。ターミナル、Neovim、AI連携ツールなど開発者向けの構成があらかじめ最適化された状態で提供されます。,https://github.com/basecamp/omarchy,1056,"・「Beautiful, Modern & Opinionated」を掲げ、開発者体験を重視したテーマやホットキー、クリップボード履歴などの作り込まれたUI/UXがトレンド入りの理由
+・Ruby on Railsの作者としても知られるDHHによるプロジェクトであることが大きな話題性を生んでいる
+・デュアルブートや無人インストール、独自テーマシステムなど実運用を意識した51章にわたる詳細マニュアルを備える",新しい開発マシンをゼロから一貫した美しい環境で立ち上げたい開発者に向いており、dotfilesの管理コストを下げたい人にも参考になります。既存のArch Linux + Hyprland構成の後継・代替として乗り換えを検討する層に人気が出そうです。,MIT License,
+tashfeenahmed/freellmapi,TypeScript,34の無料LLMプロバイダー(月間74億トークン相当、635モデルエンドポイント)を集約し、単一のOpenAI互換`/v1`エンドポイントとして提供するルーティングサーバーです。スマートルーティングと自動フェイルオーバーにより、レート制限に達したプロバイダーから別のプロバイダーへ自動的に切り替えます。,https://github.com/tashfeenahmed/freellmapi,174,"・6種類のルーティング戦略と自動フェイルオーバーにより、無料枠のLLMを実用的な単一APIとして束ねる仕組みがユニーク
+・Claude Code、Codex CLI、Aider、Clineなど10以上のコーディングエージェントに自動セットアップ対応し、MCPサーバーとしても機能する開発者フレンドリーな設計
+・複数モデルを並列に呼び出すFusionモードやプロンプト圧縮など、無料枠の制約下でも実用性を高める工夫が盛り込まれている",個人開発やプロトタイピングで複数の無料LLM APIキーを使い分ける手間を省き、コストをかけずにLLM機能を試作したい場合に便利です。ただし開発者自身が明記する通り本番運用向けではなく、各プロバイダーの利用規約順守はユーザー側の責任である点に注意が必要です。,MIT License,
+dani-garcia/vaultwarden,Rust,Bitwarden互換のパスワード管理サーバーをRustで再実装した、セルフホスト向けの軽量な非公式実装(旧bitwarden_rs)です。公式Bitwardenクライアントとの互換性を保ちながら、公式サーバーよりもはるかに少ないリソースで動作します。,https://github.com/dani-garcia/vaultwarden,175,"・公式クライアントとのAPI互換性を保ちつつ、組織・コレクション・2FA(YubiKey、FIDO2、Duo等)・緊急アクセスなどエンタープライズ機能までほぼ完全にカバー
+・Rocket(Rust)+ Dieselという軽量スタックにより、Raspberry Piのような低スペック環境でも自前運用できる省リソース性
+・長年運用されている成熟プロジェクトとして、Docker/Podman向け公式イメージや管理者向けバックエンドが整備されている",自宅サーバーや小規模チームで、公式Bitwardenのクラウド利用料を避けつつパスワード管理を内製化したい場合の定番選択肢になります。既にBitwardenクライアントを使っているユーザーはサーバーだけ差し替えれば移行できる手軽さも魅力です。,AGPL-3.0 License,
+freestylefly/awesome-gpt-image-2,JavaScript,GPT-Image2向けに530以上のリバースエンジニアリングされた生成事例と20以上の再利用可能なテンプレートをまとめた、プロンプトエンジニアリングのライブラリ兼Webサービスです。プロンプトをコードのように部品化して組み立てる「Prompt as Code」という設計思想が特徴です。,https://github.com/freestylefly/awesome-gpt-image-2,2449,"・UIデザイン、インフォグラフィック、商品写真、キャラクターデザインなど12カテゴリ・530超の実例を体系化し、プロンプトを構造化部品として再利用可能にしている
+・Claude CodeやCursor向けにNPM公開されたAgent Skill(gpt-image-2-style-library)を提供し、AIエージェントから直接スタイルライブラリを呼び出せる
+・Supabase+Vercel Functionsによるフロントエンド/バックエンド構成で、実際に生成をテストできるWebサイト(gpt-image2.canghe.ai)も併設",画像生成プロンプトの試行錯誤を減らしたいデザイナーやマーケターが、目的に近いテンプレートを起点にカスタマイズする用途に向いています。Agent Skillとしてコーディングエージェントに組み込めば、UIモックアップや広告素材生成のワークフローを自動化できます。,MIT License,
+VoltAgent/awesome-agent-skills,,"Claude Code、Codex、Gemini CLI、Cursorなど複数のAIコーディングエージェントで使える1,000以上のAgent Skillsを厳選して収録したキュレーションリポジトリです。Anthropic、Google、Vercel、Stripe、Figmaなど公式チームが公開したスキルも多数含まれています。",https://github.com/VoltAgent/awesome-agent-skills,602,"・「AI生成のスキル羅列ではなく厳選(hand-picked)」を掲げ、公式ベンダー製スキルとコミュニティ製スキルを整理して並べている点が信頼性につながっている
+・ドキュメント操作、クラウド、テスト、ML、セキュリティ監査など実務領域を幅広くカバーし、Azure関連だけで130以上のスキルを収録するなど専門領域への深掘りもある
+・Claude Code/Codex/Gemini CLI/Cursor/Copilot/Windsurfなど主要エージェントツール横断で互換性を確認済み",自分のエージェント環境に導入するスキルを探す際のカタログとして即座に活用でき、公式・コミュニティ双方の実装例を比較しながら自作スキルの参考にもできます。Agent Skillsエコシステムが急速に立ち上がる中、その全体像を俯瞰する索引として価値が高いです。,MIT License,
+tinyhumansai/openhuman,Rust,"ローカルファースト設計のパーソナルAIで、SQLiteベースの「Memory Tree」でユーザーの文脈をMarkdown形式(Obsidianボルト互換)として蓄積し、複数のエージェントを階層的に編成して自動化ワークフローやリサーチを実行するアプリケーション。100以上のOAuth連携や5,000超のMCPサーバーと接続できる点も特徴。",https://github.com/tinyhumansai/openhuman,515,"・ベクトルDBに頼らず、圧縮・スコアリングされたMarkdownファイルで記憶を管理する「Memory Tree」方式を採用し、ユーザーが直接編集・検閲できる透明性を確保
+・tinyagentsという独自フレームワーク上でチェックポイント付きグラフを実行し、最大3階層のエージェントを署名付き暗号通信でオーケストレーション
+・「TokenJuice」によるツール出力圧縮でトークン消費を最大80%削減するなどコスト最適化を追求し、公開後9日連続でGitHubトレンド上位に入るなど注目度が高い",個人の秘書AIやマルチエージェントの自動化基盤として、既存のAIアシスタントが抱える「記憶のブラックボックス化」問題への解決策になりうる。ローカル実行やプライバシーモードを備えるため、機密情報を扱う個人ユースケースや、複数のMCPサーバーを束ねたパーソナルオーケストレーション基盤の検証に向いている。,GNU General Public License v3.0,
