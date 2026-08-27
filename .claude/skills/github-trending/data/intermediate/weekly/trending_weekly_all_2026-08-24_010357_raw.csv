@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,modular/modular,https://github.com/modular/modular,The Modular Platform (includes MAX & Mojo),Mojo,28976,3076,2176,weekly,,2026-08-24T01:03:57+00:00,Apache License 2.0 with LLVM Exceptions,
+2,harry0703/MoneyPrinterTurbo,https://github.com/harry0703/MoneyPrinterTurbo,Generate HD short videos from a topic or keyword with an automated AI workflow,Python,115308,17516,11167,weekly,,2026-08-24T01:03:57+00:00,MIT License,
+3,basecamp/omarchy,https://github.com/basecamp/omarchy,"Beautiful, Modern & Opinionated Linux",Shell,29141,2961,3660,weekly,,2026-08-24T01:03:57+00:00,MIT License,
+4,AprilNEA/OpenLogi,https://github.com/AprilNEA/OpenLogi,"Native, local-first alternative to Logitech Options+ with button remapping and HID++ support",Rust,14952,400,6078,weekly,,2026-08-24T01:03:57+00:00,Apache License 2.0,
+5,cordiverse/cordis,https://github.com/cordiverse/cordis,Meta-Framework of Spatiotemporal Composability,TypeScript,7242,419,2725,weekly,,2026-08-24T01:03:57+00:00,MIT License,
+6,volcengine/OpenViking,https://github.com/volcengine/OpenViking,Self-evolving Context Database for AI Agents focusing on memory and knowledge integration,Python,32490,2483,3799,weekly,,2026-08-24T01:03:57+00:00,GNU Affero General Public License v3.0,
+7,public-apis/public-apis,https://github.com/public-apis/public-apis,A collective list of free APIs,Python,469219,51756,8295,weekly,,2026-08-24T01:03:57+00:00,MIT License,
+8,jundot/omlx,https://github.com/jundot/omlx,LLM inference server with continuous batching for Apple Silicon managed from macOS menu bar,Python,20449,1732,1671,weekly,,2026-08-24T01:03:57+00:00,Apache License 2.0,
+9,anthropics/claude-plugins-community,https://github.com/anthropics/claude-plugins-community,Community plugin marketplace for Claude Cowork and Claude Code,Python,960,126,406,weekly,,2026-08-24T01:03:57+00:00,Apache License 2.0,
+10,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,4822,396,1761,weekly,,2026-08-24T01:03:57+00:00,MIT License,
+11,apache/maka,https://github.com/apache/maka,Local-first AI agent workspace recording messages and tool interactions as append-only logs,TypeScript,2358,269,859,weekly,,2026-08-24T01:03:57+00:00,Apache License 2.0,
