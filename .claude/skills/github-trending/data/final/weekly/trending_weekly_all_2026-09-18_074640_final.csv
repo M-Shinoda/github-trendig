@@ -1,0 +1,64 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+alibaba/open-code-review,Go,Alibaba社内で実運用されている高速・高精度なAIコードレビューツール。Gitの差分を解析し、ツール利用可能なLLMエージェントに渡すことで、ファイル全体の読み込みや関連コードの検索を伴う行単位の詳細なレビューコメントを生成する。,https://github.com/alibaba/open-code-review,11489,"決定論的なパイプラインとLLMエージェントを組み合わせたハイブリッドアーキテクチャで、精度を保ちつつトークン消費量を大幅に削減(汎用エージェント比で約1/9)
+NPE・スレッドセーフティ・XSS・SQLインジェクションなど多言語対応の組み込みルールセットを持つ
+Claude Code、Cursor、Kimi CodeなどのコーディングエージェントやGitHub Actions/GitLab CIとの連携をサポート",既存のCI/CDパイプラインに組み込んで、PRごとの自動コードレビューゲートとして利用できそう。既存の静的解析ツールとLLMレビューを併用する構成の代替・補完として位置づけられ、大規模組織でのレビュー負荷軽減に役立つ可能性がある。,Apache-2.0 License,
+ayghri/i-have-adhd,Python,「i-have-adhd」はAIコーディングアシスタントの出力を簡潔かつ行動指向にするためのスキル(プラグイン)である。回答の冒頭で結論・次のアクションを示し、余計な前置きや締めの言葉を排除するルールをClaudeやCursor、Gemini等の複数プラットフォーム向けに実装している。,https://github.com/ayghri/i-have-adhd,10800,"「答えを埋もれさせない」ことに特化したプロンプト/スキル設計で、AIエージェントの出力品質という新しいニッチに着目
+Claude、Cursor、Gemini、Kimi、Qwenなど複数のAIプラットフォームに対応する実装を提供
+軽量なPythonベースの実装で、既存のコーディングエージェントに後付けで組み込みやすい",長文で冗長になりがちなAIエージェントの出力にうんざりしている開発者が、既存のワークフローに追加することで即座に恩恵を得られる。UX改善に特化した軽量スキルとして他のスキル開発の参考にもなる。,MIT License,
+bilawalsidhu/gods-eye-view,JavaScript,God's Eye Viewはブラウザ上で動作するリアルタイム地理空間可視化アプリケーションで、実際の航空機・船舶・衛星・地震・交通・公開カメラのデータをフォトリアリスティックな3D地球儀上に表示する。「本物のデータを使ったスパイ衛星シミュレーター」を謳う。,https://github.com/bilawalsidhu/gods-eye-view,14460,"Cesiumを用いた3Dグローブ上に複数の公開OSINTデータソースをリアルタイム統合
+ナイトビジョンやサーマルなどのセンサーモード切り替え、航空機コックピット視点への切り替えなど演出面が高く評価されている
+音声コマンドによるAI操作など、地理空間データとAI UXを組み合わせた実験的な試み",OSINTや地理空間データ可視化に興味のあるエンジニアにとって学習用リファレンス実装として有用であり、Cesium.js等の3D地図技術のショーケースとしても参照価値が高い。,MIT License,
+affaan-m/ECC,JavaScript,ECCは、AIコーディングエージェントの性能を最適化するためのハーネスシステムであり、「計画→テスト→実装→レビュー→検証→記憶→改善」という開発プロセスを構造化する。68種類の専門サブエージェント、292のスキル/ワークフロー、94のスラッシュコマンドを備え、Claude Code、Codex、Cursorなど複数のコーディングプラットフォームで動作する。,https://github.com/affaan-m/ECC,5607,"テスト駆動開発やAgentShieldによるセキュリティスキャン、セッションをまたぐ永続的メモリなど、エージェント開発の品質・安全性を高める仕組みを網羅
+複数のAIコーディングツール(Claude Code/Codex/Cursor/OpenCode等)を横断して利用できる汎用ハーネス設計
+大量のスキルとサブエージェントをあらかじめ体系化しており、エージェント運用のベストプラクティス集として機能する",自社でAIコーディングエージェントを運用・構築しているチームが、品質管理やレビュープロセスを標準化する目的で導入できそうである。既存のエージェントフレームワークに対する「運用ノウハウのパッケージ」として位置づけられ、開発ガバナンス強化に役立つ可能性がある。,MIT License,
+mksglu/context-mode,TypeScript,Context ModeはAIコーディングエージェント向けのMCPサーバーで、ツール出力をサンドボックス化してコンテキストウィンドウの消費を最大98%削減する。SQLite(FTS5)によるセッション記憶の永続化や、コード実行を優先するアプローチにより17種類のプラットフォームに対応する。,https://github.com/mksglu/context-mode,1482,"ツール出力の肥大化を防ぐサンドボックス実行(ctx_execute等)によりコンテキスト消費を大幅削減
+会話の圧縮(compaction)後もBM25検索でセッション状態を復元できる仕組みを持つ
+Claude Code、Cursor、Codex CLIなど17プラットフォームでMCP+フックを通じて横断的に利用可能",長時間・大規模なコーディングセッションでコンテキスト超過に悩む開発者が、既存のMCP対応エージェントに追加するだけで導入できる実用的なツールである。コンテキストウィンドウ管理に特化した専用ツールとして注目に値する。,Elastic License 2.0,
+Tencent/WeKnora,Go,WeKnoraは、大規模言語モデルを基盤としたオープンソースのエンタープライズ向けナレッジ管理プラットフォームである。生ドキュメントをRAGによる質問応答、ReActベースの自律推論エージェント、自己更新型Wikiという3つの機能に変換する。,https://github.com/Tencent/WeKnora,3982,"RAGによる質問応答だけでなく、MCPツールやスキルサンドボックス、Web検索を組み合わせたReActエージェントによる多段階タスク遂行を統合
+ドキュメントから自動的に構造化されたMarkdown Wikiを生成し、改訂履歴管理や手動編集にも対応する自己保守型Wiki機能
+Docker/Kubernetes/プライベートクラウドでの柔軟なデプロイに対応し、データ主権を保った運用が可能",社内ナレッジベースや技術文書の検索・要約基盤として、既存のRAGツールの代替や発展形として利用できそうである。自動生成Wikiの仕組みはドキュメント整備コストの削減に直結するため、ナレッジ管理系プロダクトを開発しているチームにとって参考になる設計と言える。,MIT License,
+openai/plugins,JavaScript,openai/pluginsはCodexプラグインのサンプル集を収めたリポジトリで、plugins/ディレクトリ配下に各プラグインのマニフェスト(.codex-plugin/plugin.json)とスキル・エージェント・コマンド等の付随リソースがまとめられている。Figma、Notion、Expo、Netlify、Google Slidesなど多様なサービス向けの実装例を含む。,https://github.com/openai/plugins,564,"Codexエージェント向けプラグイン開発の公式リファレンス実装として、マニフェスト構造やベストプラクティスを提示
+Figma・Notion・iOS/macOS/Web開発・Expoなど実務で使う主要サービスとの連携例をカバー
+OpenAIによる公式リポジトリという知名度と、エージェント向けプラグインエコシステムの拡大がトレンド入りの要因",独自のCodexプラグインを開発したいチームにとって、実装のひな形として直接参考にできる。プラグイン形式によるAIエージェント拡張は各社のエージェント基盤で共通のトレンドであり、他社のスキル/プラグイン仕様と比較する際の基準にもなり得る。,,
+max-sixty/worktrunk,Rust,WorktrunkはGitのworktree管理を簡素化するCLIツールで、複数のAIエージェントを並列に動かすワークフロー向けに設計されている。ブランチ感覚でworktreeを切り替え・一覧表示・削除でき、作成やマージ時にフックを実行できる。,https://github.com/max-sixty/worktrunk,1060,"wt switch/list/removeという3コマンドでGit worktreeのUXの煩雑さを解消
+コード差分からLLMがコミットメッセージを自動生成する機能
+ビルドキャッシュの共有やworktreeごとのdevサーバーポート自動割り当て、PRチェックアウトなど並列AI開発に特化した機能",複数のAIコーディングエージェント(Claude Codeなど)を同時並行で走らせる際のブランチ・作業ツリー管理を効率化できる。AIエージェント運用を前提とした体験になっている点が特徴で、マルチエージェント開発フローを構築するチームに向く。,MIT OR Apache-2.0,
+addyosmani/agent-skills,JavaScript,AIコーディングエージェント向けに、ソフトウェア開発ライフサイクル全体をカバーするプロダクショングレードのスキル集。仕様定義・計画・実装・検証・レビュー・出荷の6フェーズに沿った25個のスキルとスラッシュコマンドを提供する。,https://github.com/addyosmani/agent-skills,2560,"Googleのエンジニアリング文化に基づくベストプラクティスをエージェントに組み込み、仕様やテストの手抜きを防ぐ設計
+/spec, /plan, /build, /test, /review, /shipなど9個のスラッシュコマンドとコードレビュアー・テストエンジニア・セキュリティ監査官などの4つのエージェントペルソナを内蔵
+Claude Code、Cursor、Copilotなど70以上のエージェントで利用可能な移植性の高いMarkdown形式",チーム開発でエージェントに一貫した開発プロセスを守らせたい場合の共通ルールセットとして導入できそう。既存のスキル・プラグインエコシステムと組み合わせ、組織のエンジニアリング標準をエージェントに強制する仕組みとして応用できる。,MIT,
+anthropics/claude-code,TypeScript,ターミナルで動作するAnthropicのエージェント型コーディングツール。コードベースを理解した上で、日常的なタスクの実行、複雑なコードの説明、gitワークフローの処理などを自然言語で行える。,https://github.com/anthropics/claude-code,1294,"ターミナル・IDE・GitHub上でのメンション(@claude)など複数の場所から利用できるマルチインターフェース設計
+macOS/Linux/Windowsに対応し、curlスクリプトやHomebrew、WinGetなど多様なインストール手段を提供
+Anthropic製で、Claudeモデルの能力を活かしたエージェント的なコーディング支援を実現",既存の開発フローにターミナルベースのAIペアプログラマーとして組み込み、コードレビューやリファクタリング、テスト作成などの自動化に使える。本リポジトリで収集している他のスキル・プラグイン系リポジトリの実行基盤としても中心的な役割を持つ。,,
+anthropics/knowledge-work-plugins,Python,Claude CoworkおよびClaude Code向けに、特定の職種やチーム、企業向けにClaudeを専門化させるプラグイン集。スキル・コネクタ・スラッシュコマンド・サブエージェントをまとめ、営業やカスタマーサポート、法務、財務など11分野の業務に対応する。,https://github.com/anthropics/knowledge-work-plugins,488,"Slack、HubSpot、Jira、Snowflake、BigQueryなど各職種でよく使われるSaaSツールとのコネクタを多数内蔵
+プロダクトマネジメント、マーケティング、法務、財務、データ分析、バイオリサーチなど幅広い職能をカバーする11種類のプラグインを提供
+plugin.json・.mcp.json・commands/・skills/という統一された構造で、組織独自のワークフローに合わせたプラグインのカスタマイズや新規作成も可能",企業がClaude Cowork導入時に、自社の業務プロセスやツールに合わせてこれらのプラグインをカスタマイズし、社内向けAIアシスタントとして展開するのに使えそう。汎用エンジニアリングスキル集と対をなす「業務職能向けスキル集」の代表例と言える。,Apache License 2.0,
+obra/superpowers,Shell,Superpowersはコーディングエージェント向けの体系的なソフトウェア開発方法論を提供するフレームワーク。テスト駆動開発や体系的デバッグなど、再利用可能な「スキル」を組み合わせてエージェントの開発プロセスを導く。,https://github.com/obra/superpowers,3821,"RED-GREEN-REFACTORサイクルを強制するテスト駆動開発スキルと、4段階の根本原因分析による体系的デバッグ手法
+ブレインストーミングから実装計画まで含むスキルライブラリと、サブエージェントによる並列開発・二段階コードレビュー
+Claude Code、Cursor、Devin、Gemini、GitHub Copilotなど複数のエージェント基盤に対応",AIエージェントに一貫した開発プロセスを守らせたいチームが、既存のエージェント運用にこの方法論とスキル群を組み込むことで、場当たり的な実装を減らせる可能性がある。特にTDDや体系的デバッグをエージェントに徹底させたい場合に有用と考えられる。,MIT License,
+blader/humanizer,Python,HumanizerはAI生成文章特有の言い回しを検出・除去し、より自然で人間らしい文章に書き換えるエージェントスキル。文章の意味を保ったまま、不自然なパターンだけを修正する。,https://github.com/blader/humanizer,3235,"「XではなくY」構文や不自然なリズム、誇張表現など25種類の検出パターンを強度・頻度別に整理
+ユーザーの文章サンプルから個人の文体・トーンを学習して合わせるボイスマッチング機能
+ファイルを扱う際はコードやデータ、リンクなどを保持しつつ地の文だけを編集するファイル対応編集",AIで下書きした文章をブログや社内文書として公開する前の最終仕上げに使える。Claude Codeなどのプラグインやスキルとして導入すれば、AI臭さを消して人間味のある文章に整えるワークフローに組み込みやすい。,MIT License,
+microsoft/markitdown,Python,MarkItDownはPDFやWord、Excel、画像、音声、HTMLなど多様なファイル形式をMarkdownに変換する軽量なPythonツール。LLMやテキスト解析パイプラインでの利用を主眼に設計されている。,https://github.com/microsoft/markitdown,2814,"見出し・リスト・表・リンクなどの文書構造を保持したまま変換し、機械可読性の高いMarkdown出力を生成
+画像のEXIFメタデータ抽出やOCR、音声の文字起こしなど多様なコンテンツタイプに対応
+ZIP、YouTube URL、EPubなど幅広いファイル形式・入力ソースをサポート",RAGパイプラインやLLMへのドキュメント取り込み前処理として、社内文書や添付ファイルをまとめてMarkdown化する用途に使える。Microsoft製で継続的にメンテナンスされている点も、実運用パイプラインへの組み込みやすさにつながっている。,MIT License,
+home-assistant/core,Python,Home Assistantはローカル制御とプライバシーを重視したオープンソースのホームオートメーションプラットフォーム。モジュール式のアーキテクチャにより、多様なスマートホームデバイスやサービスを容易に統合できる。,https://github.com/home-assistant/core,285,"クラウド依存せずローカルで動作するプライバシー重視の設計
+Raspberry Piなどで動作する軽量さと、拡張性の高いモジュール構造で多数の統合(インテグレーション)に対応
+DIY愛好家や開発者コミュニティによる活発な開発が続く長寿プロジェクト",自宅のスマートデバイスを一元管理したいユーザーや、クラウドサービスに依存しないホームオートメーション環境を構築したい開発者に適している。トレンド入りは新機能追加や大型アップデートに伴う注目の高まりによるものと考えられる。,Apache License 2.0,
+kunchenguid/firstmate,Shell,Firstmateは1体の主エージェント(ファーストメイト)と対話するだけで、複数の作業用エージェント(クルー)を並列に生成・監督させるエージェント分配システム。各クルーは独立したgit worktreeで作業する。,https://github.com/kunchenguid/firstmate,890,"「Talk to one agent. Ship with a crew」というコンセプトで、複数エージェントセッションを個別に管理する手間を排除
+PRを作成する「shipタスク」と調査レポートを作る「scoutタスク」を使い分け、tmuxやHerdrなど複数のバックエンド端末で作業を可視化
+Claude Code、Grok、Codex、Cursor Agent CLIなど複数のハーネスに対応し、状態はディスク上に永続化されて再起動後も継続",複数のAIエージェントに並行してタスクを任せたいが、個別のセッション管理は避けたい開発チームに向く。マージ権限や運用モードを設定できるため、AIによる自動PR生成をどこまで自律化するか調整しながら導入できる。,MIT,
+petergyang/no-ai-slop,Python,No AI Slopは、AI生成文章にありがちな紋切り型表現(20種類以上)を検出・除去しつつ、書き手本来の文体を保つスキル。ChatGPTやClaude Codeなどのエージェントに組み込んで使う。,https://github.com/petergyang/no-ai-slop,2256,"「It's not X. It's Y」構文や「Here's the thing」のような定型的な出だし、誇張表現など20以上のAIスロップパターンを検出
+編集・検出・あえてスロップ文を生成する(風刺目的)といった複数のコマンドを提供
+ChatGPTやClaude Codeなどのコーディングエージェントと連携して利用可能",AI下書きの文章をSNS投稿やブログとして公開する前に、機械的な言い回しを削ぎ落として自然な文章に仕上げる用途に使える。humanizerと近い問題意識を持つ類似プロジェクトで、両者を比較検討する価値がある。,MIT License,
+danny-avila/LibreChat,TypeScript,LibreChatは複数のAIプロバイダーを1つのインターフェースに統合するセルフホスト型のAIチャットプラットフォームで、「拡張版ChatGPTクローン」として設計されている。,https://github.com/danny-avila/LibreChat,1421,"OpenAI、Anthropic、Google、AWSなど多数のAIプロバイダーに対応し、MCPやSkillsを備えたAIエージェント機能を搭載
+サンドボックス化されたコードインタープリターや、React/HTML/Mermaidに対応したコードアーティファクト生成のGenerative UI
+OAuth2・LDAP・メールログインなどのマルチユーザー認証、30以上の言語に対応した多言語UI、管理者パネルを備えたエンタープライズ運用も視野に入れた機能群",自社で複数のLLMプロバイダーを切り替えながら使えるチャットプラットフォームを構築したい組織に適しており、ChatGPTの代替をセルフホストで用意したい場合の有力な選択肢になる。MCPとSkills対応により、他のエージェントツールとの連携基盤としても発展しつつある点が注目される。,MIT License,
+stablyai/orca,TypeScript,Orcaは、複数のAIコーディングエージェント(Claude Code、Codex、Cursorなど)を並列のGit worktree内で同時に実行し、出力を比較・マージできるElectron製のエージェント開発環境(ADE)です。ターミナル分割やモバイルアプリからのリモート監視にも対応しています。,https://github.com/stablyai/orca,5305,"30種類以上のCLIエージェントを並列worktreeで同時実行し結果を比較・マージ可能
+WebGLレンダリングのターミナルやDesign Mode(実ブラウザでのUI検査)など開発者体験を重視した機能群
+GitHub/Linear連携やiOS/Androidのモバイル監視アプリで「並列エージェント運用」のトレンドを牽引",複数のコーディングエージェントを同時に走らせて成果を比較検討したいチームに向いており、既存のClaude CodeやCodexなどのCLIエージェントをラップして活用できる点が実用的です。,MIT License,
+Panniantong/Agent-Reach,Python,Agent Reachは、Twitter/X、Reddit、YouTube、GitHubなど複数のプラットフォームからウェブ情報を取得・検索できるPython製CLIツールで、AIエージェントに「インターネット全体を見る目」を与えることを目的としています。,https://github.com/Panniantong/Agent-Reach,3670,"Twitter、Reddit、YouTube、RSS、Bilibili、小紅書など多数のプラットフォームを統一CLIで横断的に扱える
+有料APIを使わずyt-dlpやJina Readerなどのオープンソースツールで実装し、アクセス方法が失敗した場合は自動でバックアップ手段に切り替え
+Claude Code、Cursor、WindsurfなどさまざまなAIエージェントからMCP経由で利用可能",SNSやニュースの情報収集を自動化したいAIエージェント開発者に有用で、既存のリサーチ系MCPツールと組み合わせて情報収集パイプラインを構築できそうです。,MIT License,
+decolua/9router,JavaScript,9RouterはClaude Code、Codex、Cursor、Clineなど各種コーディングツールと40以上のAIプロバイダーを接続するルーティングプロキシで、サブスクリプションの節約や無料モデルの活用、トークン圧縮による効率化を目指しています。,https://github.com/decolua/9router,871,"サブスクリプション→安価プロバイダー→無料プロバイダーの3段階フォールバックでコストを最適化
+出力を20〜40%圧縮する「RTK Token Saver」やOpenAI/Claude/Gemini間のフォーマット変換機能
+Next.js 16 + React 19構成でリアルタイムのクォータ管理・OAuth自動更新に対応",複数のAIコーディングツールを併用しつつAPIコストを抑えたい開発者に向いたプロキシで、既存のLLMルーター(LiteLLMなど)と競合・補完する位置づけです。,MIT License,
