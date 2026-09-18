@@ -1,0 +1,55 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+affaan-m/ECC,JavaScript,ECCはClaude CodeやCodex、Cursorなど複数のAIコーディングエージェント向けの「エージェントハーネス」最適化システムです。68種類のエージェント、286のスキル、94のコマンドを備え、計画・実装・レビュー・検証・記憶・改善というワークフローを一貫して支援します。,https://github.com/affaan-m/ECC,1485,"・エージェント横断で使えるMarkdown形式の「Memory Vault」により、ベンダー間でナレッジを持ち運べる点が特徴
+・AgentShieldによるプロンプト/フック/MCP設定のセキュリティスキャン機能を内蔵
+・スキル優先の設計思想へ移行しつつ、後方互換のためコマンド体系も維持している点が実践的",複数のAIコーディングツールを併用しているチームが、ナレッジやレビュー基準を統一管理する基盤として導入できそうです。特にセキュリティレビューや大規模リポジトリでの再現性のある開発フローを求めるプロジェクトと相性が良いと考えられます。,MIT License,
+mattpocock/skills,Shell,TypeScriptの著名な教育者Matt Pocock氏が自身の`.agents`ディレクトリから公開した、AIコーディングエージェント向けの実践的な「スキル」集です。仕様策定からTDD実装、コードレビューまで日々の開発で使っているワークフローをそのまま共有しています。,https://github.com/mattpocock/skills,2207,"・`/grill-me`など対話形式で要件をすり合わせるスキルにより、開発者とエージェントの認識齟齬を防ぐ設計
+・TDDのRed-Green-Refactorサイクルやアーキテクチャ改善スキャンなど、実務で磨かれた規律あるワークフローを収録
+・特定ベンダーに依存せずClaudeやCodexなど複数のエージェントで使える汎用性",個人開発から実務まで、AIエージェントに大きめのタスクを任せる前の要件整理や、実装後のレビュー精度を上げる目的で導入しやすいです。CONTEXT.mdによる共有言語の確立という考え方は、既存のドキュメント文化が薄いプロジェクトにも取り入れやすいでしょう。,MIT License,
+cathrynlavery/diagram-design,HTML,Claude CodeやCodexなどのAIエージェントが、装飾のないエディトリアル調の図を生成できるようにするためのデザインシステムです。アーキテクチャ図やシーケンス図、ガントチャートなど38種類の図を、ビルド不要の自己完結型HTML+SVGとして出力します。,https://github.com/cathrynlavery/diagram-design,620,"・「影なし・Mermaid風の雑さなし」を掲げ、4pxグリッドや1pxの罫線など厳格なデザイン制約で統一感のある見た目を実現
+・ユーザーのWebサイトから色やフォントを抽出してブランドに合わせた図を自動生成できる点がユニーク
+・draw.ioやMermaidの既存図をインポートし、詳細度や対象読者に応じて再描画できる機能",社内資料やドキュメントの図版をAIエージェントに任せたいチームにとって、デザインツールを使わずに統一感のある図を量産できる点が魅力です。技術ブログやプレゼン資料作成のワークフローに組み込むと効果を発揮しそうです。,MIT License,
+NousResearch/hermes-agent,Python,Nous Researchが開発した自己改善型AIエージェントで、ターミナルUIやTelegram、Discord、Slackなど複数プラットフォームから利用できます。経験からスキルを生成し、過去の会話を検索しながらユーザーモデルを深めていく「学習ループ」を特徴とします。,https://github.com/NousResearch/hermes-agent,520,"・会話履歴のフルテキスト検索やLLMによる要約など、セッションをまたいで記憶を蓄積する仕組みを内蔵
+・Nous Portal、OpenRouter、OpenAIなど複数のモデルプロバイダに対応し、モデルを切り替えても継続利用できる
+・ローカル、Docker、VPS、サーバーレス(Modal・Daytona・Vercel Sandbox)など多様な実行環境をサポート",個人アシスタントとして継続的に使い込むほど賢くなるエージェントを求めるユーザーに向いています。カスタムのスキル作成やスケジュール実行機能を活用すれば、日々のリマインダーや調べ物の自動化にも応用できそうです。,MIT License,
+openai/skills,Python,OpenAIのCodex向けに公開されていた「エージェントスキル」のカタログリポジトリです。指示書・スクリプト・リソースをフォルダ単位でまとめたスキルを、Codexが発見・実行できる標準フォーマットで提供していました。,https://github.com/openai/skills,46,"・スキルを`.system`(自動インストール)、`.curated`(名前指定でインストール)、`.experimental`(フォルダ指定)の3種に分類する設計
+・`$skill-installer`コマンドでCodex上から簡単にスキルを追加できる仕組み
+・現在はリポジトリ自体が非推奨(deprecated)となっており、後継としてOpenAI Pluginsリポジトリへの移行が案内されている",非推奨化されているため新規導入には不向きですが、Agent Skillsのオープン標準がどのように設計されていたかを学ぶ参考資料として有用です。既存のCodex環境で稼働中のスキル構成を確認する際の参照先としても使えます。,,
+anomalyco/opencode,TypeScript,OpenCodeはターミナルUIとデスクトップアプリの両方から使えるオープンソースのAIコーディングエージェントです。フルアクセスで実装を行う「build」モードと読み取り専用で分析を行う「plan」モードを切り替えながら開発タスクを進められます。,https://github.com/anomalyco/opencode,551,"・TabキーでBuild/Planエージェントを瞬時に切り替えられるなど、UXへの配慮が行き届いた設計
+・複雑な検索や多段階操作を担う汎用サブエージェント「general」を搭載
+・npm/bun/pnpm/yarnなど複数パッケージマネージャ、Homebrew・Scoop・Pacmanなど多様なインストール手段に対応し、20万を超えるスター数を集める人気ぶり",CLI中心の開発フローに慣れたエンジニアが、ターミナルを離れずにAIエージェントによる実装・調査を行いたい場合に適しています。ベータ版のデスクトップアプリも用意されているため、CLIとGUIを併用したチーム開発にも展開しやすいでしょう。,MIT License,
+blader/humanizer,Python,AIが生成した文章から「いかにもAIらしい」特徴を取り除き、自然な人間の文章に近づけるエージェントスキルです。5カテゴリ・25種類のAI特有の言い回しパターンを検出し、事実関係を変えずに書き直します。,https://github.com/blader/humanizer,748,"・単なる言い換えではなく、下書きと批評のプロセスを経て仕上げる「工程を見せる」設計
+・文章サンプルから個人の文体を学習し声色を合わせる「ボイスマッチング」機能
+・コードやフロントマターなど編集対象外の要素は変更しない安全設計で、4万5千超のスターを獲得",ブログ記事やドキュメント、メール文面などAI下書きを人間らしく仕上げたい場面で活用できます。Claude CodeやClaude Desktop、Cursorなど既存のエージェント環境に`/humanizer`コマンドとして組み込める手軽さも魅力です。,MIT License,
+llvm/llvm-project,LLVM,LLVMはモジュール化・再利用可能なコンパイラおよびツールチェーン技術の集合体です。中間表現(IR)の最適化やオブジェクトコード生成を担うLLVM本体に加え、C/C++/Objective-CフロントエンドのClang、リンカのLLDなど周辺コンポーネントを含みます。,https://github.com/llvm/llvm-project,23,"・数多くのプログラミング言語やプラットフォームのバックエンドとして採用される、業界標準のコンパイラ基盤
+・LLVM本体、Clang、LLD、libc++など複数の主要プロジェクトを単一のモノレポで管理
+・DiscordやDiscourseフォーラムでの活発なコミュニティ運営と定期的な同期会を通じた継続的な開発体制",新しいプログラミング言語や独自DSLのコンパイラを作る際の基盤として広く使われています。既存の言語処理系やJITコンパイラの最適化パイプラインを差し替えたいプロジェクトにとっても有力な選択肢です。,Apache License 2.0 with LLVM Exceptions,
+DietrichGebert/ponytail,JavaScript,AIコーディングエージェントに「書かなくていいコードは書かない」という怠惰(ラジー)な熟練エンジニアの思考様式を植え付けるプラグインです。コードを書く前に再利用や標準ライブラリの活用を検討させる判断フローを組み込みます。,https://github.com/DietrichGebert/ponytail,1539,"・lite/full/ultra/offの4段階でエージェントの過剰実装抑制の強度を切り替え可能
+・`/ponytail-review`や`/ponytail-audit`で差分やリポジトリ全体の過剰設計を検出
+・自社ベンチマークでコード行数を約54%、トークン消費を約22%、コストを約20%削減したと報告している点が注目点",AIエージェントが不要なライブラリや過剰な抽象化を導入しがちだと感じている開発チームに向いています。Claude CodeやCursor、GitHub Copilot CLIなど20以上のプラットフォームで横断的に使えるため、既存の開発環境に追加しやすい点も実用的です。,MIT License,
+ruvnet/ruflo,TypeScript,Rufloは、Claude Codeを土台に複数のAIエージェントを協調させる「エージェント・メタハーネス」です。100以上の専門エージェントとMCPサーバー、27種のフックを組み合わせ、階層型やメッシュ型のスウォーム構成で自律的なワークフローを構築できます。,https://github.com/ruvnet/ruflo,276,"・HNSWベースのベクトルメモリ(AgentDB)とSONAによる学習機構で、セッションをまたいで知識を蓄積・再利用できる
+・Claude/GPT/Gemini/Cohere/Ollamaなどマルチプロバイダ対応で、既存のAIコーディングエージェントをオーケストレーション層として拡張できる
+・Ed25519署名による組織間フェデレーションなど、エンタープライズ用途を意識したセキュリティ設計を備える",大規模な開発タスクをコーディング・テスト・セキュリティ監査などの専門エージェントに分割し、並列で自律実行させる用途に向いています。既存のClaude CodeプラグインやMCPエコシステムと組み合わせ、チーム開発の自動化基盤として試す価値があります。,MIT License,
+magnitudedev/magnitude,TypeScript,Magnitudeは、手元のハードウェア(CPU/GPU/メモリ帯域)を診断し、その環境で最適に動くローカルLLMを推薦・実行する推論サーバーです。Pi、OpenCode、Claude Code、Clineなど既存のAIエージェントに接続し、クラウドAPIなしで動かすことができます。,https://github.com/magnitudedev/magnitude,604,"・チップ・メモリ・帯域幅をプロファイリングし、推定トークン/秒付きで最適モデルを提案する仕組みが特徴的
+・モデルはリクエスト時にロードし、アイドル時やメモリ逼迫時に自動アンロードするなど、ローカル運用を意識したリソース管理
+・Bunベースのモノレポ構成でCLI・推論エンジン・デスクトップアプリ・Web UIを統合し、複数のエージェントCLIから利用可能",API課金やプライバシー懸念を避けたい開発者が、既に使っているコーディングエージェントのバックエンドをローカルモデルに差し替える用途に適しています。オフライン環境や社内データを扱うプロジェクトでの採用が期待できます。,Apache License 2.0,
+BraveOPotato/FckSignups,TypeScript,FckSignups(NoSignups)は、サインアップ不要でブラウザ上ですぐ使えるオープンソースツールをジャンル別にまとめたキュレーションリストです。生産性・デザイン・開発・ライティング・プライバシーなど9カテゴリで200以上のツールを紹介しています。,https://github.com/BraveOPotato/FckSignups,436,"・「登録不要・追跡なし」という明確な思想のもと、React/TypeScriptで作られた検索可能なディレクトリサイト
+・GitHub Issue経由でコミュニティがツールを提案できる仕組みで、リストが継続的に拡充されている
+・会員登録やデータ収集への反発というトレンドに合致し、プライバシー志向のユーザー層から支持を集めている",会員登録の手間なく試せるツールを探すときのブックマーク代わりに使えます。自分のプロダクトを気軽に試してもらいたい開発者が、掲載を通じて認知を広げる場としても活用できそうです。,GPL-3.0 License,
+coreyhaines31/marketingskills,JavaScript,Claude CodeなどのAIコーディングエージェント向けに、CRO・コピーライティング・SEO・分析・グロースエンジニアリングをカバーする60以上の「マーケティングスキル」をMarkdown形式でまとめたリポジトリです。,https://github.com/coreyhaines31/marketingskills,329,"・コンバージョン最適化、コンテンツ/コピー、SEO、有料広告、計測、グロース、戦略、セールスなど領域別に体系立てて整理
+・各スキルが相互参照し合い、「product-marketing」を基礎スキルとして他のスキルが読み込む設計になっている
+・Claude Code、Cursor、Windsurfなど複数のエージェントで使えるAgent Skills仕様に準拠し、非エンジニアのマーケターにもAI活用の入口を提供している",開発者だけでなくマーケター自身がAIエージェントに具体的なマーケティング業務を任せる際のプロンプト/知識ベースとして導入できます。自社のグロース施策の型化・自動化を進めたいチームに有用です。,MIT License,
+aipoch/open-science,TypeScript,Open Scienceは、macOS/Windows/Linuxで動くローカルファーストのAI研究ワークベンチです。Claude・OpenAIなど複数のモデル/エージェントランタイムを使い、プロジェクト管理からPython/Rノートブック実行、文献管理まで研究プロセス全体を支援します。,https://github.com/aipoch/open-science,146,"・PubMedやbioRxiv、ChEMBLなど24種類の科学データコネクタと、AlphaFold2・DiffDockを含む22の研究向けスキルを標準搭載
+・成果物の来歴(provenance)を不変バージョンとして記録し、根拠を追跡できる仕組みを持つ
+・BiomniBench-DA Public 50という科学AIベンチマークで1位を獲得しており、研究用途での実力が示されている",学術研究や創薬・バイオインフォマティクスなどで、データ取得から解析・執筆までをローカル環境かつ複数モデルで再現性高く進めたいチームに向いています。研究データを外部に出したくない機関での採用も見込めます。,Apache License 2.0,
+OpenWhispr/openwhispr,JavaScript,OpenWhisprは、WisprFlowやGranolaのようなクラウド型ディクテーションツールの無料オープンソース代替となる音声入力アプリです。ローカルのwhisper.cpp/Parakeetとクラウドモデル(BYOK)の両方に対応し、グローバルホットキーでどのアプリからでも音声入力できます。,https://github.com/OpenWhispr/openwhispr,121,"・Zoom/Teams/FaceTimeなどの会議を話者識別付きで文字起こしできるミーティング機能を搭載
+・ローカル処理とクラウド処理を選択でき、プライバシー重視のユーザーと高精度を求めるユーザーの両方に対応
+・Electron 41 + React 19 + whisper.cpp/sherpa-onnxという構成で、Mac/Windows/Linuxをカバーするクロスプラットフォーム設計",有料ディクテーションツールの月額費用やデータ送信を避けたいユーザーの代替手段になります。議事録作成やコーディング時の音声入力など、日常的なテキスト入力作業の効率化に活用できそうです。,MIT License,
+humanlayer/skills,TypeScript,HumanLayerが公開する、Claude Code向けのスキル/プラグイン集です。CLAUDE.mdの改善やReactの型定義の適正化、GitHub Actionsと連携した反復的エージェントループの構築など、開発ワークフローを支援する定型スキルをまとめています。,https://github.com/humanlayer/skills,451,"・improve-claude-md、narrow-react-prop-types、build-iterated-agentic-loop、design-control-loop、show-meという実務課題に直結した5つのスキルを提供
+・.claude-pluginとpluginsディレクトリによるプラグイン形式で配布されており、Claude Codeにそのまま組み込める
+・センサー・コントローラー・アクチュエータという制御ループの考え方をコーディングエージェント設計に応用するなど、エージェント運用のベストプラクティスを言語化している点が特徴",既存のClaude Code運用にすぐ組み込める実践的なスキル集として、CLAUDE.mdの品質改善やコードレビューの自動化に活用できます。エージェント自身にエージェントループを構築させるという発想は、他のAI開発ツールにも応用が利きそうです。,MIT License,
+The-Swarm-Corporation/AutoHedge,Python,AutoHedgeは、Director(戦略立案)、Quant(分析)、Risk Manager(リスク管理)、Execution(発注)という役割の異なる複数のAIエージェントを連携させ、市場分析からリスク管理・取引執行までを自動化する自律型ヘッジファンドのフレームワークです。,https://github.com/The-Swarm-Corporation/AutoHedge,142,"・リスク評価を取引実行前に必ず挟む「リスクファースト」設計で、無秩序な自動売買を防ぐ構成になっている
+・OpenAI/Anthropicのモデルとswarms(マルチエージェントオーケストレーション)を組み合わせ、Jupiter API経由でSolana上の取引に対応
+・各エージェントの判断をJSON構造化出力と監査ログで残し、意思決定プロセスの透明性を確保している",個人トレーダーや小規模ファンドが、AIエージェントによる分析・執行パイプラインの実験台として使えます。実運用にはリスクが伴うため、まずはペーパートレードやバックテストでの検証用途としての利用が現実的です。,MIT License,
+Stremio/stremio-web,JavaScript,Stremio Webは、映画・シリーズ・チャンネルをアドオン経由で横断的に検索・視聴できるメディアセンター「Stremio」の公式Web UIです。Reactによるフロントエンドと、Rust製でWebAssemblyにコンパイルされたstremio-coreエンジンを組み合わせた構成になっています。,https://github.com/Stremio/stremio-web,122,"・サードパーティ製アドオンによってカタログや字幕を拡張できるプラグイン的なアーキテクチャ
+・Chromecastでのキャスト再生、50以上の言語へのコミュニティ翻訳、PWAとしてインストール可能な点など実用性の高い機能を多数搭載
+・コアロジックをRust/WASMに切り出すことで、Web/デスクトップなど複数クライアント間でロジックを共有する設計になっている",複数のストリーミングアドオンを一元的に管理・視聴したいユーザーの母艦アプリとして使えます。RustコアをWebAssemblyでブラウザに載せる構成は、パフォーマンスが要求される他のメディア/フロントエンドプロジェクトの参考にもなります。,GPL-2.0 License,

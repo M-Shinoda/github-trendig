@@ -1,0 +1,67 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+omacom/omarchy,Shell,Arch Linuxをベースにした「美しく」「モダン」で「独断的(オピニオンウェイト)」なLinuxディストリビューションで、Hyprland(タイル型ウィンドウマネージャ)やNeovim、開発ツール一式をあらかじめ統合し、インストール直後から快適な開発環境を提供する。,https://github.com/omacom/omarchy,13231,"・ドットファイルやテーマ、シェルプラグインを含む「設定込み」の哲学で、セットアップの手間を極限まで削減
+・AI連携機能やスクリーンショット・録画・音声入力などのシステムユーティリティを標準搭載し、開発者体験(DX)を重視
+・Windows VMサポートやデュアルブートインストールにも対応し、開発者コミュニティで大きな注目を集めている",開発者向けの「すぐに使える」Linux環境として、新規PCセットアップやWSL代替の選択肢になり得る。既存のArch派生ディストリと比べ、強い意見(オピニオン)に基づくデフォルト構成が特徴で、好みが合えば導入コストを大幅に下げられる。,MIT License,
+semantica-agi/semantica,Python,AIエージェント向けに、説明可能かつ監査可能なナレッジグラフと意思決定基盤を構築するためのオープンソースインフラ。金融・医療・法務など高リスク領域での説明責任あるAIシステム構築を志向している。,https://github.com/semantica-agi/semantica,9973,"・「Sources→Ingest→Parse→Normalize→…→Knowledge Graph」というモジュール式パイプラインを持ち、RDFトリプルストアとラベル付きプロパティグラフの両方に対応
+・LLMに頼らないRete網・Datalog・SPARQLによる決定論的推論エンジンを備え、意思決定を出所(プロベナンス)付きで追跡可能
+・Databricks・Snowflake・SAP等の企業データ連携コネクタを標準搭載し、セルフホスト前提でベンダーロックインを回避",規制業界向けにAIエージェントの判断根拠を説明・監査する必要があるシステム構築に適する。単なる検索型RAGを超えて、因果関係の追跡や矛盾検知まで扱いたい場合の基盤として検討価値がある。,MIT License,
+anthropics/claude-plugins-community,Python,Claude CoworkとClaude Code向けのコミュニティプラグインを配布するマーケットプレイスのミラーリポジトリ。Anthropicの内部審査パイプラインでセキュリティ検証・承認されたプラグイン一覧を保持し、`.claude-plugin/marketplace.json`が毎晩自動同期される。プルリクエストでの直接投稿は受け付けておらず、専用フォームから申請する仕組みになっている。,https://github.com/anthropics/claude-plugins-community,2979,"・Anthropic公式のセキュリティスキャンを通過したプラグインのみを掲載する審査制マーケットプレイス
+・`claude plugin marketplace add`コマンドでClaude CLIから直接追加・インストール可能
+・Claude Cowork/Claude Codeの両プロダクトに対応し、プラグインエコシステム拡大の動きを象徴するリポジトリ",Claude Codeのプラグイン機構が本格化してきたことを示す象徴的なリポジトリで、社内ツールや自作プラグインを組み込みたい開発者にとって参照実装・配布先として有用。Anthropic自身がコミュニティプラグインの審査・配布基盤を公式整備した点は、今後のClaude Code拡張開発の設計指針としても注目される。,Apache License 2.0,
+tt-a1i/archify,JavaScript,コードベースや説明文をもとに、アーキテクチャ図・ワークフロー図・シーケンス図・データフロー図・ライフサイクル図を自動生成するAIエージェント向けスキル(ツール)。型付きJSON中間表現(IR)を経由し、モーション付きの自己完結型HTML/SVGとして出力する。,https://github.com/tt-a1i/archify,35312,"・Before/Delta/Afterによる差分検証機能で、コード変更前後の構成図を比較・検証できる
+・Cursor、Claude Code、Codex CLI、OpenCodeなど主要なAIコーディングエージェントの「スキル」として組み込める設計
+・PNG/SVG/WebMや1200×630のシェアカード出力に対応し、プレゼン資料としてそのまま使える点が支持されている",大規模なコードベースのオンボーディング資料や、PRレビュー時の構成変更の可視化に使えそう。Mermaidなど従来の作図ツールと異なり、実際のコード(Gitコミット)に紐づいた「事実に基づく」図を生成する点が差別化要素になっている。,MIT,
+AprilNEA/OpenLogi,Rust,Rust製のネイティブアプリで、Logitech Options+の代替となるローカルファーストなペリフェラル設定ツール。アカウント登録やテレメトリ送信なしでLogicoolのマウス・キーボード・ウェブカメラを設定できる。,https://github.com/AprilNEA/OpenLogi,10586,"・GPUIを用いた軽量ネイティブ実装で、Linux(X11/XWayland)を含むmacOS/Windowsをファーストクラスでサポート
+・ボタンへのジェスチャー割り当てや長押し/短押しの独立アクション、TOML形式の設定ファイルなど柔軟なカスタマイズ性
+・アカウント不要・プライバシー重視の姿勢がプロプライエタリなOptions+への不満を持つユーザーから支持を集めトレンド入り",LogicoolデバイスをLinuxで公式サポートされず困っていたユーザーの受け皿になる。CLIも提供されるため、dotfiles等でマウス設定をバージョン管理・自動化したい開発者にも便利。,Apache License 2.0 / MIT License(デュアルライセンス),
+volcengine/OpenViking,Python,AIエージェント向けのコンテキストデータベースで、記憶・リソース・スキルを`viking://`という仮想ファイルシステムとして統一的に管理する。ベクトルDBのブラックボックス検索ではなく、決定論的にたどれるパス構造でコンテキストを提供する。,https://github.com/volcengine/OpenViking,7539,"・L0(要約)からL2(詳細)まで段階的にコンテンツを読み込むティア型ロードで、トークン消費を34〜91%削減
+・クエリごとのディレクトリ探索の経路が保存され、誤った検索結果の原因を追跡できる「観測可能な検索」を実現
+・ユーザー記憶タスクで精度が24〜57%から80〜83%へ向上したというベンチマークを公開し、実用的なAgent Memory基盤として注目",長時間稼働するAIエージェントのセッション横断記憶やスキル管理基盤として、既存のRAG/ベクトルDB構成の置き換え・補完に使えそう。ファイルシステム的なAPIのため既存のツール開発者にも扱いやすい。,AGPL-3.0 License(一部コンポーネントはApache License 2.0),
+freestylefly/awesome-gpt-image-2,JavaScript,GPT系の画像生成AI向けに「産業グレード」のプロンプトエンジンを提供するリポジトリで、544件以上のケースをリバースエンジニアリングし再利用可能なテンプレートとして体系化している。Webギャラリーやnpmパッケージ、AIエージェント用スキルとしても配布されている。,https://github.com/freestylefly/awesome-gpt-image-2,18715,"・UI、インフォグラフィック、写真、イラストなど12カテゴリー・20種類以上の「産業グレードテンプレート」を収録し、プロンプトを構造化JSONとして再利用可能にしている
+・Claude Code/Codex/CursorなどのAIコーディングエージェント向けスキルパッケージとして配布され、エージェントワークフローに直接組み込める
+・画像生成プロンプトの暗黙知を形式知化する試みとして、プロンプトエンジニアリングコミュニティで急速に拡散",マーケティング素材やSNS投稿画像を量産したいチームが、質の高いプロンプトのひな形として活用できる。単なるプロンプト集ではなく、コード的に組み合わせ可能な構造化テンプレート集である点が、既存の「awesome-prompts」系リポジトリとの違い。,MIT License,
+TencentCloud/TencentDB-Agent-Memory,TypeScript,チーム単位でAIエージェントの経験を蓄積・共有するメモリハブ。会話・ドキュメント・コードベースとのやり取りを、Chat Memory・Skills・Wiki・CodeGraphという4種の再利用可能な資産に変換する。,https://github.com/TencentCloud/TencentDB-Agent-Memory,15189,"・L0(生の会話)からL3(長期プロファイル)まで階層化したメモリ構造で、コンテキストウィンドウを圧迫せずに知識を蓄積
+・Claude Code・CodeBuddy等の複数のエージェントフレームワークに、プラグイン改修なしで統合できる「エージェント非依存」なProxy層
+・private/team/ACL制限付きの3段階アクセス制御により、組織内での安全なナレッジ共有を実現",複数人・複数エージェントで同じプロジェクトに取り組むチームが、個々のエージェントの知見をチーム資産として蓄積・再利用する基盤に使える。名前に反してTencentDB自体との結合は薄く、単体のAgent Memoryミドルウェアとして採用しやすい。,MIT License,
+cloudflare/computer,TypeScript,Cloudflare製のDurable Object上に構築された仮想ファイルシステムで、AIエージェントに「コンピュータ」を与えることを目的としたプロジェクト。コンテナからJavaScriptまで複数の実行バックエンドを、単一の`workspace.runtime.exec()`から呼び出せる。,https://github.com/cloudflare/computer,8868,"・Container(FUSEマウント+RPC同期のデーモン)、Isolate Shell(just-bashのDynamic Worker実行)、Isolate JavaScript(Workers上でのESM実行)という3つの実行バックエンドを統一インターフェースで提供
+・状態をDurable ObjectのSQLiteに永続化し、Cloudflare Workersのサーバーレス基盤上でエージェント実行環境を構築する新しいアプローチ
+・「PREVIEW ONLY」を明言する実験的段階ながら、Cloudflareブランドの後ろ盾でAIエージェント基盤として大きな注目を集めトレンド入り",エージェントにサンドボックス化されたコード実行環境・ファイルシステムを持たせたいプロジェクトの参考実装になる。Cloudflare Workers上でエージェント実行基盤を作りたい場合の土台として、本番利用は避けつつ検証目的で試す価値がある。,MIT License,
+huangruiteng/loopx,Python,Codex・Claude Code・Cursorなど特定のエージェントハーネスに依存しない、長時間稼働するAIエージェントワークフロー向けのコントロールプレーン。ゴール状態の永続化やタスクの引き継ぎ、人間の承認ゲートなどを提供する。,https://github.com/huangruiteng/loopx,5297,"・複数セッション・複数ターンにまたがるゴール状態・TODOリスト・所有権の受け渡しを永続管理し、マルチエージェント間の透明な協調を実現
+・クォータベースのスケジューリングやエビデンス・検証履歴の保存など、危険な権限や最終判断は人間に残す「軽量な状態カーネル」という設計思想
+・Issue対応からPRマージまでの数日がかりの作業や定期監視タスクなど、長期タスクの信頼性確保という需要の高まりに応えてトレンド入り",複数のコーディングエージェントを併用しているチームが、タスクの重複作業や状態のロストを防ぐ調整レイヤーとして導入できる。人間のレビューゲートを維持しつつ長期タスクを自動化したい場合の管制塔として使えそう。,Apache License 2.0(v0.4.8以降、それ以前はMIT License),
+ayghri/i-have-adhd,Python,コーディングエージェントの冗長な回答を、要点を先頭に置いた簡潔で実行しやすい形式に矯正するためのスキル/プラグイン。ADHDフレンドリーな出力ルールを定義し、Claude・Cursor・Gemini等複数プラットフォームに導入できる。,https://github.com/ayghri/i-have-adhd,11252,"・「次に取るべき行動を先頭に書く」「箇条書きは5項目まで」「前置き・まとめの禁止」など10個の具体的ルールでLLMの出力スタイルを制御
+・Before/Afterの例で、長々とした説明が「npm install ...を実行し、src/auth.ts:42を編集」という具体的指示に変わる様子を示し、実利用イメージが分かりやすい
+・わずかな設定ファイル群のみのシンプルな構成にもかかわらず2.6万超のスター・1700超のフォークを獲得し、AIツールの「冗長さ」への不満の大きさを象徴",日々複数のコーディングエージェントを併用する開発者が、出力形式を統一して読む負荷を下げるために導入できる。他のスキルやシステムプロンプトと組み合わせて、チーム独自の「簡潔さルール」を作る参考にもなる。,MIT License,
+cactus-compute/needle,Python,Needleは、スマートフォンやウェアラブルなど極めて限られたリソースのデバイス上で動作するよう設計された、わずか14MBのファウンデーションモデルです。45Mパラメータの独自軽量アーキテクチャ(Simple Attention Network + Hadamard MLP、Grouped Query Attention)とCQ2bit量子化により、約28MBのRAMでフルセッションを実行できます。ツール呼び出しやデバイス自動化、構造化データ抽出などをオンデバイスで完結させることを目指しています。,https://github.com/cactus-compute/needle,6771,"・14MBという極小サイズながらツール呼び出しに特化した推論性能を実現し、バイト単位の文法制約付きデコーディングでJSON出力を保証
+・Grouped Query AttentionとEngram型KVメモリ、マルチレーンHyper-Connectionsなど独自の軽量アーキテクチャを採用
+・LoRAによるファインチューニングと.cact形式へのエクスポートに対応し、JAXでNVIDIA/Apple Silicon双方の学習をサポート",スマート家電やロボット、ウェアラブル端末でクラウド接続なしにエージェント機能(関数呼び出しや自動化)を実装したい開発者に有用です。オンデバイスAI・エッジコンピューティングのプロジェクトに組み込むことで、プライバシー保護とレイテンシ削減を両立できる点が魅力です。,Apache License 2.0,
+apache/maka,TypeScript,Apache Maka(Incubating)は、AIエージェントとのセッションをローカル環境に保存する「ローカルファースト」のエージェントワークスペースです。モデルとのメッセージやツール呼び出し、実行結果をappend-onlyのイベントログとして記録し、クラッシュからの復旧や再現性のあるベンチマークを可能にします。,https://github.com/apache/maka,3579,"・モデルメッセージとツール実行を全てappend-onlyのイベントログとして記録するイベントソーシング型アーキテクチャ
+・SQLiteによるローカルストレージでクラウド依存を排除し、プライバシーとオフライン動作を重視
+・Desktop(Electron+React)、CLI/TUI、評価用モードの3形態を提供し、サンドボックスによるツールアクセス制御も搭載",ローカルでAIエージェントを使った開発作業を行いつつ、操作履歴を監査・再現したい場合に適しています。クラウドにデータを送らず複数モデルを切り替えながら作業したいプライバシー重視のチームや、エージェントの挙動を評価・ベンチマークしたい研究者にも活用できそうです。,Apache License 2.0,
+THU-MAIC/OpenMAIC,TypeScript,清華大学(THU-MAIC)発の、トピックや資料をアップロードするだけでスライド・クイズ・シミュレーションなどを含む対話型授業を自動生成するマルチエージェント学習プラットフォーム。AI教師やAIクラスメートと共に学べる「没入型教室」体験を1クリックで構築できる。,https://github.com/THU-MAIC/OpenMAIC,10080,"・Next.js 16 / React 19 / LangGraphによるマルチエージェント構成で、ホワイトボード描画や音声読み上げ(TTS)、音声認識(FunASR)まで一体化
+・編集可能なPowerPoint出力やインタラクティブHTML出力、Slack/Feishu等のチャットからの授業生成にも対応
+・Three.jsによる3D可視化やブラウザ内コーディングを含む「Deep Interactiveモード」など、教育×生成AIの先進事例として注目",教員による教材作成の自動化や、企業研修・自己学習用インタラクティブコンテンツの生成に応用できそう。対話型AIと動画/スライド生成AIを組み合わせた「AI教師」プロダクトの先駆けとして、EdTech分野での実装例として参考になる。,MIT License,
+modular/modular,Mojo,Modular Platformは、AI開発・推論のための統合プラットフォームで、独自のプログラミング言語「Mojo」とAI推論フレームワーク「MAX」を含みます。Mojoコンパイラ・標準ライブラリ、MAXの高速化カーネル、OpenAI互換の推論サーバー、Pythonベースのモデルパイプラインなどで構成されています。,https://github.com/modular/modular,2923,"・Python風の構文を持ちながらネイティブコード並みの性能を目指す新言語Mojoと、AI推論最適化フレームワークMAXを一体で提供
+・OpenAI互換APIを持つ推論サーバーにより既存のAIツールチェーンとの相互運用が容易
+・Apache License 2.0 with LLVM ExceptionsとModular Community Licenseを組み合わせたライセンス構成",高速なAI推論基盤を自前で構築したい企業や、Pythonの生産性とネイティブコード並みの実行速度を両立させたい開発者に向いています。既存のPyTorch/TensorFlowエコシステムからの移行や、OpenAI互換APIを介した既存アプリとの統合もしやすい点が実用的です。,Apache License 2.0 with LLVM Exceptions,
+unclebob/swarm-forge,Clojure,SwarmForgeは、tmuxとgit worktreeを基盤とした複数AIエージェントの協調作業を統制するオーケストレーションツールです。各エージェントを独立したブランチ・ターミナルセッションで動かし、役割ごとのプロンプトとメール形式の引き継ぎプロトコルによって、衝突なく開発タスクを分担・実行させます。,https://github.com/unclebob/swarm-forge,2139,"・git worktreeとtmuxセッションによりエージェントごとの作業領域を完全に分離し、コンフリクトを防止
+・2/4/6エージェント構成の「Pack」から複数プロジェクトを横断管理する「Forge」まで、規模に応じた導入形態を用意
+・Agile/TDDの提唱者として知られるRobert C. Martin(Uncle Bob)による、規律あるAIエージェント運用という切り口が特徴",複数のAIコーディングエージェントに設計・実装・テスト・レビューといった役割を分担させ、疑似的な開発チームとして運用したい場合に向いています。既存のAIコーディングツールと組み合わせ、大規模タスクをエージェント間でパイプライン化する用途に応用できそうです。,,
+google/skills,Python,google/skillsは、Google Cloudをはじめとする各種Googleプロダクト向けの「Agent Skills」を集めたリポジトリです。BigQueryやGKE、Gemini APIなど100以上の機能別スキルが用意されており、npx skills addコマンドで必要なものだけを選んでインストールできます。,https://github.com/google/skills,3900,"・AI/ML、インフラ、データ分析、セキュリティなど多岐にわたる100以上のGoogle Cloud向けスキルを網羅
+・Claude Code、Codex、Antigravity CLIなど複数のエージェントハーネスに対応するプラグイン(Skills+MCPサーバー)形式で配布
+・Googleが公式に提供するエージェント拡張という信頼性と、企業インフラ運用への即応性が特徴",Google Cloud環境を運用するエンジニアが、AIエージェントにgcloud操作やBigQueryクエリ、監視設定などを直接実行させたい場合に有用です。Claude Codeなど既存のエージェント環境に組み込むことで、GCP関連の定型作業を自動化する足がかりになります。,Apache License 2.0,
+donnemartin/system-design-primer,Python,system-design-primerは、大規模システム設計の考え方を体系的に学べるオープンソースの学習リソースです。スケーラビリティやキャッシュ、データベースのレプリケーション/シャーディング、非同期処理などのトピックを、実際の企業事例やトレードオフの解説とともにまとめています。,https://github.com/donnemartin/system-design-primer,8361,"・ロードバランサからキャッシュ、DB分散まで、システム設計の主要トピックを網羅した構造化ドキュメント
+・Twitterのタイムラインやショートリンクサービスなど、定番のシステム設計面接問題への模範解答と図解を収録
+・Ankiフラッシュカードによる復習教材も付属し、エンジニアの面接対策として長年高い人気を維持",システム設計面接を控えたエンジニアの学習教材として定番であり、既存の設計知識を体系的に整理し直したいシニアエンジニアにも有用です。社内の設計レビューやオンボーディング資料のベースとして参照する使い方も考えられます。,Creative Commons Attribution 4.0 International,
+youssofal/MTPLX,Python,MTPLXは、Apple SiliconのMacでローカルLLMを高速に動かすためのネイティブアプリ兼CLIツールです。Qwen3.8など一部モデルが内蔵するMTP(Multi-Token Prediction)ヘッドを活用したスペキュラティブデコーディングにより、外部のドラフトモデルなしで出力品質を変えずに約2〜3倍の高速化を実現します。,https://github.com/youssofal/MTPLX,826,"・外部ドラフトモデル不要で、モデル自身のMTPヘッドと厳密な棄却サンプリングを用いた投機的デコーディングを実装
+・トークン/秒や採択率を可視化するダッシュボードや、ハードウェアに合わせて最適なドラフト深度を自動調整する機能を搭載
+・OpenAI/Anthropic互換APIをlocalhost:8000で提供し、既存のエージェント/RAGツールからそのまま利用可能",M1以降のMacでQwenやGemmaなどのモデルをクラウド無しで高速に動かしたい開発者や、コーディングエージェントのローカル推論バックエンドとして利用したい場合に向いています。既存のOpenAI/Anthropic API互換ツールをそのままローカル環境に接続できる点が実用面での強みです。,Apache License 2.0,
+firecrawl/pdf-inspector,Rust,PDFの種類(テキストベース・スキャン・画像・混在)を高速に判定し、位置情報を保持したままテキスト抽出やMarkdown変換を行うRust製ライブラリ。OCRが必要なページだけを選択的に処理できるよう設計されている。,https://github.com/firecrawl/pdf-inspector,13052,"・コンテンツストリームのサンプリングにより10〜50ミリ秒という短時間でPDFタイプを分類し、ページ単位でOCRの要否を判定
+・フォント情報やX/Y座標を保持した位置認識型のテキスト抽出と、見出し・リスト・表・強調などを自動認識するMarkdown変換
+・Rustコアに加えPython、Node.js、WebAssembly、CLIなど幅広い言語バインディングを提供し、既存パーサーとのベンチマークでも高いスコアを公開",Firecrawlのようなドキュメント処理・RAGパイプラインにおいて、不要なOCR処理を避けてコストと速度を最適化する前処理層として組み込めそう。PDF処理はAI/RAG分野で継続的に需要が高く、ベンチマークを伴う具体的な性能訴求がトレンド入りの後押しになったと考えられる。,MIT License,
+pingdotgg/t3code,TypeScript,t3codeは、Claude CodeやCodex、Cursorなど複数のAIコーディングエージェントをスマートフォンやWebブラウザ、デスクトップアプリから遠隔操作できる「エージェントハーネス制御盤」です。T3 Stackで知られるpingdotgg(Theo)らによって開発されています。,https://github.com/pingdotgg/t3code,5326,"・Claude Code、Codex、Cursor、Grok Build、OpenCodeなど複数のエージェントに対応するマルチプロバイダ設計
+・iOS/Android/Web/Electronデスクトップの4クライアントから同一のエージェントセッションにアクセス可能なリモート対応アーキテクチャ
+・TypeScript・Vite・pnpmワークスペースによるモノレポ構成で、フォークして自由にカスタマイズできる設計方針",自宅や職場のPCで動かしているAIコーディングエージェントを外出先のスマホから確認・指示したい開発者に向いています。複数のエージェントツールを併用しているチームが、操作画面を一本化する目的で導入することも考えられます。,MIT License,
+3b1b/manim,Python,Manimは、3Blue1Brownの動画制作者Grant Sandersonが開発した、数学解説動画向けのアニメーションエンジンです。Pythonコードで図形やグラフ、数式の変化を精密に記述・アニメーション化でき、教育コンテンツ制作に広く使われています。,https://github.com/3b1b/manim,3870,"・数式・グラフ・幾何図形をプログラムで厳密に制御しながらアニメーション化できる、教育動画特化の設計
+・OpenGLによるリアルタイムプレビューとコマンドラインでのバッチレンダリングの両方に対応
+・3Blue1Brownチャンネルでの実績を背景に、コミュニティ版ManimCEとともに教育系動画制作の事実上の標準となっている",数学・物理・機械学習などの解説動画を作りたい教育者やYouTuberにとって、既製のアニメーションソフトでは表現しづらい数式主導のビジュアルを実現する強力な選択肢になります。講義資料やオンライン教材の図解を動的に生成する用途にも応用できます。,MIT License,

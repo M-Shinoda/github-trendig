@@ -1,0 +1,46 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+modular/modular,Mojo,AI開発・推論基盤を統合する「Modular Platform」のリポジトリで、独自言語Mojoのコンパイラ・標準ライブラリと、推論最適化ライブラリ・OpenAI互換の推論サーバーを含むMAXフレームワークから構成される。,https://github.com/modular/modular,2285,"・Mojoコンパイラ(KGEN)と標準ライブラリ、MAXのアクセラレータライブラリ・モデルパイプライン・推論サーバーを1リポジトリに統合
+・Pythonライクな構文で書けるMojo言語により、高性能なAI/MLカーネルとホスト言語の生産性を両立
+・29.1k star・3.1k forkと活発なコミュニティを持ち、標準ライブラリやカーネル、モデルアーキテクチャへの外部コントリビューションを受け入れる開発体制",PyTorchやTensorFlowに代わる次世代AI推論基盤の検討材料として、また高速なカスタムカーネルをMojoで書きたいエンジニアの学習・実験環境として利用できる。MAX推論サーバーはOpenAI互換APIを提供するため、既存のLLMアプリケーションの推論バックエンドを置き換える選択肢にもなる。,Apache License 2.0 with LLVM Exceptions,
+harry0703/MoneyPrinterTurbo,Python,トピックやキーワードを入力するだけで、台本生成・素材収集・字幕作成・音声合成・動画合成までをAIが自動で行い、HD画質のショート動画を生成するツール。AIエージェント・WebUI・REST API・CLIの4通りの利用方法を提供する。,https://github.com/harry0703/MoneyPrinterTurbo,10647,"・Kimi、OpenAI、Claude、DeepSeek、Geminiなど多数のLLMプロバイダーに対応し、台本生成の柔軟性が高い
+・Edge TTS、Azure Speech、ElevenLabsなど複数の音声合成エンジンとPexels/Pixabayの素材、WaveSpeed AIのSeedanceによるAI動画生成にも対応
+・9:16(縦型)・16:9(横型)双方のフォーマットに対応し、TikTok・Instagram・YouTube Shortsへの直接投稿機能も備える",SNS向けショート動画の量産や、個人クリエイター・マーケティング担当者の動画制作の自動化に活用できる。多言語対応やLLM切り替えの柔軟性があるため、既存の動画編集ワークフローに組み込んで台本〜投稿までを一気通貫で自動化する用途に向いている。,MIT License,
+AprilNEA/OpenLogi,Rust,Logitech Options+のネイティブかつローカルファーストな代替アプリで、Rustで実装されている。アカウント登録やテレメトリなしに、マウス・キーボード・ウェブカメラの設定(ボタン割り当て、DPI、SmartShiftなど)を行える。,https://github.com/AprilNEA/OpenLogi,7019,"・HID++プロトコルとUVC規格を用いてデバイスに直接アクセスし、GPUIによるネイティブGUIを実現
+・アプリケーションごとに自動切り替わるプロファイルオーバーレイ、Actions Ringオーバーレイ、ジェスチャー割り当てなど純正ソフト以上に踏み込んだカスタマイズ機能
+・Logitechの公式ソフトを避けたいLinuxユーザー等にとって長年望まれていたクロスプラットフォーム(macOS/Linux/Windows)対応である点が話題に",LogitechデバイスをLinux環境で使う開発者やプライバシーを重視するユーザーにとって、公式Options+の代替として直接使える実用ツール。Rust製のHIDデバイスドライバ実装の参考例としても有用。,Apache License 2.0 / MIT License(デュアルライセンス),
+basecamp/omarchy,Shell,37signals(Basecamp)のDHHが開発した、Arch LinuxとHyprland(Wayland)をベースにしたモダンで美しいデスクトップ環境ディストリビューションです。ターミナル、Neovim、AI連携ツールなど開発者向けの構成があらかじめ最適化された状態で提供されます。,https://github.com/basecamp/omarchy,3934,"・「Beautiful, Modern & Opinionated」を掲げ、開発者体験を重視したテーマやホットキー、クリップボード履歴などの作り込まれたUI/UXがトレンド入りの理由
+・Ruby on Railsの作者としても知られるDHHによるプロジェクトであることが大きな話題性を生んでいる
+・デュアルブートや無人インストール、独自テーマシステムなど実運用を意識した51章にわたる詳細マニュアルを備える",新しい開発マシンをゼロから一貫した美しい環境で立ち上げたい開発者に向いており、dotfilesの管理コストを下げたい人にも参考になります。既存のArch Linux + Hyprland構成の後継・代替として乗り換えを検討する層に人気が出そうです。,MIT License,
+volcengine/OpenViking,Python,AIエージェントの記憶・知識RAG・スキルを「viking://」プロトコルによる仮想ファイルシステムとして統合管理する、自己進化型のコンテキストデータベース。ベクトル検索に依存せず、ディレクトリ探索によって決定論的にコンテキストを取得する設計が特徴。,https://github.com/volcengine/OpenViking,4048,"・コンテンツをL0(要約)・L1(概要)・L2(詳細)の3階層に分けて必要な分だけ読み込むことで、入力トークンを34〜91%削減
+・検索の過程(ディレクトリ探索の軌跡)を保存・可視化でき、なぜその結果が返されたのかをデバッグできる「観測可能な検索」を実現
+・Volcengine(ByteDance)が開発し、Claude Code・Cursorなど主要エージェントとの統合やベンチマークでユーザー記憶精度を24〜57%から80〜83%に改善したと報告",長期記憶やRAGを必要とするAIエージェント開発において、従来のベクトルDBの代替・補完として導入できる。特にトークンコストの削減とデバッグ性を重視するプロダクションのエージェント基盤に適しており、社内ナレッジベースとエージェントスキルを一元管理する用途にも応用できそうだ。,AGPLv3(本体)、Apache 2.0(CLI・サンプルコード),
+anthropics/claude-plugins-community,Python,Claude CoworkおよびClaude Code向けコミュニティプラグインマーケットプレイスの公式リードオンリーミラーリポジトリ。Anthropicのセキュリティレビューを通過したプラグインの一覧を`.claude-plugin/marketplace.json`として管理・配信する。,https://github.com/anthropics/claude-plugins-community,877,"・Anthropic内部のレビューパイプラインから毎晩同期され、直接のPRは自動クローズされるなどガバナンスが徹底されている
+・`claude plugin marketplace add`/`claude plugin install`コマンドで簡単に導入できるプラグイン配信の公式チャネル
+・Claude Cowork/Claude Codeの両プラットフォームに対応し、コミュニティ発の拡張機能を安全に流通させる仕組み",Claude Codeのエコシステムが拡大する中で、サードパーティ製プラグインを安全に見つけ・導入するための事実上の公式レジストリとして機能する。自作プラグインを公開したい開発者は提出ポータル(clau.de/plugin-directory-submission)経由の申請フローを理解しておく必要がある。,Apache License 2.0,
+cordiverse/cordis,TypeScript,「時空間合成可能性(Spatiotemporal Composability)」という独自の設計思想に基づくTypeScript製のメタフレームワークで、学術論文でも裏付けられたプラグインアーキテクチャとエフェクトシステムを提供する。,https://github.com/cordiverse/cordis,1972,"・Yarnによるmonorepo構成で複数パッケージを管理し、Vitest・NYCによるテストカバレッジ、ESLintによる品質管理など整備された開発基盤を持つ
+・プラグインの依存関係やライフサイクルを時間軸・空間軸の両面で合成可能に扱うという学術的裏付けのある設計思想が特徴
+・7.5k star・433 forkを持ち、550以上のコミットで継続的に開発されているコミュニティ",Koishiなどのチャットボットフレームワークの基盤技術としても使われており、プラグイン同士の依存管理やホットリロードが求められるBotフレームワークやモジュラーなサーバーサイドアプリケーションの設計に応用できる。学術的なアプローチに基づくアーキテクチャのため、大規模プラグインシステムの設計を学ぶ教材としても興味深い。,MIT License,
+public-apis/public-apis,Python,無料で利用できるWeb APIを分野別に整理してまとめた、開発者向けのキュレーションリスト。天気、金融、エンターテインメントなど幅広いカテゴリのAPIをREADME上で一覧できる。,https://github.com/public-apis/public-apis,7069,"・470,000近いstar、51,800以上のforkを持ち、GitHub全体でも屈指の人気を誇るリファレンスリポジトリ
+・コントリビューションガイドラインと自動チェックスクリプトを整備し、5,000件超のコミットと1,700件超のPRで継続的にAPI情報を更新
+・カテゴリ別に整理されているため、プロトタイピングやハッカソンでのAPI探しに即座に活用できる",新規サービスやプロトタイプ開発時に外部データを組み込みたい場合の第一の参照先として使える。API選定の初期リサーチや学習用のサンプルデータソース探しにも便利で、定番のリファレンスとして長期間トレンド入りし続けている点が特徴的。,MIT License,
+akitaonrails/ai-memory,Rust,Claude Code・Codex・OpenCodeなど複数のAIコーディングエージェント間で長期記憶を共有し、途中で別のエージェントに引き継いでも文脈や過去の意思決定を再説明せずに作業を再開できるようにするRust製ツール。,https://github.com/akitaonrails/ai-memory,2520,"・Gitで管理するMarkdownベースのwikiを信頼できる情報源とし、SQLiteインデックスと組み合わせて1つのRustバイナリでMCP/HTTPサーバーを提供する軽量アーキテクチャ
+・プロンプトやツール呼び出し、セッション境界からライフサイクルフックで自動的に(サイズ上限付きで)観測情報を収集する「ゼロフリクション」な記録方式
+・FTS5全文検索・エンティティマッチング・グラフ近傍探索・ベクトル類似度などを組み合わせた検索により、セッション終了時に次のエージェントへ渡すハンドオフ用サマリーを生成",複数のAIコーディングツールを併用する開発者にとって、ベンダーロックインを避けつつプロジェクトの文脈を継続させる基盤として活用できる。特にチームで異なるエージェントを使い分ける現場や、長期プロジェクトでの意思決定履歴の保持に役立ちそうだ。,MIT License,
+jundot/omlx,Python,Apple SiliconのMac向けに最適化されたLLM推論サーバーで、連続バッチ処理(continuous batching)とRAM/SSDの階層型KVキャッシュにより効率的な推論を実現し、macOSのメニューバーからサーバー管理ができるネイティブアプリを備える。,https://github.com/jundot/omlx,1689,"・MLXのBatchGeneratorを用いた継続的バッチ処理と、ホット(メモリ)/コールド(SSD)の2層KVキャッシュ、プレフィックス共有・Copy-on-Writeによる効率化
+・テキストLLMに加え、視覚言語モデル(マルチ画像対応)、埋め込み、リランキングモデルまで幅広くサポートし、OpenAI/Anthropic互換APIを提供
+・SwiftUI製のネイティブmacOSアプリでメモリ使用状況に応じた自動モデルスワップやベンチマーク、MCP連携によるツール利用が可能",Apple Silicon Mac上でローカルLLMを日常的に運用したい開発者にとって、Ollamaやlm-studioの代替となりうる。特にVSCode拡張やClaude Code、Copilotとの統合が容易な点から、ローカル完結の開発支援環境を構築したいユーザーに適している。,Apache License 2.0,
+apache/maka,TypeScript,Apache Software Foundationのインキュベータープロジェクトとして開発される、ローカルファーストのAIエージェントワークスペース。モデルとのやり取り、ツール呼び出し、実行結果などをイミュータブルなログとしてローカルに記録する。,https://github.com/apache/maka,1313,"・Desktop(Electron+React)、TUI、CLI、評価フレームワークなど複数のインターフェースを備えたSpineアーキテクチャ
+・セッション・設定・実行記録がデフォルトでローカルに保存され、モデルへのアクセスはユーザー自身のAPIキーやローカルモデルで行うプライバシー重視の設計
+・Read/Write/Edit/Bash/Glob/Grepなどの組み込みツールに加えComputer Use等のオプション機能を持ち、ASF傘下のインキュベーション案件として企業からの信頼を得やすい",Claude Code等のAIコーディングエージェントと同様のワークスペースを、ASFのガバナンス下でベンダーニュートラルに使いたい組織に向く。監査ログが残る点は企業導入時のコンプライアンス要件との相性が良い。,Apache License 2.0,
+liustack/modlens,TypeScript,DeepSeek Harnessなどのテキスト専用コーディングモデルに「視覚」を与えるプラグインで、チャットに画像を貼り付けるだけでOCRテキスト・レイアウト・意味的関係を含む構造化JSONエビデンスに変換し、テキストのみのモデルでも画像内容を理解できるようにする。,https://github.com/liustack/modlens,809,"・Gemini、OpenAI互換、Anthropic、Claude CLI、Kimi CLIなど6つの組み込みAPIプロバイダーと4つのローカルエージェントCLIログインを組み合わせた計10種類のフェイルオーバーチェーンで可用性を確保
+・フックやラッパー、ローカルプロキシデーモンを必要とせず、プラグインフォルダ1つを配置するだけで導入・削除できる軽量設計
+・画像パスを渡す手間なくチャットに直接貼り付けるだけで利用でき、複数のAPIキーをローテーションしてレート制限や認証エラーに対応",DeepSeekやGLMなどテキスト専用モデルをコーディングエージェントとして使いつつ、UIスクリーンショットのデバッグやデザインレビューなど画像を伴う作業を行いたい開発者に有用。既存のClaude CodeやOpenCodeの認証情報をそのまま流用できるため、追加コストをかけずにマルチモーダル機能を後付けしたいチームに向いている。,MIT License,
+eneskirca/nodeterm,TypeScript,AIコーディングエージェント向けのノードベース端末マネージャー。tmuxベースの複数ターミナルを無限パン・ズームキャンバス上にドラッグ可能なノードとして配置し、Claude Code・Copilot・Gemini・Grokなど複数のAIエージェントセッションを並行して管理できる。Electron製デスクトップアプリに加え、ブラウザ版サーバーエディションやiOS用コンパニオンアプリも提供する。,https://github.com/eneskirca/nodeterm,529,"・CorePlatformという抽象化層でElectron/ブラウザ/iOSが同一のコアロジックを共有するアーキテクチャ
+・エージェントの状態をRUNNING/NEEDS YOUなどのバッジでリアルタイム表示し、サブエージェントの実行状況もカード上に可視化
+・Git連携(ステージ/ブランチ切替/worktree)やGitHub Issue連携のカンバンボード、オンデバイスWhisper音声入力など周辺機能が充実",複数のAIエージェントを同時並行で走らせる開発者にとって、タブの奥に隠れがちなターミナルを空間的に整理できる点が実用的である。リモートSSHプロジェクトやセッション永続化にも対応しており、チームでの並列エージェント開発ワークフローに組み込みやすい。,Business Source License 1.1,
+Tencent/AI-Infra-Guard,Python,TencentのZhuque Labが開発するフルスタックのAIレッドチーミングプラットフォーム。AIエージェント、スキル、MCPサーバー、AIインフラの脆弱性、LLMのジェイルブレイク耐性などを横断的にスキャンし、AIエコシステム全体のセキュリティを評価する。,https://github.com/Tencent/AI-Infra-Guard,1212,"・Ollama、ComfyUI、vLLM、n8n、Tritonなど100以上のAIフレームワークにまたがる2,000件超のCVEを検出可能
+・Agent Scan/Skills Scan/MCP Scanなどモジュール式プラグインアーキテクチャで、Dify・Cozeなどエージェントプラットフォームも評価対象に含む
+・SkillTrustBenchでF1スコア最大0.9848を達成するなど、LLMベースのスキル/MCPリスク検知精度を定量的に公開",社内でAIエージェントやMCPサーバーを本番導入する前のセキュリティ監査ツールとして活用できる。REST API・CLI・Web UIを備えるため、CI/CDパイプラインに組み込んだ継続的なAIインフラ脆弱性スキャンにも応用できそうである。,Apache License 2.0,
+cursor/plugins,TypeScript,AIコードエディタ「Cursor」の公式プラグイン仕様と公式プラグイン集を収めたリポジトリ。marketplace.jsonによるカタログと各プラグインのplugin.jsonマニフェストで構成される、Cursorエージェント向け拡張機能マーケットプレイスの中核となる。,https://github.com/cursor/plugins,1832,"・各プラグインがSKILL.md(スキル)、.mdcルール、MCPサーバー定義を持つ標準化されたディレクトリ構造
+・Gmail・Google Drive・GitHub・Salesforce・HubSpot・Zoomなど外部SaaS連携から、PRレビュー・ドキュメント生成・並列クラウドエージェント編成まで幅広いプラグインを公式提供
+・5,000以上のスター・400超のフォークを獲得し、45件のPRと236件のコミットでコミュニティ開発も活発",Cursorを使う開発チームが自前のMCPサーバーやスキルをこの仕様に沿って作成すれば、公式マーケットプレイスと同じ形式でエージェント拡張を配布・共有できる。既存のPRレビューや学習支援プラグインをテンプレートとして、自社ワークフロー向けプラグインを開発する足掛かりにもなりそうだ。,MIT License,
