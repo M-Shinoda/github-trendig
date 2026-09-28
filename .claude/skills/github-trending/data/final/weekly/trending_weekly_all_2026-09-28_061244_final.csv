@@ -1,0 +1,55 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+anthropics/financial-services,Python,投資銀行業務、株式調査、プライベートエクイティ、資産運用向けのAIエージェント・スキル・データコネクタを提供するAnthropic製リファレンス実装。Claude Cowork pluginとしても、Claude Managed Agents APIデプロイとしても同じソースから利用できる。,https://github.com/anthropics/financial-services,2606,"ピッチデック生成、決算更新、GL照合、KYCスクリーニングなど業務別の名前付きエージェントを多数収録
+Daloopa、FactSet、Moody's、PitchBookなど11以上の金融データプロバイダーとのMCPコネクタを同梱
+Markdown/YAMLベースでビルド不要、check.pyによるマニフェスト整合性検証など運用面の配慮あり。出力はあくまで人間レビュー前提のドラフトと明記",金融機関がClaudeを使った業務自動化を検討する際の出発点・テンプレートとして直接利用できる。財務モデリングやコンプライアンス業務を扱う社内ツール開発の参考実装としても有用で、既存のFactSetやPitchBookなどのデータ基盤と組み合わせやすい設計になっている。,Apache License 2.0,
+paperclipai/paperclip,TypeScript,Paperclipは、複数のAIエージェント(Claude Code、Codex、OpenClawなど)をチームとして編成し、実際の業務を遂行させるためのNode.jsサーバーとReact UIから成るオープンソースのオーケストレーションプラットフォームである。チケット管理、組織図、予算管理などの機能を通じて、AIエージェントの集団を「会社」のように運営することを目指す。,https://github.com/paperclipai/paperclip,7364,"複数の異なるAIエージェント(OpenClaw、Claude Code、Codexなど)を横断的に統括できるマルチエージェント管理基盤である点
+トークン・コストの予算管理やガバナンス(承認フロー、監査ログ)など、企業運用を意識した設計が注目点
+「個々のエージェントを作る」のではなく「エージェント集団を経営する」という新しい切り口がトレンド入りの背景",社内で複数のコーディングエージェントを並行運用しているチームが、タスク配分や予算超過の監視を一元化する基盤として活用できそうである。AutoGenやCrewAIなどのマルチエージェントフレームワークと比較すると、開発寄りではなく組織運営・ガバナンス寄りの設計思想が特徴である。,MIT License,
+vectorize-io/hindsight,Python,Hindsightは、AIエージェントが会話履歴を単に記憶するのではなく、時間をかけて「学習」していくためのエージェントメモリシステムである。世界の事実・経験・観察・メンタルモデルといった生体模倣的なデータ構造でメモリを整理し、retain(記憶)・recall(想起)・reflect(内省)という3つの操作を提供する。,https://github.com/vectorize-io/hindsight,11089,"RAGやナレッジグラフの弱点を克服することを掲げ、長期記憶タスクで高い性能を狙う設計
+25以上のLLMプロバイダーに対応し、Python/Node.js/Go/CLIの各種SDKと60以上の統合を備える実用志向の充実度
+PostgreSQLやOracle AI Databaseをバックエンドに選べ、Docker/ベアメタル/Kubernetes/マネージドクラウドと多様なデプロイ形態をサポートする点",長期間にわたって文脈を保持し続ける必要があるカスタマーサポートAIやパーソナルアシスタントの記憶基盤として使えそうである。既存のRAGベースのメモリ管理と置き換える形で導入することで、単純な検索ではなく学習的な振る舞いを実現できる可能性がある。,MIT License,
+cloudflare/security-audit-skill,JavaScript,コーディングエージェントを多段階のセキュリティ監査担当者に変える「スキル」。独立検証済みで機械可読な脆弱性の発見結果を生成する6フェーズの監査ワークフローを提供する。,https://github.com/cloudflare/security-audit-skill,4805,"偵察→カバレッジ主導の脆弱性探索→候補の独立検証→構造化出力→記録検証→報告という6段階のプロセスで、発見と検証を分離した敵対的検証設計
+メモリ安全性、クラウドインフラ、認証、クライアントサイドなど複数の専門ハンティングドメインに対応
+ゼロ依存のバリデータで発見結果とカバレッジ台帳を検証し、実行間で知見を蓄積できる",Claude CodeなどのエージェントにこのスキルをインストールすることでCI/CDや定期監査にセキュリティレビューを組み込める。既存のSASTツールと組み合わせ、誤検知を減らすための独立検証レイヤーとして活用できそう。,MIT License,
+Tencent/WeKnora,Go,生の文書群を検索可能なナレッジシステムに変換するオープンソースのLLM知識基盤。ハイブリッド検索を用いたRAG、複数ステップ推論を行う自律エージェント、自己更新型Wikiの3機能を1つのプラットフォームで提供する。,https://github.com/Tencent/WeKnora,2705,"マルチモーダル文書解析と出典付き回答生成によるRAG、Docker/E2Bサンドボックス対応のエージェント、ナレッジグラフ連携の自動Wiki生成という3層構造
+27種類のLLMベンダーや複数のベクトルDBバックエンドに対応し、WeChat・Slack・Feishuなど複数IMプラットフォームと統合可能
+Docker Compose・Kubernetes・単一バイナリなど多様なデプロイ形態、ワークスペースRBACやLangfuseによる可観測性など、エンタープライズ運用を意識した機能を備える",社内文書やドキュメントを対象にしたRAGチャットボット構築や、社内Wikiの自動整備ツールとして活用できそう。既存のRAG基盤と競合するが、Wiki自動生成とエージェント機能を統合している点が差別化ポイント。,MIT License,
+davila7/claude-code-templates,Python,Claude Code向けにすぐ使えるエージェント、カスタムコマンド、設定、フック、MCP連携、プロジェクトテンプレートをまとめたコレクション兼CLIツール。設定・監視を一括で行える。,https://github.com/davila7/claude-code-templates,1154,"100以上のコンポーネント(エージェント、スラッシュコマンド、MCP、設定、フック、スキル)を収録し、aitmpl.comのWebインターフェースからも閲覧・インストール可能
+分析ダッシュボードや会話モニター、ヘルスチェック、プラグイン管理といった開発者向けツールを内蔵
+GitHub、PostgreSQL、Stripe、AWS、OpenAIなど外部サービスとの統合テンプレートを多数提供",Claude Codeを使い始めるチームがベストプラクティスや設定例を素早く取り込むための出発点として便利。既存のプロジェクトにセキュリティ監査やパフォーマンス最適化用のエージェントをそのまま追加でき、Claude Codeエコシステムのデファクトなテンプレート集として定着しつつある。,MIT License,
+stablyai/orca,TypeScript,複数のコーディングエージェントを並列に動かして比較・管理するための「ADE(Agentic Development Environment)」。Claude Code、Codex、OpenCodeなど複数エージェントを独立したgit worktree上で同時実行できる。,https://github.com/stablyai/orca,6227,"複数エージェントを並列worktreeで走らせ、出力を比較できる設計に加え、モバイルアプリからエージェントを監視・指示可能
+WebGLレンダリングのターミナル分割、UI要素をクリックしてコンテキストを送れるDesign Mode、組み込みChromiumブラウザなどリッチなUXを提供
+GitHubやLinearとのネイティブ連携、SSH worktreeによるリモート実行、スクリプト用のOrca CLIなど開発ワークフロー全体をカバー",複数のAIコーディングエージェントを比較検証しながら開発したいチームに向いており、自分のサブスクリプションで任意のエージェントを実行できる点が既存のエージェント管理ツールとの差別化点。,MIT License,
+vercel/next.js,JavaScript,Reactを拡張してフルスタックWebアプリケーションを構築できるフレームワーク。Rust製ツールチェーンを統合することでビルドの高速化を図っている。,https://github.com/vercel/next.js,496,"最新のReact機能を拡張しつつ、Rustベースの高速ビルドツールを統合している点
+世界中の大企業に採用される実績あるフレームワークで、豊富なドキュメントとコミュニティ(GitHub Discussions, Discord)を持つ
+フロントエンドからバックエンドまでを一体で扱えるフルスタック指向の設計",Webアプリケーション開発のデファクトスタンダードとして、新規プロジェクトの土台にそのまま採用できる。既に広く使われているため新規性より継続的なアップデート(Rustツールチェーン強化など)がトレンド入りの理由と考えられる。,MIT License,
+HKUDS/CLI-Anything,Python,あらゆるソフトウェア(デスクトップアプリ、Webサービス、コードベース)をAIエージェントが操作可能なCLIに自動変換するフレームワークです。ソースコードやドキュメントを解析し、コマンド設計・Click製CLIの実装・テスト生成・ドキュメント生成・パッケージ公開までを7段階の自動パイプラインで行います。,https://github.com/HKUDS/CLI-Anything,1105,"80以上の生成済みCLIを管理できる「CLI-Hub」パッケージマネージャを搭載
+30以上のアプリケーションに対し2,461件超のテストで100%パス実績があり実用性が高い
+Claude Code、Cursor、Codexなど主要AIエージェントとの連携やSKILL.md自動生成に対応し、エージェント時代のソフトウェア標準化を狙う設計思想がトレンド入りの要因",既存のGUI専用ソフトウェアをAIエージェント経由で自動操作したいプロジェクトとの親和性が高く、業務自動化やノーコードエージェント基盤の構築に応用できそうです。,Apache License 2.0,
+pytorch/pytorch,Python,GPUアクセラレーションに対応したテンソル計算と動的ニューラルネットワーク構築を可能にするPythonの機械学習フレームワークです。NumPyライクなテンソル演算をGPU上で実行でき、リバースモード自動微分による柔軟なネットワーク定義・研究開発から本番運用まで広く使われています。,https://github.com/pytorch/pytorch,320,"NVIDIA CUDA、AMD ROCm、Intel GPUなど複数のGPUプラットフォームに対応
+動的計算グラフによりネットワーク構造を実行時に変更できる高い柔軟性
+機械学習分野で最も広く採用されているフレームワークの一つであり、継続的な開発活動とエコシステムの大きさが常時トレンド入りする理由",深層学習モデルの研究・プロトタイピングから本番デプロイまで一貫して利用でき、既存の多くのAI/MLプロジェクトの基盤ライブラリとして採用できます。,BSD-style license,
+anthropics/claude-code,TypeScript,ターミナル上で動作するエージェント型コーディングツールで、自然言語でコードベースを理解し、コーディング作業を高速化します。ルーチン的なコーディングタスクの自動実行、複雑なコードの説明、Gitワークフローの操作などを自然言語で行える点が特徴です。,https://github.com/anthropics/claude-code,1493,"ターミナル、IDE、GitHub(@claudeメンション)と統合できるエージェント型ツール
+カスタムコマンドを追加できるプラグイン機構を搭載
+Anthropic製の公式コーディングエージェントとして開発者コミュニティで急速に採用が広がっている",日常の開発ワークフローに組み込むことで、コードレビューやリファクタリング、Git操作などを自然言語で効率化できます。,,
+affaan-m/ECC,JavaScript,Claude Codeなどのコーディングエージェント向けに、計画・テスト駆動開発・コードレビュー・セキュリティスキャン・継続学習を体系化した「エージェントハーネスOS」です。68種の専門エージェント、292のスキル、94のコマンドシムなどを備え、モデルのコンテキストウィンドウを節約しつつ知識や検証機構を外部に永続化する設計思想を持ちます。,https://github.com/affaan-m/ECC,5175,"68エージェント/292スキル/94コマンドという大規模な構成でエンジニアリングワークフローを網羅
+セキュリティスキャン機構「AgentShield」やメモリ保管庫(Memory Vault)による永続的な学習・共有機能
+Cursor、OpenCode、Codex、Kimiなど複数のコーディングプラットフォームに対応するアダプタ設計",既存のAIコーディングエージェント運用にTDDやコードレビューなどの規律あるプロセスを付加したいチームに有用です。,MIT License,
+rohitg00/ai-engineering-from-scratch,Python,「AI Engineering from Scratch」は、数学の基礎からプロダクション運用までを網羅する、523レッスン・20フェーズ・約342時間規模のオープンソースAI学習カリキュラムである。Python、TypeScript、Rust、Juliaなど複数言語を用い、理論からゼロ実装、実務フレームワークまで段階的に学べる構成になっている。,https://github.com/rohitg00/ai-engineering-from-scratch,3850,"各レッスンが実際に使えるプロンプト・スキル・エージェント・MCPサーバーといった成果物を生み出す実践重視の設計
+数学基礎から古典的ML、深層学習、LLM、エージェント工学、プロダクション基盤までを一気通貫でカバーする網羅性
+初学者からML実践者、LLMエンジニア、エージェント開発者まで複数の学習パスを用意している点",独学でAIエンジニアリングを体系的に学びたい個人や、社内研修用のカリキュラムを整備したいチームの教材として活用できそうである。既存の単発チュートリアルと異なり、ゼロ実装から本番運用までを一貫してカバーする点が学習の質を高める要素になり得る。,MIT License,
+alibaba/open-code-review,Go,Alibaba社内のコードレビューシステムを起源とするAI搭載コードレビューCLIツールです。決定論的なエンジニアリングパイプラインとLLMエージェントを組み合わせたハイブリッドアーキテクチャで、Gitの差分を解析し行単位の精密なレビューコメントを生成します。,https://github.com/alibaba/open-code-review,3727,"NPEやスレッドセーフティ、XSS、SQLインジェクションなど組み込みルールセットによる多言語対応のセキュリティチェック
+決定論的なファイル選定・バンドリングにより変更漏れのない網羅的レビューを実現
+Claude CodeやCursorなど既存AIコーディング基盤への委任モードを備え、アリババの大規模運用実績を持つ",既存のCI/CDパイプラインに組み込んでプルリクエストの自動レビューを行う用途に適しています。,Apache-2.0,
+cloudflare/quiche,Rust,IETF仕様に準拠したQUICトランスポートプロトコルおよびHTTP/3のRust実装です。QUICパケットの処理と接続状態管理のための低レベルAPIを提供し、I/Oやイベントループはアプリケーション側で扱う設計になっています。,https://github.com/cloudflare/quiche,521,"CloudflareのエッジネットワークにおけるHTTP/3サポートの中核として実運用されている
+AndroidのDNSリゾルバでのDNS over HTTP/3や、curlへのHTTP/3統合にも採用
+C/C++向けFFIバインディングやAndroid/iOS対応など、幅広いプラットフォームでの実用性の高さがトレンド入りの背景",高速・低遅延な通信を必要とするネットワークプロダクト(CDN、DNSリゾルバ、HTTPクライアント/サーバー)にQUIC/HTTP3層として組み込める点が特徴です。,BSD-2-Clause license,
+TencentCloud/Octop,Python,家庭や小規模チーム向けのセルフホスト型AIアシスタントプラットフォームです。単一プロセスでWebダッシュボード、CLI、チャットボット連携、cron自動化を提供し、データはすべて自分のサーバー(~/.octop/)にローカル保存されます(デフォルトはSQLite、PostgreSQLもオプション対応)。,https://github.com/TencentCloud/Octop,869,"16種類のMBTIテンプレートによる個性を持つ複数のAIエージェントをマルチユーザーで作成・共有可能
+Feishu、DingTalk、WeChat、Discord、Telegramなど多数のIMプラットフォームと連携
+ブラウザ自動化やリモートデスクトップ操作、ナレッジベース検索など機能が幅広く、Tencent Cloudによる開発でエンタープライズ導入の期待が高い",プライバシー重視でクラウドに依存しないAIアシスタントを構築したい個人・小規模チームに適しています。,MIT License,
+anthropics/knowledge-work-plugins,Python,Claude Cowork(およびClaude Code)向けに、特定の職種・チーム・企業に特化したスキル・コネクタ・スラッシュコマンド・サブエージェントをまとめたプラグイン集。営業、カスタマーサポート、プロダクト管理、マーケティング、法務、財務、データ分析など11種類の業務別プラグインを提供し、Claudeをその分野の専門アシスタントとして機能させる。,https://github.com/anthropics/knowledge-work-plugins,478,"Anthropic公式によるナレッジワーカー向け実用プラグイン集で、業務別の即戦力スキル・ワークフローを網羅
+.claude-plugin/plugin.jsonやskills/、commands/という統一構造により、企業ごとのカスタマイズ・拡張が容易
+Claude CoworkとClaude Codeの両方に対応し、Claudeエコシステムの実務適用範囲を大きく広げる",社内の各部門(営業・サポート・法務・財務など)向けにClaudeを即座に業務特化アシスタント化できるため、既存の社内ナレッジベースやMCPコネクタと組み合わせて導入すれば、業務効率化のテンプレートとして活用しやすい。,Apache License 2.0,
+FxEmbed/FxEmbed,TypeScript,X(Twitter)やBlueskyの投稿埋め込みを改善するサービス。リンクのドメインを書き換えるだけ(fxtwitter.com、fixupx.com、fxbsky.appなど)で、Discord・Telegramなどのチャットアプリ上で画像・動画・投票・翻訳などを正しく埋め込み表示できるようにする。Cloudflare Workers上で動作し、セルフホストも可能。,https://github.com/FxEmbed/FxEmbed,432,"複数画像・動画・投票・翻訳など、公式埋め込みでは表示できないリッチコンテンツに対応
+Cloudflare Workersベースの軽量構成とDocker対応で、誰でも簡単にセルフホスト可能
+5,500以上のスター、4,000超のコミットを持つ活発なプロジェクトで、X/Twitter API制限後の埋め込み代替手段として広く利用",DiscordやTelegramのコミュニティ運営者がX/Bluesky投稿を共有する際のUX改善に直接使える。,MIT License,
