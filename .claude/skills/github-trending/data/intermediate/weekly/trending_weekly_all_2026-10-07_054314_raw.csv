@@ -1,0 +1,13 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,mvschwarz/openrig,https://github.com/mvschwarz/openrig,"Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",TypeScript,5555,404,3327,weekly,,2026-10-07T05:43:14+00:00,Apache License 2.0,
+2,heygen-com/hyperframes,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,TypeScript,58070,5170,3614,weekly,,2026-10-07T05:43:14+00:00,Apache License 2.0,
+3,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,10142,962,1106,weekly,,2026-10-07T05:43:14+00:00,MIT License,
+4,NVIDIA/OpenShell,https://github.com/NVIDIA/OpenShell,"OpenShell is the safe, private runtime for autonomous AI agents.",Rust,15174,1718,5228,weekly,,2026-10-07T05:43:14+00:00,Apache License 2.0,
+5,VectifyAI/PageIndex,https://github.com/VectifyAI/PageIndex,"PageIndex: Document Index for Vectorless, Reasoning-based RAG",Python,38821,3362,2079,weekly,,2026-10-07T05:43:14+00:00,MIT License,
+6,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,"Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI",TypeScript,97275,8571,2104,weekly,,2026-10-07T05:43:14+00:00,Apache License 2.0,
+7,pablostanley/yoinks,https://github.com/pablostanley/yoinks,yoink any video from your terminal. no shady ads.,TypeScript,4922,427,2947,weekly,,2026-10-07T05:43:14+00:00,MIT License,
+8,HunxByts/GhostTrack,https://github.com/HunxByts/GhostTrack,Useful tool to track location or mobile number,Python,17263,2349,2017,weekly,,2026-10-07T05:43:14+00:00,,
+9,DuarteSantos8/openGym,https://github.com/DuarteSantos8/openGym,"Self-hosted gym & body-weight tracker — plan routines, log workouts, see which muscles are trained, fatigued or detrained",JavaScript,5959,810,3318,weekly,,2026-10-07T05:43:14+00:00,AGPL-3.0,
+10,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,6943,520,3073,weekly,,2026-10-07T05:43:14+00:00,GPL-2.0,
+11,Panniantong/Agent-Reach,https://github.com/Panniantong/Agent-Reach,"Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu",Python,92750,8133,6454,weekly,,2026-10-07T05:43:14+00:00,MIT License,
+12,byoungd/up,https://github.com/byoungd/up,中英双语终身学习指南：英语学习、AI 协作、真实项目与成长证据. A bilingual guide to English learning and AI-era growth.,JavaScript,67564,6707,2154,weekly,,2026-10-07T05:43:14+00:00,,

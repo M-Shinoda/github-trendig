@@ -1,0 +1,13 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,tester-army/e2e,https://github.com/tester-army/e2e,Next generation e2e testing framework for web and mobile apps.,TypeScript,6561,292,1725,daily,,2026-10-07T05:43:14+00:00,Apache-2.0,
+2,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,278382,23309,889,daily,,2026-10-07T05:43:14+00:00,MIT License,
+3,earthtojake/text-to-cad,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,Python,18088,1809,619,daily,,2026-10-07T05:43:14+00:00,MIT License,
+4,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,6943,520,949,daily,,2026-10-07T05:43:14+00:00,GPL-2.0,
+5,pbakaus/impeccable,https://github.com/pbakaus/impeccable,The design language that makes your AI harness better at design.,JavaScript,77832,4633,616,daily,,2026-10-07T05:43:14+00:00,Apache-2.0,
+6,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,Persistent Context Across Sessions for Every Agent,TypeScript,97275,8571,534,daily,,2026-10-07T05:43:14+00:00,Apache License 2.0,
+7,ayghri/i-have-adhd,https://github.com/ayghri/i-have-adhd,A skill to stop your coding agent from burying the answer. ADHD-friendly output.,Python,54521,3133,326,daily,,2026-10-07T05:43:14+00:00,MIT,
+8,morluto/rea,https://github.com/morluto/rea,"Reverse engineer anything with agents, from app behavior down to native binaries.",TypeScript,10309,1142,2956,daily,,2026-10-07T05:43:14+00:00,MIT license,
+9,deepseek-ai/DeepGEMM,https://github.com/deepseek-ai/DeepGEMM,DeepGEMM: clean and efficient BLAS kernel library on GPU,Cuda,8776,1383,199,daily,,2026-10-07T05:43:14+00:00,MIT License,
+10,msitarzewski/agency-agents,https://github.com/msitarzewski/agency-agents,A complete AI agency at your fingertips,Shell,157955,25460,623,daily,,2026-10-07T05:43:14+00:00,MIT License,
+11,DuarteSantos8/openGym,https://github.com/DuarteSantos8/openGym,"Self-hosted gym & body-weight tracker — plan routines, log workouts",JavaScript,5959,810,1419,daily,,2026-10-07T05:43:14+00:00,AGPL-3.0,
+12,cathrynlavery/diagram-design,https://github.com/cathrynlavery/diagram-design,"Editorial diagram design for Claude Code, Codex, GitHub Copilot",HTML,44183,2847,228,daily,,2026-10-07T05:43:14+00:00,MIT License,

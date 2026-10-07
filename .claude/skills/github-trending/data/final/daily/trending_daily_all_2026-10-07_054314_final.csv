@@ -1,0 +1,37 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+tester-army/e2e,TypeScript,AIエージェントを使い、自然言語で記述したゴールに基づいてWeb/モバイルアプリをe2eテストする次世代フレームワーク。PlaywrightによるChromium/Firefox/WebKitとiOS/Androidの双方をサポートし、ロケーターやアサーションで結果を検証する。,https://github.com/tester-army/e2e,1725,"自然言語の目標記述からAIエージェントがテストを自動実行する新しいテスト手法
+Web(Playwright)とモバイル(iOS/Android)を単一フレームワークで統合
+アクションのリプレイ機能でモデル呼び出しの重複を削減し、コストを抑制",既存のPlaywrightやAppiumベースのE2Eテストを置き換え、仕様変更に強い自然言語ベースのテストスイートを構築できそう。CI/CDに組み込めば、UI変更に追従しやすいテストメンテナンスの省力化が期待できる。,Apache-2.0,
+mattpocock/skills,Shell,Matt Pocock氏が自身の.agentsディレクトリで使っているAIコーディングエージェント向けのスキル集。Claude CodeやCodexなどで発生しやすい失敗パターン(要件のズレ、冗長な出力、コード品質、アーキテクチャ崩れ)に対処するための再利用可能なスキルを提供する。,https://github.com/mattpocock/skills,889,"要件確認用の/grill-meなどアライメント系スキルで手戻りを防止
+TDDやバグ診断などのフィードバックループ系スキルでコード品質を向上
+Claude Codeのプラグインマーケットプレイスやnpmインストーラーで簡単に導入可能",個人やチームのAIエージェント運用ルールを体系化するテンプレートとして活用できる。既存のCLAUDE.mdやエージェント設定に組み込み、冗長な回答や設計崩れを防ぐガードレールとして使えそう。,MIT License,
+earthtojake/text-to-cad,Python,AIエージェントに3D CAD生成能力を与えるプラグイン。STEP、STL、GLB、3MFなどの形式でモデルを作成・出力でき、製造適性評価や図面生成など製造ワークフロー向けの機能も備える。,https://github.com/earthtojake/text-to-cad,619,"Claude Code、Codex、Cursor、Gemini、Grokなど複数のAIエージェント基盤に対応
+DFM(製造性評価)やエンジニアリング図面生成など実務的な製造支援機能を搭載
+URDF/SRDF/SDFなどロボット記述フォーマットにも対応し、ロボティクス用途にも応用可能",プロトタイピングや治具設計など、AIエージェントに自然言語でCADモデルを作らせる用途に向く。3Dプリントや製造サービスとの連携機能もあり、ハードウェア開発のアイデア出しから試作までを加速できそう。,MIT License,
+boykopovar/AnyPS5,C++,PS5用の実行ファイルをLinuxやWindows上で動作するようにリリンクして変換するツール。エミュレーションや別プロセスのランタイムを使わず、システムprxライブラリの実装によってネイティブ形式へ変換する。,https://github.com/boykopovar/AnyPS5,949,"SPIR-VへのシェーダーリコンパイルによりGPU命令を変換
+SDL対応ゲームコントローラーとキーボード/マウス入力のマッピングに対応
+「Dreaming Sarah」などで動作実績があり、軽量ハードウェアで60fps動作を確認",ゲーム互換性研究やリバースエンジニアリングの教材として注目度が高い。エミュレータに依存しない変換アプローチは、他コンソール向け移植プロジェクトの参考実装としても活用できそう。,GPL-2.0,
+pbakaus/impeccable,JavaScript,AIコーディングエージェントがより良いフロントエンドデザインを生成できるようにするデザインガイダンスシステム。統一されたデザインコマンド、ブラウザでのライブ反復、決定論的な品質チェックを提供する。,https://github.com/pbakaus/impeccable,616,"polishやaudit、critiqueなど24種類の専用コマンドを搭載
+60種類の検出ルールでAI特有のデザインの陳腐化(多用フォント、紫グラデーションなど)を自動検知
+Cursor、Claude Code、GitHub Copilot、Grok Buildなど複数のAI開発環境に対応",AIで生成したUIのレビュー・改善プロセスに組み込み、デザインの一貫性を保つチェックリストとして利用できそう。プロダクトの初期セットアップ時にデザインコンテキストを定義し、以降の生成物の品質を安定させる用途に向く。,Apache-2.0,
+thedotmack/claude-mem,TypeScript,AIエージェントのセッション間で永続的なコンテキストを維持するメモリシステム。セッション中の行動をキャプチャしてAIで圧縮し、SQLiteデータベースに保存、後続のセッションに関連情報を自動的に注入する。,https://github.com/thedotmack/claude-mem,534,"セマンティック検索対応のSQLiteデータベースでセッション履歴を保存
+ライフサイクルフックによる自動的な観察データのキャプチャとWebUI付きローカルワーカー
+手動操作なしでコンテキストを自動注入する設計",Claude Codeなど長期にわたる開発プロジェクトで、過去の決定事項や進行状況を忘れずに引き継げるようにする用途に最適。既存のエージェントワークフローに追加するだけで、セッションをまたいだ「記憶」を実現できそう。,Apache License 2.0,
+ayghri/i-have-adhd,Python,コーディングAIエージェントの出力を簡潔・直接的に整形するスキル。回答の冒頭に結論やアクションを示し、手順を番号付きリストで提示するなど、冗長な説明を排除したADHDフレンドリーな出力形式を強制する。,https://github.com/ayghri/i-have-adhd,326,"「次のアクションを先頭に出す」「余談を抑制する」など10のルールで出力を構造化
+Claude、Cursor、Gemini、Qwen、Kimiなど複数のAIプラットフォームに対応
+冒頭や結びの定型文(""Hope this helps!""等)を排除し情報密度を高める",冗長な回答に悩むユーザーが、自分のエージェント設定に組み込むことで即座に出力スタイルを改善できる。既存のCLAUDE.mdやカスタムインストラクションに追加する軽量な補助スキルとして導入しやすい。,MIT,
+morluto/rea,TypeScript,バイナリからアプリケーション、ランタイム動作まで、あらゆるものをAIエージェントがリバースエンジニアリングするためのMCPツール。Mach-O/ELF/PE形式のネイティブバイナリ、JavaScript/Electronアプリ、.NETアセンブリ、Android APK、Webサイト、ファームウェアなど幅広い対象を解析できる。,https://github.com/morluto/rea,2956,"HopperやGhidraなどのデコンパイルツールと連携し、文字列検索やクロスリファレンス、コールグラフ生成を実行
+解析対象を外部にアップロードせずローカルで完結する設計
+「機能の理解から自作実装まで」を導くガイド付きワークフローを提供",既存アプリの挙動解析や互換実装の開発、セキュリティ調査などに応用できる。MCPツールとして既存のAIエージェント環境に組み込めば、手作業のリバースエンジニアリング工程を大幅に効率化できそう。,MIT license,
+deepseek-ai/DeepGEMM,Cuda,DeepGEMMは、大規模言語モデル向けに最適化されたGPU上でのテンソルコア演算(GEMM)ライブラリです。FP8/FP4/BF16形式の密行列・グループ化GEMMや、MoEのdispatch/combineを通信とオーバーラップさせる融合カーネルなどを提供し、DeepJITによる実行時コンパイルでインストール時のCUDAビルドを不要にしています。,https://github.com/deepseek-ai/DeepGEMM,199,"NVIDIAのCUTLASS/CuTeに触発されながらもコア実装を極力シンプルに保ち、GPU最適化を学びやすい設計
+DeepJITによる実行時JITコンパイルでビルド不要、SM90/SM100など複数アーキテクチャに対応
+MoEのdispatch+Linear+活性化+combineを融合しNVLink通信とオーバーラップさせる「Mega MoE」カーネルが専門家チューニング済みライブラリに匹敵・超える性能を発揮",DeepSeekモデルのような大規模MoE/LLM推論基盤を自前で構築する際のバックエンドカーネルとして組み込める。vLLMやSGLangなど推論エンジンのカスタムCUDAカーネル置き換えの選択肢になり得る。,MIT License,
+msitarzewski/agency-agents,Shell,agency-agentsは、エンジニアリング・デザイン・マーケティング・セールスなど20以上の部門にまたがる230種類以上の専門AIエージェント人格を提供し、1つのAIエージェンシーをまるごと手元で使えるようにするリポジトリです。各エージェントはMarkdownファイルとして実装され、Claude Code・GitHub Copilot・Cursor・Windsurfなど複数のAIコーディングツールに変換・導入できます。,https://github.com/msitarzewski/agency-agents,623,"230以上のエージェント人格を20超の職能分野(エンジニア、デザイナー、PM、マーケター等)にわたって網羅
+Claude Code/Copilot/Cursor/Windsurf/Aider等、主要AIコーディングツールへの自動変換・導入スクリプトを用意
+スタートアップMVP構築やマーケティング施策など、複数エージェントを組み合わせた実践的なユースケーステンプレートを収録",個人開発者やスタートアップが人手不足の職能(デザイン・マーケ・QA等)をAIエージェントで補う際のテンプレート集として使える。,MIT License,
+DuarteSantos8/openGym,JavaScript,openGymは、外部サーバーやサブスクリプションに依存せずセルフホストできるジム・筋トレ記録アプリです。ワークアウトルーティンの計画、トレーニングの記録、進捗の可視化までを一貫して行えます。React 19/ViteのフロントエンドとNode.js APIをDockerで動かし、データはローカルのJSONファイルとして保持します。,https://github.com/DuarteSantos8/openGym,1419,"1,324種類のエクササイズとアニメーション付きデモ、スーパーセットやタイマー付きセットに対応したルーティン作成機能
+パスキー(WebAuthn)認証とリビジョンベースの競合解決によるマルチデバイス同期を自前実装
+FitNotes/Strong/Hevyからのインポートや推定1RM計算、筋肉活動ヒートマップなどデータ主権を重視した機能群",プライバシーを重視してトレーニングデータを自分のサーバーに置きたいユーザー向けの自己管理型フィットネストラッカーとして使える。StrongやHevyなど既存の有料アプリからの移行先の自己ホスト版候補になりそう。,AGPL-3.0,
+cathrynlavery/diagram-design,HTML,diagram-designは、Claude CodeやCodex、GitHub Copilotなどのコーディングエージェントが、デザインスキルなしでもエディトリアル品質の図(ダイアグラム)を生成できるようにするスキル/ツール集です。HTML+SVGのみで外部依存のない自己完結した出力を生成します。,https://github.com/cathrynlavery/diagram-design,228,"アーキテクチャ図・フローチャート・シーケンス図・データ可視化など42種類の図タイプをサポート
+ミニマルライト/ミニマルダーク/フルエディトリアルの3種類の出力バリアントを用意し、draw.io・Mermaid・Excalidrawからのインポートにも対応
+ブランドサイトから配色・フォントを抽出するブランドオンボーディング機能や、幾何学的検証ゲートなど品質保証の仕組みを内蔵",AIコーディングエージェントに組み込むスキルとして、技術ドキュメントや提案書向けの図を自動生成するワークフローに使える。,MIT License,
