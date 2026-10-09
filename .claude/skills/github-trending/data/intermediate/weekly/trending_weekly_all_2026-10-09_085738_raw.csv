@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,17739,1411,10243,weekly,,2026-10-09T08:57:38+00:00,GPL-2.0 license,
+2,mvschwarz/openrig,https://github.com/mvschwarz/openrig,"Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",TypeScript,6263,456,2693,weekly,,2026-10-09T08:57:38+00:00,Apache-2.0 license,
+3,heygen-com/hyperframes,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,TypeScript,59410,5297,3996,weekly,,2026-10-09T08:57:38+00:00,Apache-2.0 license,
+4,EpicGames/raddebugger,https://github.com/EpicGames/raddebugger,"A native, user-mode, multi-process, graphical debugger.",C,8194,392,448,weekly,,2026-10-09T08:57:38+00:00,MIT license,
+5,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,10465,988,1109,weekly,,2026-10-09T08:57:38+00:00,,
+6,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,"Persistent memory for AI agents that captures session activity, compresses it with AI, and reinjects context later.",TypeScript,98770,8657,3153,weekly,,2026-10-09T08:57:38+00:00,Apache-2.0 license,
+7,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,281714,23608,7448,weekly,,2026-10-09T08:57:38+00:00,MIT license,
+8,Panniantong/Agent-Reach,https://github.com/Panniantong/Agent-Reach,"Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub",Python,94444,8254,6987,weekly,,2026-10-09T08:57:38+00:00,MIT license,
+9,earthtojake/text-to-cad,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,Python,18575,1845,1898,weekly,,2026-10-09T08:57:38+00:00,MIT license,
+10,DuarteSantos8/openGym,https://github.com/DuarteSantos8/openGym,"Self-hosted gym and bodyweight tracker for routines, workout logging, muscle-recovery views, and data import",JavaScript,8249,1043,6086,weekly,,2026-10-09T08:57:38+00:00,AGPL-3.0 license,
+11,pablostanley/yoinks,https://github.com/pablostanley/yoinks,yoink any video from your terminal. no shady ads.,TypeScript,5534,467,2706,weekly,,2026-10-09T08:57:38+00:00,MIT license,

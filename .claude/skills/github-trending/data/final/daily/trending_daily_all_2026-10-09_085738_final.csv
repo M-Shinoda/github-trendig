@@ -1,0 +1,28 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+boykopovar/AnyPS5,C++,PS5用の実行ファイルをLinuxやWindowsへ自動的に移植(ポーティング)するツールです。リリンカーが実行ファイルをターゲットOSのネイティブ形式に変換し、PS5のシステムPRXライブラリの実装を提供して動的リンクを可能にします。エミュレーションや別プロセスのランタイムを使わない点が特徴です。,https://github.com/boykopovar/AnyPS5,4669,"エミュレーション方式ではなくバイナリを直接リリンクするアプローチを採用
+SPIR-Vを出力するシェーダーリコンパイラやSDL対応ゲームコントローラーのサポートを含む
+相互運用性・研究・保存・互換性を目的とし、著作権のあるソフトウェアや鍵、プロプライエタリライブラリは含まないと明言している",家庭用ゲーム機向けバイナリの移植研究やリバースエンジニアリング学習用途として参考になります。C++でのネイティブコード変換・動的リンク実装の実例としても学習価値が高いです。,GPL-2.0 license,
+cathrynlavery/diagram-design,HTML,Claude Code、Codex、GitHub Copilot、Factory Droid、Piなどのコーディングエージェント向けに、編集(エディトリアル)スタイルの図を生成するスキルです。ビルド不要・JavaScript不要の自己完結型HTML/SVGファイルとして、42種類の図(アーキテクチャ図、フローチャート、シーケンス図、ガントチャートなど)を出力できます。,https://github.com/cathrynlavery/diagram-design,1160,"ビルドステップやJS実行なしで完結するSVG/HTML出力という軽量設計
+既存のdraw.io、Mermaid、Excalidrawのソースを読み込んで再描画できる互換性
+サイトのブランドカラーやフォントに合わせたスタイル調整機能を持つ",複数のAIコーディングエージェントで共通利用できる「スキル」形式のため、ドキュメント生成やアーキテクチャ説明の自動化に組み込みやすいです。,MIT license,
+morluto/rea,TypeScript,ネイティブバイナリからアプリの挙動まで、あらゆるものをAIエージェントがリバースエンジニアリングできるようにするオープンソースのMCPサーバー兼CLIです。Hopper、Ghidra、IDAなどと連携したネイティブバイナリ解析、JavaScript/Electronアプリ、Webサイト、.NETアセンブリ、Android APK、ファームウェア、EVMバイトコードなど幅広い対象をローカルで解析します。,https://github.com/morluto/rea,7738,"MCPサーバーとして主要コーディングエージェント(Claude Code、Codex、Cursorなど)に直接統合できる
+解析対象の幅がネイティブバイナリからWeb、スマートコントラクトまで非常に広い
+解析はローカル実行で、証拠(evidence)と限界(limitations)を明示する設計",セキュリティ調査やマルウェア解析、レガシーバイナリの仕様復元などにAIエージェントを活用したいチームに向いています。,MIT license,
+mattpocock/skills,Shell,著者の.agentsディレクトリから公開された、Claude CodeやCodex、GitHub Copilotなど向けの再利用可能なエージェントスキル集です。「vibe coding」的な無秩序な開発ではなく、規律あるソフトウェアエンジニアリングを支援することを目的としています。,https://github.com/mattpocock/skills,1774,"作業開始前にヒアリングを行う/grill-meなどのアラインメント用スキルを収録
+TDD(/tdd)やバグ診断などフィードバックループを重視したワークフローを提供
+ドメイン用語集やADR(アーキテクチャ決定記録)でエージェントとの共通言語を整備する仕組み",個人の実践知をスキルとして公開している点が特徴で、自社のエージェント運用ルールを整備したいチームが参考にしやすい構成です。,MIT license,
+thedotmack/claude-mem,TypeScript,AIコーディングエージェントのセッションを越えて文脈を保持するための永続的メモリシステムです。セッション中のツール使用履歴を記録し、AIで要約・圧縮した上で、以降のセッションに関連する文脈を自動的に注入します。,https://github.com/thedotmack/claude-mem,670,"SQLiteとChromaベクトルDBを組み合わせたハイブリッドなストレージ構成
+ライフサイクルフックとローカルワーカーサービスによりClaude Code、Codex、Geminiなど複数エージェントに対応
+MCP検索ツールを提供し、過去の作業内容を自然言語で検索可能",長期にわたるAIペアプログラミングで「毎回文脈を説明し直す」手間を減らしたい開発者に適しています。,Apache-2.0 license,
+EpicGames/raddebugger,C,Epic Gamesが公開している、ネイティブ・ユーザーモード・マルチプロセス対応のグラフィカルデバッガです。現在はアルファ版でWindows x64とPDBによるローカルデバッグをサポートし、独自のデバッグ情報形式RDI(RAD Debug Info)や大規模PE/COFF実行ファイル向けの高速リンカRAD Linkerも含みます。,https://github.com/EpicGames/raddebugger,279,"大手ゲームスタジオ(Epic Games)が開発・公開する実用志向のネイティブデバッガ
+既存のPDB/DWARF形式に代わる独自デバッグ情報形式RDIを採用
+大規模ゲーム向け実行ファイルのビルドを高速化するリンカを同梱",大規模C/C++プロジェクトでVisual StudioのデバッガやWinDbgに代わる軽量な選択肢を探している開発者に関心を持たれそうです。,MIT license,
+anthropics/knowledge-work-plugins,Python,Claude Cowork(およびClaude Code)向けに、特定の職種に特化したClaudeプラグイン集を提供するAnthropicのオープンソースリポジトリです。各プラグインはスキル・スラッシュコマンド・MCPコネクタをまとめたもので、営業、カスタマーサポート、プロダクト管理、マーケティング、法務、財務など11種類が収録されています。,https://github.com/anthropics/knowledge-work-plugins,392,"コードやビルド不要、Markdown/JSONのみで構成されたプラグイン形式
+営業・法務・財務など知識労働の具体的な職種ごとに特化した構成
+企業独自のツールやプロセスに合わせてカスタマイズすることを前提に設計",社内のナレッジワーカー向けAI導入を検討する企業にとって、ゼロから業務別プロンプトやスキルを作る代わりのテンプレートとして活用できます。,Apache-2.0 license,
+storytold/artcraft,Rust,storytoldによる「アーティスト向けIDE」と称されるデスクトップ創作ツールで、対話的なAI画像・映像生成を目的としています。2Dでの構図作成と3Dでのシーン配置を組み合わせ、シーンのブロッキング、キャラクターのポーズ付け、カメラ配置、背景除去、画像・3D・ワールドアセットの統合など多数の機能を持ちます。,https://github.com/storytold/artcraft,2103,"画像・動画・音楽・3Dメッシュ・ワールドの62種類のAIモデル(ArtCraft、Grok、Midjourney、Sora、World Labsなど)を1つのカタログから選択可能
+テキストから画像生成、プロンプト/キャンバスベースの画像編集、画像から動画生成まで一体化したワークフロー
+2D構図と3Dシーン配置を組み合わせたユニークな編集体験",映像制作やコンセプトアート制作のプリプロダクション工程で、複数のAI生成モデルを一元管理したいクリエイターに向いています。,,
+liquidslr/system-design-notes,Markdown,書籍『System Design Interview - An Insider's Guide』(Vol.1・Vol.2)の学習ノートをまとめたリポジトリです。レート制限、キーバリューストア、URL短縮、チャットシステム、YouTube、Google Drive、決済システム、株式取引所など28章分のトピックごとにフォルダが分かれています。,https://github.com/liquidslr/system-design-notes,393,"システム設計インタビュー対策という実務的ニーズに直結し、就職/転職活動中の開発者に広く刺さるテーマ
+Markdownのみで構成されたシンプルな知識ベースながら、章立てが書籍に忠実で体系的に読みやすい
+外部の技術記事やケーススタディへのリンクも整理されており、単なる要約以上の学習ハブとして機能",システム設計の面接対策や社内勉強会のベース資料として活用しやすく、既存の設計ノウハウ集と組み合わせて使うと理解が深まります。,,

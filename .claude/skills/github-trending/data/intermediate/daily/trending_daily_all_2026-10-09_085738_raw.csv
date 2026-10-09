@@ -1,0 +1,10 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,17739,1411,4669,daily,,2026-10-09T08:57:38+00:00,GPL-2.0 license,
+2,cathrynlavery/diagram-design,https://github.com/cathrynlavery/diagram-design,"Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types.",HTML,47065,2990,1160,daily,,2026-10-09T08:57:38+00:00,MIT license,
+3,morluto/rea,https://github.com/morluto/rea,"Reverse engineer anything with agents, from app behavior down to native binaries.",TypeScript,32353,3907,7738,daily,,2026-10-09T08:57:38+00:00,MIT license,
+4,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,281714,23608,1774,daily,,2026-10-09T08:57:38+00:00,MIT license,
+5,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions,TypeScript,98770,8657,670,daily,,2026-10-09T08:57:38+00:00,Apache-2.0 license,
+6,EpicGames/raddebugger,https://github.com/EpicGames/raddebugger,"A native, user-mode, multi-process, graphical debugger.",C,8194,392,279,daily,,2026-10-09T08:57:38+00:00,MIT license,
+7,anthropics/knowledge-work-plugins,https://github.com/anthropics/knowledge-work-plugins,Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork,Python,27893,3225,392,daily,,2026-10-09T08:57:38+00:00,Apache-2.0 license,
+8,storytold/artcraft,https://github.com/storytold/artcraft,"ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",Rust,9225,1359,2103,daily,,2026-10-09T08:57:38+00:00,,
+9,liquidslr/system-design-notes,https://github.com/liquidslr/system-design-notes,Notes of the book System Design Interview - An Insider's Guide,Markdown,25050,4649,393,daily,,2026-10-09T08:57:38+00:00,,

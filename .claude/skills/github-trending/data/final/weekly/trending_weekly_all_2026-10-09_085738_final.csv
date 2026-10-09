@@ -1,0 +1,34 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+boykopovar/AnyPS5,C++,PS5用の実行ファイルをLinuxやWindowsへ自動的に移植(ポーティング)するツールです。リリンカーが実行ファイルをターゲットOSのネイティブ形式に変換し、PS5のシステムPRXライブラリの実装を提供して動的リンクを可能にします。エミュレーションや別プロセスのランタイムを使わない点が特徴です。,https://github.com/boykopovar/AnyPS5,10243,"エミュレーション方式ではなくバイナリを直接リリンクするアプローチを採用
+SPIR-Vを出力するシェーダーリコンパイラやSDL対応ゲームコントローラーのサポートを含む
+相互運用性・研究・保存・互換性を目的とし、著作権のあるソフトウェアや鍵、プロプライエタリライブラリは含まないと明言している",家庭用ゲーム機向けバイナリの移植研究やリバースエンジニアリング学習用途として参考になります。C++でのネイティブコード変換・動的リンク実装の実例としても学習価値が高いです。,GPL-2.0 license,
+mvschwarz/openrig,TypeScript,OpenRigは、Claude Code・Codex・PiなどのAIコーディングエージェントを「チーム」として運用するためのオープンソース・セルフホスト型システムです。YAMLで役割やチーム構成(RigSpec)を定義し、`rig up`で起動すると各エージェントが個別のtmuxセッション上で永続的に動作し、共有コンテキストやメッセージング、スナップショット/リストアなどの機能を提供します。,https://github.com/mvschwarz/openrig,2693,"複数のAIエージェントを「役職を持つ組織」として編成するという、マルチエージェント運用の新しいパラダイムを提示
+ローカルデーモン+CLI+TUI+MCPサーバー(SQLite)という本格的なアーキテクチャで、tmuxベースの永続セッション管理を実現
+スターターチームや専門チームのテンプレートが用意され、エージェント連携の実践例として参照しやすい",個人開発者やスタートアップが複数のAIエージェントに役割分担をさせて並行開発を進める際の基盤として使えそうです。,Apache-2.0 license,
+heygen-com/hyperframes,TypeScript,HyperframesはHTML/CSS/メディア/アニメーションを決定論的なMP4動画へレンダリングするオープンソースフレームワークです。CLIやAIコーディングエージェントのスキル、またはレンダリングコアとして利用でき、GSAPやLottie、Three.jsなど多様なアニメーション手法に対応し、ヘッドレスChromeでフレームごとにシークしFFmpegでエンコードします。,https://github.com/heygen-com/hyperframes,3996,"「HTMLを書いて動画を出力する」という発想により、動画生成をWeb開発者やAIエージェントに開放
+CLI、コアエンジン、プロデューサー、スタジオ、プレイヤー、Lambdaレンダリングまで含む本格的なパッケージ構成
+HeyGenという動画AI企業がOSSとして公開しており、エージェント向けスキルやブロックカタログも同梱",マーケティング動画やSNS向け動画をコードから自動生成するパイプラインに組み込みやすく、Remotionなど既存のコードベース動画生成ツールの対抗/代替として位置づけられます。,Apache-2.0 license,
+EpicGames/raddebugger,C,Epic Gamesが公開している、ネイティブ・ユーザーモード・マルチプロセス対応のグラフィカルデバッガです。現在はアルファ版でWindows x64とPDBによるローカルデバッグをサポートし、独自のデバッグ情報形式RDI(RAD Debug Info)や大規模PE/COFF実行ファイル向けの高速リンカRAD Linkerも含みます。,https://github.com/EpicGames/raddebugger,448,"大手ゲームスタジオ(Epic Games)が開発・公開する実用志向のネイティブデバッガ
+既存のPDB/DWARF形式に代わる独自デバッグ情報形式RDIを採用
+大規模ゲーム向け実行ファイルのビルドを高速化するリンカを同梱",大規模C/C++プロジェクトでVisual StudioのデバッガやWinDbgに代わる軽量な選択肢を探している開発者に関心を持たれそうです。,MIT license,
+cursor/plugins,TypeScript,cursor/pluginsは、Cursorエディタ向けプラグイン仕様と公式プラグイン集を収めたマーケットプレイス的リポジトリです。各プラグインは`.cursor-plugin/plugin.json`マニフェストを持つ独立ディレクトリとして管理され、ルートの`marketplace.json`で一覧化されています。GitHub、Gmail、Salesforce、Playwrightなど多数のサードパーティ統合プラグインが含まれます。,https://github.com/cursor/plugins,1109,"Cursor公式によるプラグイン仕様の提示であり、エディタの拡張性を定義する基盤的リポジトリ
+エージェントスキル、Cursorルール、MCPサーバー定義をプラグインとして統合管理する設計
+大手SaaS連携(Salesforce、Gmail、Google Workspace等)が多数公式サポートされている点が注目",自社ツールをCursor向けプラグインとして公開する際のテンプレートとして参照できます。,,
+thedotmack/claude-mem,TypeScript,AIコーディングエージェントのセッションを越えて文脈を保持するための永続的メモリシステムです。セッション中のツール使用履歴を記録し、AIで要約・圧縮した上で、以降のセッションに関連する文脈を自動的に注入します。,https://github.com/thedotmack/claude-mem,3153,"SQLiteとChromaベクトルDBを組み合わせたハイブリッドなストレージ構成
+ライフサイクルフックとローカルワーカーサービスによりClaude Code、Codex、Geminiなど複数エージェントに対応
+MCP検索ツールを提供し、過去の作業内容を自然言語で検索可能",長期にわたるAIペアプログラミングで「毎回文脈を説明し直す」手間を減らしたい開発者に適しています。,Apache-2.0 license,
+mattpocock/skills,Shell,著者の.agentsディレクトリから公開された、Claude CodeやCodex、GitHub Copilotなど向けの再利用可能なエージェントスキル集です。「vibe coding」的な無秩序な開発ではなく、規律あるソフトウェアエンジニアリングを支援することを目的としています。,https://github.com/mattpocock/skills,7448,"作業開始前にヒアリングを行う/grill-meなどのアラインメント用スキルを収録
+TDD(/tdd)やバグ診断などフィードバックループを重視したワークフローを提供
+ドメイン用語集やADR(アーキテクチャ決定記録)でエージェントとの共通言語を整備する仕組み",個人の実践知をスキルとして公開している点が特徴で、自社のエージェント運用ルールを整備したいチームが参考にしやすい構成です。,MIT license,
+Panniantong/Agent-Reach,Python,Agent-Reachは、AIエージェントにWeb、YouTube、Twitter/X、Reddit、GitHubなど多数のプラットフォームへのアクセス能力を与えるオープンソースのCLI/機能レイヤーです。各プラットフォームに対して複数のバックエンドツールを順に試行し、失敗時はフォールバックする仕組みを持ち、ログインが必要なサービスはローカルに保存したクッキーで対応します。,https://github.com/Panniantong/Agent-Reach,6987,"「エージェントにインターネットを見る目を与える」という明快なコンセプトで、多プラットフォーム対応の情報収集を一元化
+ツールの自動選択・インストール・ヘルスチェック・ルーティングまで行う抽象化レイヤーが技術的に注目点
+Exa検索エンジンを使ったWeb全体検索や、中国圏SNS対応など地域横断的なカバレッジ",リサーチ系AIエージェントやSNSモニタリングツールの情報収集基盤として組み込みやすく、既存の単一プラットフォーム用スクレイパーを統合する役割を果たせます。,MIT license,
+earthtojake/text-to-cad,Python,text-to-cadは、AIコーディングエージェントにCADモデルの生成・検証機能を与えるプラグイン/スキル集です。STEP形式を主出力としつつGLB、STL、3MFにも対応し、製造可能性チェックや図面生成、3Dプリント・板金・CNC加工サービスとの連携まで行えます。,https://github.com/earthtojake/text-to-cad,1898,"Claude Code、Codex、Cursor、Gemini、Grokなど複数のエージェント基盤に対応したスキルパッケージという横断的な設計
+CADモデリングという従来AIが苦手だった領域に、寸法図面生成やDFM/DfAMチェックまで含めて踏み込んでいる点が注目
+G-codeスライシングや実際の加工サービス連携まで含み、設計から製造までのエンドツーエンドを志向",ハードウェアスタートアップや個人メイカーが、AIエージェントに部品設計や図面作成を依頼するワークフローに組み込めます。,MIT license,
+DuarteSantos8/openGym,JavaScript,openGymは、自分でホストできるジム・ボディウェイトトラッカーです。週間ルーティーンの計画、スーパーセットやウォームアップ・カーディオを含むワークアウトの記録、筋肉ごとの疲労/未トレーニング状況の可視化ができ、FitNotes・Strong・Hevyからのデータインポートにも対応します。,https://github.com/DuarteSantos8/openGym,6086,"データを自分のサーバーに保持できる自己ホスト型という点が、プライバシー重視のフィットネスアプリとして注目
+Docker Composeでの簡単なデプロイ、パスキーログイン、Androidアプリ、オプションのAIコーチ・MCPサーバー対応など機能が充実
+既存の人気トラッキングアプリ(FitNotes、Strong、Hevy)からの移行をサポートしており乗り換えのハードルが低い",商用のフィットネストラッキングSaaSからデータ主権を取り戻したいユーザーの移行先として使えます。,AGPL-3.0 license,
+pablostanley/yoinks,TypeScript,"yoinksは、YouTube、X/Twitter、Instagram、TikTokなど1,800以上のサイトから動画をダウンロードできるNode.js製CLIツールです。URLを貼り付けて解像度や音声のみ(MP3)を選ぶだけで、`~/Downloads`に保存されます。内部ではyt-dlpとffmpegを利用し、InkでターミナルUIを構築しています。",https://github.com/pablostanley/yoinks,2706,"「no shady ads」を掲げ、既存の広告だらけの動画ダウンロードサイトに代わる軽量CLIとして支持を集めている
+Inkによる洗練されたターミナルUIと、yt-dlp/ffmpegという実績あるツールチェーンの組み合わせが技術的に手堅い
+個人アーカイブ目的に特化しつつ5.5k超のスター・467フォークを獲得しており、シンプルなユーティリティの支持の高さを示す",個人的な動画バックアップやオフライン視聴用途に手軽に使えるツールで、youtube-dl系GUIツールの代替候補になります。,MIT license,
