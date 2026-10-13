@@ -1,0 +1,67 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+alibaba/open-code-review,Go,Alibabaが公開するAI駆動のコードレビューCLIツール。Gitの差分を読み取り、設定可能なLLMエージェントに変更ファイルを渡し、行単位のレビューコメントを生成する。決定論的パイプライン(ファイル選定・ルールマッチング)とLLMエージェントを組み合わせたハイブリッド構成が特徴。,https://github.com/alibaba/open-code-review,24317,"`ocr scan`コマンドで差分だけでなくファイル全体のレビューも可能
+同一モデル使用時にClaude Codeより高い精度・F1値を、約9分の1のトークン数で達成したというベンチマークを主張
+大手企業(Alibaba)による実運用ベースのコードレビュー自動化ツールという点で信頼性と注目度が高い",CI/CDパイプラインに組み込んで自動コードレビューを行い、レビュー工数とLLMコストの削減を図れる。,Apache-2.0 license,
+debpalash/VoiceStudio,Python,ElevenLabsの完全ローカル・オープンソース版代替を目指すツール。ボイスクローニング、ボイスデザイン、動画の吹き替え、音声入力(ディクテーション)、文字起こし、オーディオブック作成を646言語でサポートする。,https://github.com/debpalash/VoiceStudio,37110,"Electron製デスクトップアプリに加え、ローカルAPIとMCP連携を提供しAIエージェントからも利用可能
+NVIDIA GPU、Apple Silicon、CPUのみの環境のいずれでも動作し、約6.1万スター(取得時点)という高い人気
+完全ローカル処理によるプライバシー保護が、クラウド課金型の音声AIサービスとの差別化点として評価されている",有料クラウド音声合成サービスのコスト・プライバシー面での代替として、ポッドキャストやオーディオブック制作、動画ローカライズ業務に活用できる。,AGPL-3.0 license,
+paperclipai/paperclip,TypeScript,AIエージェントのチームを組織し、業務上のタスクを管理するためのオープンソースNode.js製サーバーとReact UI。組織図、タスク管理、予算・コスト管理、承認フロー、目標アラインメントなどの機能を提供する。,https://github.com/paperclipai/paperclip,20601,"Claude Code、Codex、OpenClawなど任意のエージェントを「持ち込み」で管理できるダッシュボードを提供
+npxコマンドで即起動でき、ソースからのセルフホストも可能という導入の手軽さ
+「職場でエージェントを管理する」という新興分野を正面から扱い、マルチエージェント業務運用のデファクトツールを狙う点が注目されている",複数のAIエージェントを使った業務委託・タスク自動化を社内で統制する管理基盤として導入できる。,MIT license,
+anthropics/financial-services,Python,金融サービス業務(投資銀行、株式リサーチ、プライベートエクイティ、ファンド管理、業務運用、資産運用アドバイザリーなど)向けのClaudeエージェント、スキル、スラッシュコマンド、データコネクタ集。各コンポーネントはClaude Coworkプラグイン、またはManaged Agent(/v1/agents API)のいずれの形でも利用できる、ビルド不要のファイルベース(Markdown/YAML/JSON)構成になっている。,https://github.com/anthropics/financial-services,4838,"Pitch Agent、Earnings Reviewer、KYC Screener、GL Reconcilerなど業務別のエンドツーエンドAgentを多数提供
+Daloopa、FactSet、Moody's、PitchBook、S&P GlobalなどプロのデータプロバイダへのMCPコネクタを同梱
+すべて人間による最終レビュー・承認を前提とし、投資助言や自動発注・自動承認は行わない設計",金融機関がClaude Cowork/Claude Code上で、リサーチ作成、決算レビュー、月次決算などの業務プロセスを自動化する出発点として使える。,Apache-2.0 license,
+vectorize-io/hindsight,Python,AIエージェントが単純な会話記憶だけでなく経験から「学習」できるようにする、エージェント用メモリシステム。Retain(記憶の保存)、Recall(検索)、Reflect(深い推論によるつながりの発見)という3つの操作で、事実・経験・観察・メンタルモデルを管理する。,https://github.com/vectorize-io/hindsight,25557,"セマンティック・キーワード・グラフ・時間軸検索を組み合わせたハイブリッドRecallとリランキングを実装
+Docker・pip・Helm・ホスティング型クラウドなど複数の実行形態と、Python/Node.js/Go/CLIクライアント、組み込みMCPエンドポイントを提供
+60以上のコーディングエージェント/フレームワークとの統合実績があり、既存のOpenAI/Anthropicクライアントをラップするだけで記憶機能を追加できる点が注目されている",Claude CodeやCursorなどのコーディングエージェントに長期記憶を持たせ、プロジェクトをまたいで学習させる用途に向く。,MIT license,
+affaan-m/ECC,JavaScript,Claude Code、Codex、OpenCode、Cursorなどのコーディングエージェントに、計画立案・テスト・レビュー・メモリ・セキュリティのワークフローを追加する「エージェントハーネス性能最適化システム」。71種のエージェント、311のスキル、97のコマンドシムなどを備える。,https://github.com/affaan-m/ECC,22583,"plan→test→implement→review→verify→remember→improveという研究駆動の開発サイクルを体系化
+AgentShieldによるセキュリティスキャンと継続的学習(メモリ)の仕組みを統合
+Claude Codeをベストサポート対象としつつ、CodexやQoderにはネイティブプラグイン、他ツールには機能限定アダプタで対応",既存のAIコーディングエージェントの生産性と安全性を強化するアドオンとして、プロジェクトに後付けで導入できる。,MIT license,
+anthropics/knowledge-work-plugins,Python,営業、カスタマーサポート、プロダクト管理、マーケティング、法務、財務などの職種向けに、スキル・コネクタ・スラッシュコマンド・サブエージェントをまとめたClaude Cowork(Claude Codeとも互換)用プラグイン集。11種類の職種別プラグインを提供する。,https://github.com/anthropics/knowledge-work-plugins,5365,"各プラグインが`.claude-plugin/plugin.json`等の統一ファイル構成を持ち、コード記述やビルドが不要
+enterprise-searchやbio-researchなど専門領域にも対応し、企業が自社ツール・業務プロセスに合わせてカスタマイズ可能
+Anthropicが知識労働者向けエージェント活用の標準テンプレートを公式に提供する動きとして注目される",企業がClaude Coworkを導入する際のスターターキットとして、部門ごとに即座に業務を自動化できる。,Apache-2.0 license,
+anthropics/claude-code,TypeScript,ターミナルで動作するエージェント型コーディングツール「Claude Code」の公式リポジトリ。コードベースの理解、ルーチン作業の実行、自然言語によるgitワークフロー操作などを行う。,https://github.com/anthropics/claude-code,6422,"curl/brew/wingetなど複数のインストール手段を提供し、ターミナル・IDE・GitHub(@claudeメンション)から利用可能
+プラグインシステムによりカスタムのコマンドやサブエージェントを追加できる
+Anthropic自身が開発するエージェント型CLIとして、GitHubトレンドで継続的に高い人気を維持している",開発者が日常のコーディング作業(リファクタリング、テスト作成、PR対応)をAIエージェントに委任するための中核ツールとして使える。,,
+Tencent/WeKnora,Go,ドキュメントをRAG型のQ&A、多段推論エージェント、自己更新型Wikiへ変換するTencent製のオープンソースLLM知識プラットフォーム。,https://github.com/Tencent/WeKnora,11159,"ハイブリッド検索(キーワード+ベクトル)、リランキング、引用付き回答に対応したRAG機能
+Web検索・MCPツール・サンドボックス・ブラウザ操作を使う多段推論エージェントと、ナレッジグラフ付きの自動生成Wikiを搭載
+33.6k超のスターを獲得しトレンド入りし、Docker Compose/Helm/単一バイナリ(Lite)など多様なデプロイ形態に対応",Feishu、Confluence、Notionなど社内ドキュメントを取り込んでナレッジベースを構築し、問い合わせ対応やナレッジ共有を自動化する用途に向く。,,
+TencentCloud/Octop,Python,マルチユーザー・マルチエージェントに対応したセルフホスト型AIアシスタント。Webダッシュボード、CLI、Feishu/DingTalk/Telegram/DiscordなどのIM連携を備えた単一プロセスとして動作する。,https://github.com/TencentCloud/Octop,7333,"ユーザーごとに複数の「エキスパート(エージェント)」とワークスペース、cronジョブを持てる設計
+知識ベース検索、プラグインシステム、OAuth/MCP対応のConnectors、ACPによるIDE連携やブラウザ・リモートデスクトップ操作まで統合
+Python/FastAPI + React/TypeScriptのスタックで、インストーラー・PyPI・Docker・デスクトップアプリなど多様な導入手段を提供",個人や小規模チームが自前のインフラ上で、複数ユーザー・複数エージェント構成のAIアシスタントを運用したい場合の代替手段となる。,MIT license,
+heygen-com/hyperframes,TypeScript,HTML・CSS・メディア・シーク可能なアニメーションをMP4動画に変換するオープンソースフレームワークです。ヘッドレスChromeで各フレームをシークしてレンダリングし、FFmpegでエンコードするため、同じ入力から常に同じ出力が得られます。構成はタイミングやトラックを示すdata属性付きの通常のHTMLファイルで、GSAP・Lottie・Three.jsなどのアニメーションランタイムを利用できます。,https://github.com/heygen-com/hyperframes,12662,"「HTMLを書いて動画をレンダリングする」という、AIエージェントが扱いやすい動画生成パイプラインを提示している点が独自性
+ヘッドレスChromeでの決定的(deterministic)なフレームシーク+FFmpegエンコードという堅牢な技術構成
+HeyGenという動画生成企業が公開したOSSであり、AIエージェント向けスキルやホスト型ワークフローへの組み込みも想定されている点が注目される",動的なテキストや画像を含むパーソナライズ動画、SNS向け自動生成動画コンテンツなどの制作パイプラインに組み込めそうです。,Apache-2.0 license,
+agent-substrate/substrate,Go,Kubernetes上で大量のエージェント用サンドボックスを安全かつ高密度に実行するためのランタイム「Agent Substrate」。アイドル時間の多いエージェントワークロードを少数のワーカーPodに集約する設計になっている。,https://github.com/agent-substrate/substrate,3104,"microVMやgVisorなど複数のサンドボックス技術に対応し、特定のエージェントフレームワークに依存しない
+アクターのライフサイクル管理(サスペンド/レジューム)、ワーカーへの割り当て、トラフィックルーティングをコントロールプレーンが担う
+APIサーバー、DaemonSet、WorkerPoolコントローラ、`kubectl-ate` CLIなど本格的なK8sネイティブ構成で、「数百万のエージェントサンドボックス」を掲げる野心的な設計が注目点",大規模にAIエージェントを並行実行したい基盤チームが、コスト効率よくサンドボックスを管理するための土台として利用できる。,Apache-2.0 license,
+NVIDIA/OpenShell,Rust,OpenShellはNVIDIAが開発した、自律型AIエージェントのための安全でプライベートな実行ランタイムです。エージェントをカーネルレベルで隔離したサンドボックス内で動かし、ファイルアクセス、ネットワーク通信、資格情報の利用をポリシーに基づいて制御します。,https://github.com/NVIDIA/OpenShell,7457,"カーネルによる強制的なアクセス制御とサンドボックス分離で、エージェントの暴走や権限逸脱を防ぐ設計
+エージェント自身には本物の資格情報を見せず、承認済みエンドポイントへのリクエストにのみ注入する資格情報分離方式
+ポリシー変更の形式検証やgRPC API、Python/TypeScript/Go/RustのSDKを備え、Kubernetes上でのゲートウェイ運用にも対応",自律エージェントを本番環境やマルチテナント環境で安全に動かすための基盤として利用でき、既存のエージェントフレームワークの実行層を守るセキュリティレイヤーとして組み込む用途が考えられます。,Apache-2.0 license,
+JustVugg/colibri,C,colibriは依存ライブラリを一切持たない純粋なC言語の推論エンジンで、巨大なMixture-of-Expertsモデルを一般的なハードウェア上で動かすことを目指しています。常駐する密な部分はRAMに置き、ルーターが必要とするエキスパートのみをディスクからストリーミングして読み込む仕組みです。,https://github.com/JustVugg/colibri,13470,"モデルファミリごとに1つのCファイルで構成され、実行時にPythonを一切使わない超軽量設計
+preadによる単発読み込み、ローダープールによる先読み、LRUキャッシュとピン留めされたホットセットによる効率的なエキスパートストリーミング
+CUDA/Vulkan/Metalの各GPUバックエンドや投機的デコーディング、OpenAI/Anthropic互換APIなど実用機能を幅広く搭載",GPUメモリに載らない超大規模MoEモデルを、一般的なPCやサーバー上でも動かせる可能性があり、llama.cppのようなローカル推論エンジンの延伸として注目されます。,Apache-2.0 license,
+tashfeenahmed/freellmapi,TypeScript,freellmapiは、約34の無料LLMプロバイダーをまとめて単一のOpenAI互換/v1エンドポイントとして公開するセルフホスト型ルーターです。リクエストを空きのあるプロバイダーに振り分け、レート制限や失敗時には自動的に別モデルへフェイルオーバーします。,https://github.com/tashfeenahmed/freellmapi,8213,"速度・性能・信頼性をもとにモデルをランキングし、キーローテーションやクールダウンを伴う自動フェイルオーバーを実装
+プロバイダーのAPIキーをSQLiteに暗号化保存し、クライアントには単一のBearerトークンのみを公開する鍵管理方式
+複数モデルに同時問い合わせして審判モデルが統合する「Fusionモード」や、MCPサーバー・ダッシュボード・CLIなど周辺ツールも充実",個人の実験や試作アプリで、複数の無料LLM枠を使い切ることなく柔軟に使い分けたい場合に便利そうです。,MIT license,
+addyosmani/agent-skills,JavaScript,agent-skillsは、AIコーディングエージェント向けに実務レベルのエンジニアリングスキルをまとめたリポジトリです。仕様作成・計画・実装・テスト・レビュー・リリースといった開発フェーズごとに、シニアエンジニアの実践知を構造化したMarkdownワークフロー(SKILL.md)として提供します。,https://github.com/addyosmani/agent-skills,12396,"Define/Plan/Build/Verify/Review/Shipの6フェーズに対応した25のスキルと、/spec・/build・/test・/reviewなど9つのスラッシュコマンド
+コードレビューやセキュリティ監査などの専門ペルソナ、テスト・セキュリティ・パフォーマンスなどのチェックリストを完備
+Claude Code、Cursor、Gemini CLI、GitHub Copilotなど複数のエージェント環境に対応するアダプターとnpxインストーラー",既存のAIコーディングエージェント(Claude Codeなど)に体系的な開発プロセスを組み込みたいチームにとって有用です。,MIT license,
+trycua/cua,Rust,cuaは、AIエージェントにコンピュータを操作させるためのツールキットです。デスクトップ操作の自動化ドライバ、ローカルVM/サンドボックス、小型の意思決定モデル、ベンチマークなどを一式で提供し、クロスOSでエージェント群(フリート)を動かせます。,https://github.com/trycua/cua,7084,"macOS/Windows/Linuxのネイティブアプリやブラウザをポインタを奪わずに操作できる「Cua Driver」
+Apple SiliconのVirtualization.FrameworkでローカルmacOS/Linux VMを作成・管理する「Lume」や、gVisorサンドボックスをPython/TypeScript/Swift/Kotlinから利用できるSDK
+フォーム入力特化の小型モデル「CUA-S1」や、エージェント評価・学習データ収集のための「Cua Bench」を同梱",RPAやブラウザ操作エージェントの基盤として、既存のComputer-use系エージェントと比較される位置づけにあり、実機・実OS上でのエージェント評価環境として活用できそうです。,MIT license,
+mksglu/context-mode,TypeScript,context-modeはAIコーディングエージェント向けのコンテキストウィンドウ最適化ツールで、ツール実行結果をサンドボックスで隔離してから要約結果だけをモデルに返し、セッションの記憶をローカルのSQLite全文検索インデックスに永続化する。Claude Code、Gemini CLI、Cursor、Codex CLIなど17種類のプラットフォームにMCPとフックを通じてルーティングする。,https://github.com/mksglu/context-mode,4706,"大量のツール出力でコンテキストウィンドウが圧迫される問題に対し、サンドボックス実行+結果のみ返却というアプローチで解決している
+セッションが圧縮(compact)されても会話の作業状態を復元できる永続メモリ機構を持つ
+17種類のAIコーディングツールに対応する横断的な設計がマルチエージェント時代のニーズに合致しトレンド化した一因",長時間・大規模なコーディングタスクでコンテキスト超過やセッション圧縮によるコンテキスト欠落に悩むユーザーに有用。,,
+cursor/plugins,TypeScript,Cursorエディタ向けのプラグイン仕様と、公式マーケットプレイスに掲載されるプラグイン集を管理するリポジトリ。各プラグインは.cursor-plugin/plugin.jsonマニフェストを持ち、開発者向けツール(ralph-loop、pr-review-canvasなど)やGmail、Google Drive、GitHub、Salesforce、Playwrightなど多数のサードパーティ統合を提供する。,https://github.com/cursor/plugins,3707,"Cursorの公式プラグインエコシステムとして、エディタ拡張の標準仕様を定義
+Gmail/Drive/GitHub/Salesforce/Playwrightなど幅広い統合プラグインを一括管理するマーケットプレイス構成
+AIコーディングエディタの開発者が急増する中、Cursor自身の公式リポジトリとして高い注目を集めている",自作のCursorプラグイン開発時のテンプレートやAPI仕様のリファレンスとして活用できる。,,
+NationalSecurityAgency/ghidra,Java,Ghidraは米国家安全保障局(NSA)の研究部門が開発したソフトウェアリバースエンジニアリング(SRE)フレームワークです。Windows/macOS/Linux上でコンパイル済みコードを逆アセンブル・逆コンパイルし、解析できます。,https://github.com/NationalSecurityAgency/ghidra,9722,"多様なプロセッサ命令セットや実行ファイル形式に対応した逆アセンブル・逆コンパイル・グラフ表示機能
+JavaやPython(PyGhidra)によるスクリプト・拡張機能での高い拡張性、対話的操作と自動(ヘッドレス)解析の両方に対応
+EclipseやVisual Studio Codeと連携したスクリプト開発環境を提供する成熟した長期運用プロジェクト",マルウェア解析やセキュリティ研究、脆弱性調査など実務で広く使われる定番ツールであり、IDA Proなど商用リバースエンジニアリングツールの無料かつ強力な代替として位置づけられます。,Apache-2.0 license,
+bilawalsidhu/gods-eye-view,JavaScript,ブラウザ上で動作するスパイ衛星シミュレーターを模したOSSプロジェクトで、CesiumJSによるフォトリアルな3D地球儀上に航空機・船舶・人工衛星・地震・交通・気象・公開カメラなど実在する公開データフィードをリアルタイムに重ね合わせて表示する。OpenAI Realtime APIを使ったハンズフリーの音声操作にも対応している。,https://github.com/bilawalsidhu/gods-eye-view,24627,"公開APIのみを組み合わせて「スパイ衛星」級の可視化体験を再現している点がSNSで話題になりやすいビジュアルインパクトを生んでいる
+CesiumJSとVanilla JS/Viteという比較的軽量な構成で多数のリアルタイムデータレイヤーを統合している
+多くのレイヤーがAPIキー不要で動作し、音声操作(OpenAI Realtime API)というAI要素も組み込まれている",教育・啓発目的でのオープンデータ可視化デモや、OSINT的な情報収集の入り口として使えそう。,,
+rohitg00/ai-engineering-from-scratch,Python,ai-engineering-from-scratchは、AIエンジニアリングを体系的に学べるオープンソースのカリキュラムです。数学・深層学習・LLM・マルチモーダル・エージェントまで20フェーズ528レッスンにわたり、実際に書いて動かすコードを通じて学習できます。,https://github.com/rohitg00/ai-engineering-from-scratch,13880,"Pythonを中心に、一部のフェーズではTypeScript・Rust・Juliaも使用する多言語構成のハンズオン教材
+検索評価・エージェントのトレースデバッグ・ツール呼び出しファイアウォールなど採点可能な実践プロジェクトを用意
+npxで導入できるAIチューター用エージェントスキル(クイズ・レッスン別チュートリアル・資格対策)やMCP・Agent Skills特化の学習パスを提供",AIエンジニアを目指す学習者が独学でLLMやエージェント開発の基礎から実践までを体系的に身につけるのに適しています。,MIT license,

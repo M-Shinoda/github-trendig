@@ -1,0 +1,10 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,morluto/rea,https://github.com/morluto/rea,"Reverse engineer anything with agents, from app behavior down to native binaries.",TypeScript,176884,42499,45327,daily,,2026-10-13T08:09:20+00:00,MIT License,
+2,bilawalsidhu/gods-eye-view,https://github.com/bilawalsidhu/gods-eye-view,"A spy satellite simulator in your browser, except the data is real.",JavaScript,54259,10680,1895,daily,,2026-10-13T08:09:20+00:00,,
+3,mksglu/context-mode,https://github.com/mksglu/context-mode,"Context window optimization for AI coding agents. Sandboxes tool output, persists session memory, routes across 17 platforms via MCP and hooks.",TypeScript,27599,1958,246,daily,,2026-10-13T08:09:20+00:00,,
+4,storytold/artcraft,https://github.com/storytold/artcraft,"ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",Rust,23297,3710,4095,daily,,2026-10-13T08:09:20+00:00,"Apache-2.0, MIT licenses found",
+5,open-webui/open-webui,https://github.com/open-webui/open-webui,"User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",Python,155377,22665,157,daily,,2026-10-13T08:09:20+00:00,,
+6,cathrynlavery/diagram-design,https://github.com/cathrynlavery/diagram-design,"Editorial diagram design for Claude Code, Codex, Copilot, Cursor, and other tools, with 44 diagram types, self-contained HTML + SVG",HTML,53129,3358,2081,daily,,2026-10-13T08:09:20+00:00,MIT License,
+7,lyogavin/airllm,https://github.com/lyogavin/airllm,AirLLM 2.8T LLM inference with single 4GB GPU,Jupyter Notebook,37818,3890,879,daily,,2026-10-13T08:09:20+00:00,Apache License 2.0,
+8,microsoft/BitNet,https://github.com/microsoft/BitNet,Official inference framework for 1-bit LLMs,C++,41039,3819,97,daily,,2026-10-13T08:09:20+00:00,MIT License,
+9,Alishahryar1/free-claude-code,https://github.com/Alishahryar1/free-claude-code,"Lets users run Claude Code, Codex, and other coding harnesses for free from terminal, IDE, phone, or browser, with multi-model and voice support.",Python,59595,9360,626,daily,,2026-10-13T08:09:20+00:00,,

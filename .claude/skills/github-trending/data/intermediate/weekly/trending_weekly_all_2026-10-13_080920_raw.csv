@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,33506,2897,27263,weekly,,2026-10-13T08:09:20+00:00,GPL-2.0 license,
+2,tester-army/e2e,https://github.com/tester-army/e2e,Next generation e2e testing framework for web and mobile apps.,TypeScript,9760,469,5582,weekly,,2026-10-13T08:09:20+00:00,Apache-2.0 license,
+3,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,288497,24220,11139,weekly,,2026-10-13T08:09:20+00:00,MIT license,
+4,heygen-com/hyperframes,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,TypeScript,62070,5558,4482,weekly,,2026-10-13T08:09:20+00:00,Apache-2.0 license,
+5,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,"Persistent memory across agent sessions. Captures agent activity, compresses it with AI, and reinjects relevant context later.",TypeScript,100205,8785,3762,weekly,,2026-10-13T08:09:20+00:00,Apache-2.0 license,
+6,flutter/flutter,https://github.com/flutter/flutter,Flutter makes it easy and fast to build beautiful apps for mobile and beyond,Dart,180014,33859,806,weekly,,2026-10-13T08:09:20+00:00,BSD-3-Clause license,
+7,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,11119,1082,1144,weekly,,2026-10-13T08:09:20+00:00,,
+8,earthtojake/text-to-cad,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,Python,19757,1943,2441,weekly,,2026-10-13T08:09:20+00:00,MIT license,
+9,mvschwarz/openrig,https://github.com/mvschwarz/openrig,"Build networks of agents from Claude Code, Codex, and Pi, with persistent teams that have roles, shared context, and assigned work.",TypeScript,7333,554,2056,weekly,,2026-10-13T08:09:20+00:00,Apache-2.0 license,
+10,morluto/rea,https://github.com/morluto/rea,"Reverse engineer anything with agents, from app behavior down to native binaries.",TypeScript,176884,42500,130471,weekly,,2026-10-13T08:09:20+00:00,MIT License,
+11,DuarteSantos8/openGym,https://github.com/DuarteSantos8/openGym,Self-hosted gym and bodyweight tracker for planning routines and logging workouts.,JavaScript,10746,1300,6621,weekly,,2026-10-13T08:09:20+00:00,AGPL-3.0 license,
