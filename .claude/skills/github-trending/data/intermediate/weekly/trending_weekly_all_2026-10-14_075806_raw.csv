@@ -1,0 +1,11 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,35865,3120,28663,weekly,,2026-10-14T07:58:06+00:00,GPL-2.0 license,
+2,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,290194,24356,11955,weekly,,2026-10-14T07:58:06+00:00,MIT license,
+3,tester-army/e2e,https://github.com/tester-army/e2e,Next generation e2e testing framework for web and mobile apps.,TypeScript,10252,497,4426,weekly,,2026-10-14T07:58:06+00:00,Apache-2.0 license,
+4,EpicGames/raddebugger,https://github.com/EpicGames/raddebugger,"A native, user-mode, multi-process, graphical debugger.",C,8495,414,857,weekly,,2026-10-14T07:58:06+00:00,MIT license,
+5,heygen-com/hyperframes,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,TypeScript,63092,5660,4732,weekly,,2026-10-14T07:58:06+00:00,Apache-2.0 license,
+6,thedotmack/claude-mem,https://github.com/thedotmack/claude-mem,"Persistent Context Across Sessions for Every Agent. Captures agent activity during sessions, compresses it with AI, and injects relevant context into future sessions.",TypeScript,100544,8811,3587,weekly,,2026-10-14T07:58:06+00:00,Apache-2.0 license,
+7,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,11273,1096,1141,weekly,,2026-10-14T07:58:06+00:00,,
+8,earthtojake/text-to-cad,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,Python,20110,1981,2173,weekly,,2026-10-14T07:58:06+00:00,MIT license,
+9,flutter/flutter,https://github.com/flutter/flutter,Flutter makes it easy and fast to build beautiful apps for mobile and beyond,Dart,180145,34051,967,weekly,,2026-10-14T07:58:06+00:00,BSD-3-Clause license,
+10,cathrynlavery/diagram-design,https://github.com/cathrynlavery/diagram-design,"Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG.",HTML,54693,3455,9867,weekly,,2026-10-14T07:58:06+00:00,MIT License,

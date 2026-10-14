@@ -1,0 +1,31 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+boykopovar/AnyPS5,C++,PS5の実行ファイルをLinuxやWindowsへ自動的に移植(ポーティング)するツール。リリンカーで実行ファイルをターゲット環境のネイティブ形式に変換し、システムPRXライブラリの実装によって動的リンクに対応する。エミュレーションや別ランタイムプロセスを使わない点が特徴。,https://github.com/boykopovar/AnyPS5,28663,"エミュレーションなしでネイティブ実行形式へ変換するアプローチが技術的に新しい
+SPIR-Vを出力するシェーダー再コンパイラを備える
+コンソールゲーム互換性/リバースエンジニアリング分野として話題性が高い",PS5タイトルの技術解析やコンソールゲームのPC移行可能性を探る研究に使えそう。,GPL-2.0 license,
+mattpocock/skills,Shell,AIコーディングエージェント(Claude Code、Codex、GitHub Copilot、Gemini CLIなど)向けの再利用可能なスキル集。著者の.agentsディレクトリから抜き出したもので、要件のズレやフィードバックループの弱さ、コード設計の劣化といった典型的な失敗パターンに対処する。,https://github.com/mattpocock/skills,11955,"/grill-meや/tddなど小さく編集可能で組み合わせ可能なスキル設計
+AIエージェント運用のベストプラクティスを体系化した点が注目
+複数のエージェントツールに対応する汎用性",自分のClaude Code/Codex環境にそのまま導入してエージェントの挙動改善に使えそう。,MIT license,
+tester-army/e2e,TypeScript,Web・モバイルアプリ向けの次世代E2Eテストフレームワーク。自然言語でゴールを記述するとエージェントがアプリを操作してゴールへ到達する仕組みを持つ。ロケーターやアサーションによる従来型のテストも併用可能。,https://github.com/tester-army/e2e,4426,"自然言語指示でテストを駆動するAIエージェント統合が目新しい
+一度記録したステップはモデル呼び出し無しで再生でき、コスト・速度面で実用的
+PlaywrightベースのwebエンジンとiOS/Android向けモバイルエンジンを統合",既存のPlaywright/Appiumベースのテストスイートの置き換えや補完に使えそう。,Apache-2.0 license,
+EpicGames/raddebugger,C,Epic Gamesが開発する、ネイティブでユーザーモード・マルチプロセス対応のグラフィカルデバッガ。現在はアルファ版でWindows x64のPDBベースのローカルデバッグをサポートする。独自デバッグ情報フォーマットRDIや大規模プロジェクト向けリンカRAD Linkerも同梱。,https://github.com/EpicGames/raddebugger,857,"ゲーム業界大手Epic Gamesが公開した本格デバッガという点で注目度が高い
+独自のRDIフォーマットや高速リンカなど低レベルツールチェーンを自社開発
+Visual Studioデバッガの代替となりうる大規模プロジェクト向け設計",大規模C/C++プロジェクトのデバッグ作業の代替・高速化に試せそう。,MIT license,
+heygen-com/hyperframes,TypeScript,HTMLやCSS、各種アニメーションライブラリで書いたコンテンツを、決定論的なMP4動画としてレンダリングするフレームワーク。CLIやエージェント向けスキル、再利用可能なブロック集も提供する。ヘッドレスChromeとFFmpegでレンダリングを行う。,https://github.com/heygen-com/hyperframes,4732,"HTML/CSSを「動画のソースコード」として扱う発想がユニーク
+GSAP・Lottie・Three.js・WAAPIなど多様なアニメーション手段をサポート
+AIエージェントが動画生成を自動化できるよう設計されている点がトレンド",AIエージェントによる広告・紹介動画の自動生成パイプラインに組み込めそう。,Apache-2.0 license,
+thedotmack/claude-mem,TypeScript,AIコーディングエージェントのためのセッション間永続メモリシステム。セッション中の操作ログを収集し、AIで圧縮して検索可能な観察記録・要約に変換し、次回セッションに関連コンテキストとして注入する。,https://github.com/thedotmack/claude-mem,3587,"SQLiteとChromaベクトル検索を組み合わせたローカルメモリ基盤
+Claude CodeだけでなくCodex・Gemini・OpenCodeなど複数エージェント/IDEに対応
+エージェントの「記憶の持続性」という課題に直接応えるトレンド性",長期にわたる開発プロジェクトでエージェントに過去の文脈を引き継がせる用途に使えそう。,Apache-2.0 license,
+cursor/plugins,TypeScript,Cursorのプラグイン仕様と、公式プラグインのマーケットプレイス的リポジトリ。各プラグインはマニフェストを持つ独立したディレクトリとして構成され、スキルやルール、MCPサーバー定義を含められる。GitHubやGmail、Salesforceなど多数のサードパーティ連携プラグインも収録。,https://github.com/cursor/plugins,1141,"エディタ向けプラグイン仕様を公式に標準化した点が注目
+スキル・ルール・MCPサーバーを一つの仕組みで扱える拡張性
+サードパーティサービス連携を含む公式マーケットプレイスとしての存在感",Cursorエディタの拡張開発や既存ツール連携プラグインの作成リファレンスとして活用できそう。,,
+earthtojake/text-to-cad,Python,AIエージェントにCAD(3D設計)機能を付与するツール・スキルセット。テキストや画像の指示からSTEP、GLB、STL、3MFなどの3Dモデルを生成・編集し、製造可能性チェックや寸法付き図面の生成も行う。,https://github.com/earthtojake/text-to-cad,2173,"Claude Code, Codex, Cursor, Gemini, Grokなど複数のAIコーディングエージェントに対応するスキルフレームワークを提供
+DfAM/DFM(設計・製造性)チェックやSendCutSend連携、G-code生成・Bambu Lab 3Dプリンタ連携まで実製造ワークフローを統合
+テキスト/画像からCADモデルを生成するという新しいAIエージェント活用領域を開拓している点がトレンド入りの要因",ロボティクスやハードウェアプロトタイピングのワークフローにAIエージェントを組み込み、設計から製造までを自動化できる可能性がある。,MIT license,
+flutter/flutter,Dart,Googleが開発する、単一のDartコードベースでモバイル・Web・デスクトップ向けの美しいアプリを構築できるオープンソースUIツールキット。,https://github.com/flutter/flutter,967,"ホットリロードにより状態を保持したまま高速に開発できる体験
+Material/CupertinoのウィジェットセットとSkia/Impellerによるハードウェアアクセラレーション描画
+DartのネイティブコンパイルとWeb向けJS/WASMコンパイルによる真のクロスプラットフォーム対応",既存の大規模プロジェクトでも定番のクロスプラットフォームフレームワークとして長期的に高い人気を保っている。,BSD-3-Clause license,
+cathrynlavery/diagram-design,HTML,diagram-designは、Claude Code・Codex・GitHub Copilot・Cursorなどのコーディングエージェント向けに、エディトリアルなスタイルの図解を生成するエージェントスキルです。各図はビルド不要の単一HTML+SVGファイルとして出力され、44種類の図解タイプを提供します。,https://github.com/cathrynlavery/diagram-design,9867,"ビルドプロセス不要で、HTMLとSVGだけで完結する図解ファイルを生成するシンプルな設計
+サイトのブランドカラーやフォントに合わせて図を描き分けられる柔軟性
+既存のdraw.io・Mermaid・Excalidrawファイルを読み込んで再描画し、SVGやPNGへのエクスポートにも対応",ドキュメント作成やブログ記事、技術プレゼンテーションに統一感のある図解を素早く用意したい場合に有用。,MIT License,
