@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,morluto/rea,https://github.com/morluto/rea,"Reverse engineer anything with agents, from app behavior down to native binaries.",TypeScript,276523,69681,239477,weekly,,2026-10-16T06:17:48+00:00,MIT license,
+2,boykopovar/AnyPS5,https://github.com/boykopovar/AnyPS5,Tool for automatic PS5 executables porting to Linux and Windows,C++,38965,3477,25174,weekly,,2026-10-16T06:17:48+00:00,GPL-2.0 license,
+3,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,293156,24579,12147,weekly,,2026-10-16T06:17:48+00:00,MIT license,
+4,heygen-com/hyperframes,https://github.com/heygen-com/hyperframes,Write HTML. Render video. Built for agents.,TypeScript,64754,5830,5318,weekly,,2026-10-16T06:17:48+00:00,Apache-2.0 license,
+5,cathrynlavery/diagram-design,https://github.com/cathrynlavery/diagram-design,"Editorial diagram design for AI coding tools, with 44 diagram types, output as self-contained HTML and SVG.",HTML,56060,3547,10237,weekly,,2026-10-16T06:17:48+00:00,MIT license,
+6,NationalSecurityAgency/ghidra,https://github.com/NationalSecurityAgency/ghidra,Ghidra is a software reverse engineering (SRE) framework,Java,89018,9939,6614,weekly,,2026-10-16T06:17:48+00:00,Apache-2.0 license,
+7,ranxianglei/billion-context,https://github.com/ranxianglei/billion-context,"A context-compression plugin for small context windows, with token savings and very long single sessions. Bilingual (English and Chinese).",TypeScript,1424,116,659,weekly,,2026-10-16T06:17:48+00:00,,
+8,earthtojake/text-to-cad,https://github.com/earthtojake/text-to-cad,Give your agent CAD superpowers.,Python,20779,2052,2244,weekly,,2026-10-16T06:17:48+00:00,MIT license,
+9,twostraws/SwiftUI-Agent-Skill,https://github.com/twostraws/SwiftUI-Agent-Skill,"SwiftUI agent skill for Claude Code, Codex, and other AI tools.",Markdown,6123,222,900,weekly,,2026-10-16T06:17:48+00:00,MIT license,
+10,DuarteSantos8/openGym,https://github.com/DuarteSantos8/openGym,"A self-hosted gym and body-weight tracker for planning routines, logging workouts, tracking muscle recovery, and importing data from other apps.",JavaScript,12489,1531,4471,weekly,,2026-10-16T06:17:48+00:00,,
+11,cursor/plugins,https://github.com/cursor/plugins,Cursor plugin specification and official plugins,TypeScript,11697,1140,1214,weekly,,2026-10-16T06:17:48+00:00,,
