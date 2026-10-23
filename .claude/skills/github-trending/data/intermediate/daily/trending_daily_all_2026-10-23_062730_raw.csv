@@ -1,0 +1,10 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,php/php-src,https://github.com/php/php-src,The PHP interpreter,C,41308,8329,287,daily,,2026-10-23T06:27:30+00:00,BSD-3-Clause license,
+2,anthropics/knowledge-work-plugins,https://github.com/anthropics/knowledge-work-plugins,Open-source plugins for knowledge workers using Claude Cowork,Python,31767,3542,303,daily,,2026-10-23T06:27:30+00:00,Apache-2.0 license,
+3,DietrichGebert/ponytail,https://github.com/DietrichGebert/ponytail,"Guides an AI agent to favor minimal code, with the best code being code never written",JavaScript,173887,9467,1948,daily,,2026-10-23T06:27:30+00:00,MIT license,
+4,cloudflare/security-audit-skill,https://github.com/cloudflare/security-audit-skill,"Coding-agent skill for multi-phase security audits with verified, machine-readable findings",JavaScript,40075,2500,2979,daily,,2026-10-23T06:27:30+00:00,MIT license,
+5,Graphify-Labs/graphify,https://github.com/Graphify-Labs/graphify,"Builds a queryable knowledge graph from codebases, docs, SQL schemas, configs, and PDFs",Python,133259,12739,1408,daily,,2026-10-23T06:27:30+00:00,"Apache-2.0 license, MIT license",
+6,supabase/supabase,https://github.com/supabase/supabase,"Postgres development platform for web, mobile, and AI apps",TypeScript,113590,17016,693,daily,,2026-10-23T06:27:30+00:00,Apache-2.0 license,
+7,fastapi/fastapi,https://github.com/fastapi/fastapi,High-performance Python web framework,Python,103913,10099,101,daily,,2026-10-23T06:27:30+00:00,MIT license,
+8,luongnv89/claude-howto,https://github.com/luongnv89/claude-howto,"Visual, example-driven guide to Claude Code with copy-paste templates",Python,43486,5410,177,daily,,2026-10-23T06:27:30+00:00,MIT license,
+9,Meloong-Git/PCL,https://github.com/Meloong-Git/PCL,"Plain Craft Launcher, a Minecraft launcher",Visual Basic .NET,8785,1224,119,daily,,2026-10-23T06:27:30+00:00,,
