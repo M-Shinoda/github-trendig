@@ -1,0 +1,37 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+cloudflare/security-audit-skill,JavaScript,Cloudflareが公開した、コーディングエージェントをセキュリティ監査担当に変えるスキルです。偵察・網羅的な脆弱性探索・候補の検証・構造化出力・独立検証・報告という6段階のプロセスで、検証済みかつ機械判読可能な脆弱性レポートを生成します。,https://github.com/cloudflare/security-audit-skill,15072,"・各フェーズを独立したエージェントで実行し、結果をスキーマで検証することで誤検知を抑えている点が技術的に注目されます。
+・Cloudflare社内の脆弱性発見基盤の出発点として公開されており、実運用での知見が反映されています。",自社プロダクトのセキュリティレビューを自動化・標準化したいチームに有用で、CI/CDに組み込んでPRごとの脆弱性チェックに使えそうです。既存の静的解析ツールと組み合わせることで、AIエージェントによる監査の信頼性を高める試みとして興味深いです。,MIT license,
+ruvnet/ruflo,TypeScript,Ruflo(旧Claude Flow)は、Claude CodeやCodexの周りで動作するオープンソースのエージェントハーネスです。複数エージェントによるスワーム、セッション間で持続するメモリと学習、異なるマシン間でエージェントが連携するフェデレーションなどを提供します。,https://github.com/ruvnet/ruflo,2987,"・`npx ruflo init`で導入でき、Claude Code用プラグイン群、MCPサーバー、ターミナルコンソールを同梱している点が特徴です。
+・ベクトルRAGによるメモリ機能や会話的AIへの対応など、自律的なマルチエージェントワークフローを志向した設計が注目されています。",複数のコーディングエージェントを協調させて大規模タスクを分担処理したい開発者に向いています。既存のClaude CodeやCodexのワークフローに組み込み、記憶を持つ長期運用の自律エージェント基盤として活用できそうです。,MIT license,
+anthropics/knowledge-work-plugins,Python,AnthropicのClaude Cowork向けに、知識労働者をロールや業務ごとの専門家に変えるプラグイン集です。スキル、スラッシュコマンド、MCPコネクタをパッケージ化しており、productivity・sales・finance・legal・dataなど11種のプラグインが含まれます。,https://github.com/anthropics/knowledge-work-plugins,2790,"・プラグインはMarkdownとJSONのみで構成されコードやビルド不要なため、組織独自の文脈を追記するだけでカスタマイズできる点が特徴です。
+・Claude Coworkだけでなく Claude Codeとの互換性も確保されています。",営業・財務・法務などの定型業務にClaudeを即座に適用したい企業に向いています。既存の業務プロセスに合わせてMCP接続先を書き換えるだけで、自社向けのナレッジワーカー支援を低コストで構築できそうです。,Apache-2.0 license,
+anomalyco/opencode,TypeScript,OpenCodeは「オープンソースのAIコーディングエージェント」を掲げるターミナルUIベースのツールです。開発作業用のフル権限を持つbuildエージェントと、調査・分析用の読み取り専用のplanエージェントをTabキーで切り替えて使えます。,https://github.com/anomalyco/opencode,5921,"・複雑な検索やマルチステップタスク用に@generalで呼び出す汎用サブエージェントを備えている点が特徴です。
+・インストールスクリプト、npm、Homebrewなど複数の導入手段とベータ版デスクトップアプリを提供しています。",Claude CodeやCodexに近い使い方をしつつ、エージェントの権限を用途ごとに切り替えたい開発者に向いています。既存のターミナルワークフローに組み込み、安全な読み取り専用の調査フェーズと実装フェーズを明確に分けて運用できそうです。,MIT license,
+stablyai/orca,TypeScript,Orcaは、Claude CodeやCodex、OpenCodeなど複数のコーディングエージェントを同時に動かし、一括管理するためのオープンソースのデスクトップアプリです。各エージェントは個別のgit worktreeで動作し、デスクトップ・モバイル・リモートの各ランタイムから統合的に扱えます。,https://github.com/stablyai/orca,9622,"・モバイルの伴走アプリによるエージェント監視・フォローアップ送信や、UI情報をエージェントに送れるDesign Mode付きの組み込みブラウザが特徴です。
+・GitHubやLinearとの連携、SSH経由のリモートworktree、CLIによる外部スクリプトからの操作にも対応しています。",複数のコーディングエージェントを並行稼働させてタスクを分担したい開発チームに向いています。既存のCI/CDやLinearのワークフローと連携させ、エージェント群のオーケストレーションを一元管理するツールとして活用できそうです。,MIT license,
+heygen-com/hyperframes,TypeScript,HyperFramesは、HTML・CSS・メディア・シーク可能なアニメーションをMP4動画に変換するオープンソースのフレームワークです。ローカルCLI、AIコーディングエージェント向けのインストール可能なスキル、ホスト型ツールのレンダリングコアとして利用できます。,https://github.com/heygen-com/hyperframes,5612,"・同じ入力から常に同じ出力が得られる決定論的レンダリングを重視している点が特徴です。
+・ヘッドレスChromeとFFmpegを基盤としたレンダリングパッケージ、再利用可能なブロックのカタログ、ブラウザベースのスタジオを同梱しています。",AIエージェントに動画生成を担わせたいプロダクトや、HTMLベースで動画コンテンツを量産したいチームに向いています。既存の動画生成サービスの内部レンダリングエンジンとして組み込む、あるいは字幕・プロモ動画の自動生成パイプラインに利用できそうです。,Apache-2.0 license,
+android/skills,Kotlin,Android開発タスク向けにAIエージェントが活用できる、SKILL.md形式のモジュール化された指示ファイル(スキル)を集めたリポジトリ。developer.android.comのガイダンスに基づき、LLMが苦手とするAndroid開発のワークフローを支援する。Claude CodeやCodexなどのエージェント向けプラグインとしても利用可能。,https://github.com/android/skills,1070,"・Googleの公式リポジトリとして、Android開発に特化したエージェントスキルを体系化している点が注目される
+・オープンなagent-skills形式を採用し、複数のコーディングエージェント(Claude Code, Codex, Android CLI)に対応
+・LLMが弱い領域を明示的にターゲットにした設計思想",Android開発を行うプロジェクトでClaude Codeなどのエージェントに組み込むことで、公式ガイドラインに沿った実装やレビューを自動化できる可能性がある。既存のモバイル開発ワークフローにスキルとして追加することで、コード品質や一貫性の向上に寄与しそう。,Apache-2.0 license,
+Graphify-Labs/graphify,Python,コードベース、ドキュメント、DBスキーマ、設定ファイル、PDFなどを解析し、クエリ可能な知識グラフに変換するツール。Claude CodeやCursor、Codex、Gemini CLIなどのコーディングエージェント向けに「/graphify」スキルとして提供される。,https://github.com/Graphify-Labs/graphify,6903,"・tree-sitterによるローカル解析を採用し、LLM呼び出しやベクトルストアを使わずに知識グラフを構築
+・エッジを「明示的」か「推論」かで区別するなど、GraphRAG的アプローチを工夫している
+・Leidenアルゴリズムなどを用いたコミュニティ検出でコードベースの構造を可視化",大規模コードベースをgrepではなくグラフクエリで探索できるため、既存のRAGベースのコード検索ツールを補完・代替する用途が考えられる。複数のエージェントツールと統合しやすい設計なので、社内の開発基盤に組み込みやすい。,"Apache-2.0 license, MIT license",
+akitaonrails/ai-memory,Rust,Claude Code、Codex、Cursorなど複数のAIコーディングエージェント間で共有できる長期記憶システム。ライフサイクルフックで作業内容を記録し、Git管理されたWikiのMarkdownページとして検索可能な形に変換する。,https://github.com/akitaonrails/ai-memory,3254,"・既定ではLLM呼び出し0でメモリを保存・検索でき、必要に応じてLLMプロバイダも利用可能
+・エージェントベンダー間(Claude↔Codex↔Cursorなど)でのハンドオフを前提にした設計が特徴的
+・サーバーを立てればチームで記憶を共有できる構成",複数のAIエージェントを併用する開発チームが、タスクの引き継ぎや過去の意思決定を追跡する基盤として活用できそう。既存のエージェントワークフローにメモリ層を追加する形で統合しやすい。,MIT license,
+Comfy-Org/ComfyUI,Python,ノードグラフ(グラフ/ノード)インターフェースで画像・動画・音声・3Dモデルを生成できる、モジュール式の拡散モデルGUI/API/バックエンド。多数のオープンソース拡散モデルに対応し、ローカル実行やAPIによる外部連携が可能。,https://github.com/Comfy-Org/ComfyUI,4790,"・ノードベースで処理フローを自由に組み立てられる柔軟性と、カスタムノードによる拡張性
+・Windows/Linux/macOSに対応し、オフライン実行をデフォルトとするプライバシー重視の設計
+・画像生成AIコミュニティで広く使われる定番ツールとしての継続的な開発",既存の画像/動画生成パイプラインに組み込み、ワークフローをAPI経由で自動化する用途が考えられる。他のAIツールと連携させたクリエイティブ制作基盤として、研究用途からプロダクト組み込みまで幅広く応用できそう。,GPL-3.0 license,
+anthropics/claude-plugins-official,Python,Anthropicが公式に管理する、Claude Code向けプラグインのディレクトリ。`/plugin install`コマンドや`/plugin > Discover`から、社内製プラグインとサードパーティ製プラグインの両方を閲覧・導入できる。,https://github.com/anthropics/claude-plugins-official,2245,"・Anthropic公式のキュレーション付きプラグインストアとしての位置づけ
+・内部メンテナンスのプラグイン(`/plugins`)と外部コミュニティ製プラグイン(`/external_plugins`)を分離管理
+・プラグインに含まれるMCPサーバーやコードはAnthropicの管理外である旨を明示するなど、セキュリティ面の注意喚起がある",Claude Codeを使う開発者が、タスクに応じた拡張機能を手軽に探して導入する入口として使える。自社のワークフローに合うプラグインの選定や、将来的に自前のプラグインを公開する際の参考リポジトリとしても有用。,Apache-2.0 license,
+vllm-project/vllm,Python,大規模言語モデルの推論・サービングを高速かつ省メモリで行うためのオープンソースライブラリ。PagedAttentionや連続バッチング、量子化などの技術により高スループットを実現し、OpenAI互換のAPIサーバーも提供する。,https://github.com/vllm-project/vllm,1445,"・多様なハードウェア(NVIDIA、AMD、TPUなど)と幅広いモデルアーキテクチャ(Llama, Qwen, DeepSeek, GPT-OSSなど)への対応
+・MoEモデルや最新GPU世代のサポートなど、最先端の推論最適化を継続的に取り込んでいる
+・業界標準的な推論エンジンとして、研究・プロダクション双方で広く採用されている",自社LLMサービスの推論基盤として導入し、コスト効率とスループットを改善する用途に直結する。既存のOpenAI API互換アプリケーションをそのまま置き換えられる点も実務での導入ハードルを下げている。,Apache-2.0 license,
+multica-ai/andrej-karpathy-skills,Markdown,Andrej Karpathy氏のLLMコーディングの失敗パターンに関する知見をもとに作られた、単一のCLAUDE.mdファイルでClaude Codeの挙動を改善するプロジェクト。「考えてからコードを書く」「シンプルさ優先」「外科的な変更」「目的駆動の実行」という4原則を提示する。,https://github.com/multica-ai/andrej-karpathy-skills,2937,"・複雑な仕組みではなく1つのMarkdownファイルという最小構成で、エージェントの挙動改善を狙う点がユニーク
+・Claude Codeプラグインとしてもプロジェクトへの直接コピーとしても導入可能
+・Cursor用のルールファイルも同梱し、複数のツールに対応",既存のClaude Code/Cursorを使った開発プロジェクトに、プロンプト改善レイヤーとして簡単に追加できる。自社のコーディングガイドラインをCLAUDE.md化する際の参考実装としても活用できそう。,,
+pingdotgg/t3code,TypeScript,"自分のマシン上で動くAIコーディングエージェント(Claude Code, Codex, Cursorなど)を、iOS/Androidアプリやウェブ、Electronデスクトップアプリから操作できる「エージェントハーネス制御サーフェス」。既存のサブスクリプションをそのまま利用できる。",https://github.com/pingdotgg/t3code,1770,"・複数のコーディングエージェント(Claude Code, Codex, Cursor, Grok Build, OpenCode, Google Antigravityなど)を横断的に操作できる統一インターフェース
+・モバイルからもリモートでエージェントの進行状況を確認・操作できる点が新しい
+・開発初期段階であることを明示しつつ、実用的なツールとして注目されている",外出先やモバイル端末からローカルの開発環境のエージェントタスクを監視・操作したい開発者に向けたツールとして使える。CI待ちや長時間タスクの合間に進捗確認する運用に組み込みやすそう。,MIT license,
