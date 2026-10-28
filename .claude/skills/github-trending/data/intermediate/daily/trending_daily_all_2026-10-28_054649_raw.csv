@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,elayadesign/ai-design-skills,https://github.com/elayadesign/ai-design-skills,,Markdown,9862,694,1395,daily,,2026-10-28T05:46:49+00:00,MIT license,
+2,Nutlope/hallmark,https://github.com/Nutlope/hallmark,"Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",CSS,39369,2055,2830,daily,,2026-10-28T05:46:49+00:00,MIT license,
+3,nightly-labs/openbot,https://github.com/nightly-labs/openbot,"A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",TypeScript,2644,265,777,daily,,2026-10-28T05:46:49+00:00,,
+4,obra/superpowers,https://github.com/obra/superpowers,An agentic skills framework & software development methodology that works.,Shell,306632,27292,617,daily,,2026-10-28T05:46:49+00:00,MIT license,
+5,pbakaus/impeccable,https://github.com/pbakaus/impeccable,"The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",Rust,90903,5389,1449,daily,,2026-10-28T05:46:49+00:00,Apache-2.0 license,
+6,makecindy/cindy,https://github.com/makecindy/cindy,Consider it done. The open-source AI agent that works out of the box.,TypeScript,7653,907,1465,daily,,2026-10-28T05:46:49+00:00,Apache-2.0 license,
+7,gitroomhq/postiz-app,https://github.com/gitroomhq/postiz-app,The ultimate agentic social media scheduling tool,TypeScript,39586,7530,951,daily,,2026-10-28T05:46:49+00:00,AGPL-3.0 license,
+8,affaan-m/ECC,https://github.com/affaan-m/ECC,"The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",JavaScript,291073,43090,1165,daily,,2026-10-28T05:46:49+00:00,MIT license,
+9,HKUDS/DeepTutor,https://github.com/HKUDS/DeepTutor,DeepTutor: Lifelong Personalized Tutoring.,Python,46450,5810,1598,daily,,2026-10-28T05:46:49+00:00,Apache-2.0 license,
+10,JetBrains/thinkrail,https://github.com/JetBrains/thinkrail,"Vibe code with pi in a lightweight, real IDE that customises itself around the way you work",TypeScript,4258,225,1204,daily,,2026-10-28T05:46:49+00:00,Apache-2.0 license,
+11,togg53192-cmd/jailbreaks,https://github.com/togg53192-cmd/jailbreaks,LIST OF ALL MY JAILBREAKS,Text,5885,865,902,daily,,2026-10-28T05:46:49+00:00,,
