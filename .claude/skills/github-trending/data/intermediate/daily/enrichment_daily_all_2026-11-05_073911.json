@@ -1,0 +1,82 @@
+{
+  "NVIDIA/auto-ontology": {
+    "overview": "NVIDIAが公開するPythonフレームワークで、企業データ上にセマンティックでグラフベースのオントロジー(文脈レイヤー)を構築する。自然言語の質問をSQLへ変換してLLMやエージェントに文脈を提供し、より決定論的で説明可能な回答生成を目指している。Next.js製フロントエンド、FastAPIバックエンド、取り込みサービス、MCPサーバーからなるマイクロサービス構成で、PostgreSQL(pgvector)にオントロジーとベクトル埋め込みを保存する。",
+    "highlights": "・ドラフト生成→人による承認(certify)→SQL生成・検証という3段階パイプラインで、回答の根拠となるSQLと手順を明示できる決定論的なクエリ生成を実現\n・PostgreSQL、Snowflake、Databricks、DuckDBなど10種のSQLエンジンに対応し、Helm/Kubernetesやdocker composeでのデプロイをサポートする点がエンタープライズ採用を後押し\n・NVIDIA NIMモデルやKumoRFMによる予測機能、Apache Ossieとの相互運用性など、NVIDIAのAIスタックとの統合が強み",
+    "usage_ideas": "社内の複数データベースに散らばる用語・定義の揺れを統一し、LLMエージェントが安全かつ説明可能に業務データへアクセスするための基盤として使える。RAGやtext-to-SQLエージェントの信頼性向上、データカタログ整備の土台としての活用が考えられるが、現時点では外部コントリビューションを受け付けていない点に留意が必要。"
+  },
+  "max-sixty/worktrunk": {
+    "overview": "Rust製のCLIツールで、Gitのworktreeをディレクトリパスではなくブランチ名で直接操作できるようにする。並列で動くAIコーディングエージェント(Claude CodeやCodexなど)向けのワークフローを想定して設計されており、`wt switch`や`wt merge`などのコマンドでworktreeの作成・切替・統合・削除をシンプルに行える。",
+    "highlights": "・`wt switch feat`のようにブランチ名だけでworktreeを作成・切替でき、手動の`cd`や`git worktree add`を置き換える点で開発体験を大きく改善\n・APFSやbtrfsなどのコピーオンライトファイルシステムを利用し、node_modulesやtargetなどのビルドキャッシュをworktree間で共有してセットアップ時間を短縮\n・LLMによるコミットメッセージ生成、CIステータスやPRプレビュー付きの対話的ピッカー、エージェント自動起動フック(`wt switch -x claude`)など、AIエージェント運用を前提にした機能が充実",
+    "usage_ideas": "複数のAIエージェントやブランチを並行して走らせる開発フローで、worktreeの切替・後片付けを自動化するツールとして利用できる。CI結果のプレビューや自動生成コミットメッセージと組み合わせることで、マルチエージェント開発やレビューの効率化に役立つと考えられ、Homebrew・Cargo・wingetなど複数のパッケージマネージャから導入できる手軽さも普及要因になっている。"
+  },
+  "mattpocock/skills": {
+    "overview": "Matt Pocock氏が自身の`.agents`ディレクトリから公開した、Claude CodeやCodex、GitHub Copilot、Gemini CLIなどのコーディングエージェント向けスキル集。計画の整合性確認からTDD、デバッグ、アーキテクチャ改善まで、実務的なエンジニアリング規律をMarkdown形式のスキルとしてまとめている。",
+    "highlights": "・`grill-me`による設計の壁打ちや`tdd`によるレッドグリーンリファクタの強制など、エージェントに外部から「規律」を与える仕組みが特徴的\n・スキルを「ユーザー起動型(スラッシュコマンド)」と「モデル起動型(自動発火)」に明確に分け、小さく組み合わせ可能な単位で管理する設計思想\n・『A Philosophy of Software Design』や『Domain-Driven Design』などの考え方を取り込み、特定モデルに依存しない形で公開している点が広く支持された要因と考えられる",
+    "usage_ideas": "自社のエージェント運用に、仕様化・チケット化・実装・レビューという一連の開発フローをそのまま取り込むことができる。`npx skills`やプラグイン経由で導入でき、チームのAIエージェント運用ルールの標準化やオンボーディング資料としても活用できそう。"
+  },
+  "floci-io/floci": {
+    "overview": "floci-io/flociは、LocalStackの代替となる無料のAWSローカルエミュレータ。`localhost:4566`でAWS互換APIを提供し、既存のAWS SDK、CLI、Terraform、CDKなどをそのまま使ってローカルでの開発・テスト・CIを行える。Java製で、多数のAWSサービスをDockerコンテナで本物に近い形で再現する。",
+    "highlights": "・LocalStack Communityとの比較で起動時間約24ms(LocalStackは約3.3秒)、アイドル時メモリ約13MiB、Dockerイメージ約90MBと、軽量・高速さを明確に打ち出している\n・S3やDynamoDBなどステートフルなサービスは共有ストレージ層、Lambda・RDS・EKSなどは実際のDockerコンテナで動かすなど、忠実度と軽量さを両立させるアーキテクチャ\n・LocalStackの環境変数や初期化スクリプトをそのまま読み込める互換レイヤーを持ち、5つのSDKと3つのIaCツールに対して2,576件の自動互換テストを実施している点が信頼性の訴求につながっている",
+    "usage_ideas": "LocalStackのコストや起動の重さに課題を感じているチームが、CI/CDパイプラインやローカル開発環境の高速化を目的に移行先として検討できる。Testcontainersモジュール(Java/Node.js/Python/.NET)で既存のテストスイートにも組み込みやすく、マルチクラウド版(Azure/GCP/OCI)展開も見据えたエコシステムとして注目される。"
+  },
+  "thedotmack/claude-mem": {
+    "overview": "claude-memは、Claude CodeをはじめとするAIコーディングエージェントにセッションをまたいだ永続的な記憶を持たせるTypeScript製ツール。ツール利用の観察結果をAIで要約・圧縮して保存し、次回以降のセッションに必要な文脈だけを注入する。",
+    "highlights": "・SessionStartやPreToolUseなどのライフサイクルフックで活動を自動記録し、SQLite(FTS5)とChromaベクトルDBによるハイブリッド検索で段階的に詳細を取得する設計により、約10倍のトークン削減を主張している\n・`<private>`タグによる機密情報マスキング、観察結果の引用(citation)、ローカルWebビューアなど、プライバシーと透明性に配慮した機能を搭載\n・Claude Agent SDKを基盤に、Claude Code・Codex・Gemini・Copilotなど複数のエージェントに対応するマルチプラットフォーム設計で、クラウド同期もオプションで提供",
+    "usage_ideas": "長期にわたる開発プロジェクトで、エージェントに「前回何をしたか」を覚えさせ、毎回のコンテキスト構築コストを削減する用途に向く。個人開発者のコンテキスト管理やチームでの知見の引き継ぎ資料としても活用でき、MCPツール(search/timeline/get_observations)経由で他のツールチェーンに統合することも可能。"
+  },
+  "vercel-labs/agent-desktop": {
+    "overview": "Vercel Labsが公開したRust製CLIで、AIエージェントによる「コンピュータ操作(computer use)」を、スクリーンショットではなくOSのアクセシビリティツリーを使って実現する。各UI要素にリファレンスIDを与え、エージェントがそのIDを指定して操作し、結果を再スナップショットで確認するというループを前提に設計されている。",
+    "highlights": "・画面のピクセルマッチングやスクリーンショット解析を使わず、macOSのAX、WindowsのUI Automation、LinuxのAT-SPIといったネイティブなアクセシビリティAPIから構造化データ(JSON)を取得する点が技術的に新しい\n・約56種類のコマンドで要素操作・キーボード/マウス制御・ウィンドウ管理・クリップボードなどを網羅し、各コマンドがリトライ可否を含むエラー情報を返す設計でエージェントが安全に自律動作しやすい\n・MCPサーバーとしてstdio経由で動作し、各コマンドがそのままMCPツールとして公開されるため、Claudeなどのエージェントフレームワークに容易に統合できる。Cライブラリとしても提供される",
+    "usage_ideas": "デスクトップアプリの自動操作が必要なRPAやQA自動化、あるいはClaudeなどのエージェントにPC操作能力を与えるためのバックエンドとして使える。スクリーンショットベースの既存のcomputer-useツールと比べて高速・低コストな代替として、エンタープライズのデスクトップ自動化や社内ツール連携に向くと考えられる。"
+  },
+  "github/spec-kit": {
+    "overview": "GitHubが公開するPython製のツールキットで、「Spec-Driven Development(SDD)」などのプロセスに沿ってAIコーディングエージェントを運用するための構造化されたワークフロー、テンプレート、スラッシュコマンドを提供する。",
+    "highlights": "・仕様作成→計画→タスク化→実装→収束という一連のSDDフローを`/speckit-specify`や`/speckit-plan`などのスラッシュコマンドで統一的に扱える点が、エージェント開発の再現性を高めている\n・バグ修正用・企画評価用の拡張(extension)、プリセット、ワークフローオーバーレイなど、組織ごとにプロセスをカスタマイズ・パッケージ化できる柔軟な構成\n・GitHub公式としてGitHub Copilotなど複数のエージェントとの統合を前提に設計され、オフライン・セルフホスト型のカタログにも対応するなどエンタープライズ採用を意識している",
+    "usage_ideas": "AIエージェントを使った開発を「思いつきで指示する」のではなく、仕様書・計画・タスクという明確な工程に落とし込みたいチームに向く。既存のアジャイル開発プロセスへのSDD組み込みや、バグ修正・新規アイデア評価フローの標準化にも使える。GitHub謹製という信頼性もtrending入りの一因と考えられる。"
+  },
+  "The-PR-Agent/pr-agent": {
+    "overview": "PR-Agentは、プルリクエストのレビューを自動化するオープンソースのAIエージェントです。CLIやGitHub Action、Docker、セルフホスト型Webhookなど様々な形で動作し、GitHub・GitLab・Bitbucket・Azure DevOps・Giteaなど主要なプラットフォームに対応しています。元々はQodo社が開発したツールで、現在はコミュニティによって保守されているオリジナルのOSS版です。",
+    "highlights": "・/describe、/review、/improve、/askといったコマンドをPRコメントやCLIから呼び出すだけでレビューが実行できる。\n・1つのツールにつき1回のLLM呼び出しで済む設計と、大規模PRに対応する圧縮戦略により効率的に動作する。\n・OpenAI、Anthropic Claude、Google Gemini、DeepSeek、Mistral、Ollamaなど多様なLLMをLiteLLM経由で利用できる柔軟性。",
+    "usage_ideas": "チーム独自のレビュー基準をJSON設定でカスタマイズし、CI/CDパイプラインに組み込んでPR品質チェックを自動化できます。セルフホスト環境でのコードレビュー効率化や、Qodoの商用版に依存しないOSSベースの開発フロー構築にも活用できそうです。"
+  },
+  "harry0703/MoneyPrinterTurbo": {
+    "overview": "MoneyPrinterTurboは、トピックやキーワードを指定するだけでAIが台本作成からナレーション、字幕、BGM、映像素材の選定までを自動で行い、ショート動画を一本生成する中国発のオープンソースツールです。Web UI、HTTP API、CLI、AIエージェントなど複数の利用方法が用意されています。",
+    "highlights": "・OpenAI、Gemini、DeepSeek、Ollamaなど多数のLLMに対応し、複数言語での台本生成が可能。\n・Pexels・Pixabayなどのストック素材やAIによるテキスト動画生成、無料のEdge TTSを含む多様な音声合成を組み合わせられる。\n・faster-whisperによるローカル文字起こしで字幕タイミングを高精度化でき、縦型・横型・正方形など複数のアスペクト比に対応。",
+    "usage_ideas": "SNS向けショート動画の量産や、ニュース要約・教育コンテンツの自動生成に活用できそうです。CapCutやInVideoのようなAI動画生成SaaSのOSS代替として、個人クリエイターやマーケターのコンテンツ制作を効率化する用途が想定されます。"
+  },
+  "garrytan/gstack": {
+    "overview": "gstackは、投資家Garry Tanが実際に使用しているClaude Codeのセットアップを公開したオープンソースのスラッシュコマンド集です。CEO・デザイナー・エンジニアリングマネージャー・リリースマネージャー・ドキュメントエンジニア・QAなど23個の役割特化型ツールを提供し、AIコーディングエージェントを仮想的な開発チームのように機能させます。",
+    "highlights": "・/plan-ceo-review、/design-review、/qa、/shipなどの役割別コマンドが「考える→計画→実装→レビュー→テスト→リリース→振り返り」という開発フローに沿って連携する。\n・/browseや/qaは実際のブラウザを操作してバグの再現や検証を自動化し、GBrainとの連携でセッションを超えた知識の永続化も可能。\n・Claude Codeをフルサポートしつつ、Codex CLIやCursor、Gemini CLIなど他のコーディングエージェントにも実験的に対応するマルチエージェント設計。",
+    "usage_ideas": "著名投資家の実践知をそのまま再現できる点が話題性となっており、個人開発者が一人で企画・設計・実装・QA・リリースといった各工程を疑似的なチーム体制で回せるようになります。スタートアップの初期フェーズでの開発プロセス標準化や、Claude Code活用のベストプラクティス集としても参考になりそうです。"
+  },
+  "FareedKhan-dev/kimi-k3-in-c": {
+    "overview": "kimi-k3-in-cは、2.78兆パラメータを持つ大規模言語モデルKimi K3を、GPUもBLASも使わずポータブルなC99コードだけで単一CPU・8.24GBのRAM上で推論実行するプロジェクトです。MoE(専門家混合)と線形アテンションを採用したモデルを、MXFP4量子化とAVX2によるSIMD最適化で効率的に動かします。",
+    "highlights": "・外部フレームワーク・BLASライブラリ・GPUに依存しない、依存関係ゼロのC99実装という技術的な挑戦。\n・MXFP4量子化により超巨大モデルを一般的なPCのメモリ容量に収める工夫。\n・CMake/Makefile対応やベンチマーク・テストを備え、巨大LLMの推論を民主化する教育的・実用的価値を持つ。",
+    "usage_ideas": "高価なGPUクラスタがなくても最先端の超巨大モデルをローカルで動かせる可能性を示す実験的プロジェクトで、llama.cppのような軽量推論エンジンの系譜に位置づけられます。エッジ環境や低コストサーバーでのLLM推論、量子化・最適化手法の学習素材としての活用が考えられます。"
+  },
+  "JiaFeiMiao-K-Cat/DiscImageStudio": {
+    "overview": "DiscImageStudioは、画像をディスク表面の可視パターンに変換し、一般的な光学ドライブでそのまま書き込めるツールです。CD・DVD・片面25GBのBD-Rに対応し、画像入りの物理ディスクを作成できます。",
+    "highlights": "・CDはWAV+CUEやRAWオーディオ、DVDはNRZI制約ソルバーを用いたISO生成など、メディアごとに最適化された書き込み方式を実装。\n・ディスク写真から半径やトラックピッチを推定するキャリブレーション機能や、ブランドごとのプリセットなど実用的な工夫が充実。\n・Windows IMAPI2を使った実験的な直接書き込みモードに加え、Windows用WPF GUIとLinux/macOS向けCLIを両方提供し、ネットワーク通信やテレメトリを行わないプライバシー重視の設計。",
+    "usage_ideas": "物理メディアへのこだわりやノスタルジーから話題になりやすい、アート・DIY系プロジェクトとして注目されそうです。レトロコンピューティング愛好者や、物理ディスクにメッセージ・画像を刻みたいクリエイターの自己表現ツールとしての活用が考えられます。"
+  },
+  "MichaelCade/90DaysOfDevOps": {
+    "overview": "90DaysOfDevOpsは、Michael Cadeが個人の学習記録として始めたプロジェクトが発展し、DevOpsの原則・プロセス・ツール・ユースケースを体系的に学べるコミュニティ主導の学習マップとなったリポジトリです。2022年のDevOpsコース、2023年のDevSecOpsコース、2024年のコミュニティ主導セッション集という3年分のコンテンツを収録しています。",
+    "highlights": "・Ansible、Kubernetes、Terraform、IaC、コンテナ、ネットワークなど幅広いDevOpsトピックを無料・OSSツールのみで解説。\n・世界中のコントリビューターによる翻訳・修正・拡充を受け入れるコミュニティ主導の運営体制。\n・90daysofdevops.comとして静的サイト化もされており、YouTube上の90本のコミュニティセッションとも連携。",
+    "usage_ideas": "DevOpsエンジニアを目指す初学者が90日間のロードマップとして学習を進める教材として使えるほか、企業の新人研修や社内学習コンテンツの土台としても活用できそうです。特定ベンダーに偏らない中立的な学習リソースという点が信頼を得て支持を広げています。"
+  },
+  "D4Vinci/Scrapling": {
+    "overview": "Scraplingは、単純なHTTPリクエストから大規模クローリングまでを一つのライブラリでカバーするPython製Webスクレイピングフレームワークです。ブラウザのTLSフィンガープリントを模倣した高速フェッチ、ステルスブラウザによるJS対応、CSS/XPath/正規表現によるパース、Scrapy風のクローラーAPIを統合しています。",
+    "highlights": "・Cloudflare Turnstileの突破やブラウザTLSフィンガープリントの模倣など、ボット対策への対応力が高い。\n・ページ構造が変化しても要素を追跡できるアダプティブ選択機能や、Markdown出力によるRAGパイプラインとの親和性。\n・AIエージェント向けのMCPサーバーやコーディングアシスタント用Agent Skillを備え、AI時代のスクレイピング用途を意識した設計。",
+    "usage_ideas": "ScrapyやPlaywrightの機能を一つにまとめた実用ツールとして、個人開発から大規模データ収集まで幅広く使えます。LLMへの入力データ収集やRAG用コンテンツ取得など、AIアプリケーションのデータパイプライン構築に特に向いています。"
+  },
+  "Thysrael/Horizon": {
+    "overview": "HorizonはAIを活用したニュースアグリゲーターで、RSS/Atom、Hacker News、Reddit、Telegram、X(Twitter)、GitHub、GDELT、Google Newsなど多数のソースから記事を収集します。収集した情報を重複排除・フィルタリングし、英語と中国語の日次ブリーフィングとして自動生成します。",
+    "highlights": "・「プロファイル」という再利用可能な編集ルールで、ソースごとに採用基準やスコアリング、出力形式を柔軟に設定できる点が技術的に特徴的\n・Claude、GPT、Gemini、DeepSeekなど複数のLLMプロバイダーに対応し、MCPサーバーとしてパイプラインをAIアシスタントに公開できる\n・uv管理のPythonプロジェクトでDocker対応、GitHub Pages公開やSlack/Discord/WeChatなど多様な配信チャネルを備える",
+    "usage_ideas": "個人や小規模チームが情報収集を自動化し、業務・技術トレンドの定点観測に使える。GitHub Actionsでの定期実行やWebhook連携により、社内ニュースレターや技術チームの朝会資料作成にも応用できそう。他の要約系ニュースツールと比べ、プロファイル機構による出力のカスタマイズ性が強みと言える。"
+  },
+  "scenario-labs/skills": {
+    "overview": "scenario-labs/skillsは、AIコーディングエージェントがScenario MCPサーバーを通じて画像・動画・音声・3Dなどのプロダクションレベルのコンテンツを生成できるようにするAgent Skills集です。モデル選定やコスト事前見積もり、キャラクター/ブランドの一貫性維持を支援します。",
+    "highlights": "・Veo、Kling、Seedance、Meshy、Rodinなど特定モデルファミリー向けのスキルが個別に用意されている\n・Blender、Maya、ZBrush、Unreal、Unity、Godot、Roblox Studioなどのクリエイティブツールを操作する「エキスパートチーム」スキルを含む\n・70以上のAIエージェントに対応するインストーラーがあり、`npx skills add`で導入できる",
+    "usage_ideas": "ゲーム開発や3Dコンテンツ制作のワークフローにAIエージェントを組み込み、アセット生成からDCCツール操作までを自動化する用途に向く。価格事前計算機能により、生成AIのコスト管理をしながら制作パイプラインに組み込める点が実務的。"
+  }
+}
