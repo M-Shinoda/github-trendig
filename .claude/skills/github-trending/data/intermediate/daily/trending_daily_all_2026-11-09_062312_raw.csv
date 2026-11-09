@@ -1,0 +1,10 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,sherlock-project/sherlock,https://github.com/sherlock-project/sherlock,Hunt down social media accounts by username across social networks,Python,104689,12205,2373,daily,,2026-11-09T06:23:12+00:00,MIT License,
+2,dsx-ai-factory/nvke,https://github.com/dsx-ai-factory/nvke,NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.,Go,935,113,345,daily,,2026-11-09T06:23:12+00:00,Apache License 2.0,
+3,milind-soni/OpenMausBot,https://github.com/milind-soni/OpenMausBot,Open-source Grok Bot alternative with a virtual machine that bots can use,TypeScript,18722,2581,1439,daily,,2026-11-09T06:23:12+00:00,Apache License 2.0,
+4,anthropics/claude-quickstarts,https://github.com/anthropics/claude-quickstarts,A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API,Python,19585,3285,32,daily,,2026-11-09T06:23:12+00:00,MIT License,
+5,vercel-labs/agent-browser,https://github.com/vercel-labs/agent-browser,Browser automation CLI for AI agents,Rust,47876,3270,815,daily,,2026-11-09T06:23:12+00:00,Apache License 2.0,
+6,meta/astryx,https://github.com/meta/astryx,An open source design system that's fully customizable and agent ready,TypeScript,17594,1381,875,daily,,2026-11-09T06:23:12+00:00,MIT License,
+7,anthropics/skills,https://github.com/anthropics/skills,Public repository for Agent Skills,Python,189908,22371,792,daily,,2026-11-09T06:23:12+00:00,,
+8,google-deepmind/mujoco,https://github.com/google-deepmind/mujoco,Multi-Joint dynamics with Contact. A general purpose physics simulator.,C++,16562,1959,41,daily,,2026-11-09T06:23:12+00:00,Apache-2.0 license,
+9,ranxianglei/billion-context,https://github.com/ranxianglei/billion-context,"A context-compression plugin for month-long single sessions (billions of tokens), small context windows (a 100K context is enough) and token savings (5x fewer tokens). billion-context is all you need",TypeScript,5377,416,460,daily,,2026-11-09T06:23:12+00:00,,
