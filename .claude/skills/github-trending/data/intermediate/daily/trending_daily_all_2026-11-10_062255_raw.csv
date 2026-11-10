@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,anthropics/skills,https://github.com/anthropics/skills,Public repository for Agent Skills,Python,191353,22466,1038,daily,,2026-11-10T06:22:55+00:00,,
+2,meta/astryx,https://github.com/meta/astryx,An open source design system that's fully customizable and agent ready,TypeScript,20777,1581,3278,daily,,2026-11-10T06:22:55+00:00,MIT license,
+3,sherlock-project/sherlock,https://github.com/sherlock-project/sherlock,Hunt down social media accounts by username across social networks,Python,107667,12449,4267,daily,,2026-11-10T06:22:55+00:00,MIT license,
+4,google-deepmind/mujoco,https://github.com/google-deepmind/mujoco,Multi-Joint dynamics with Contact. A general purpose physics simulator.,C++,17044,2010,574,daily,,2026-11-10T06:22:55+00:00,Apache-2.0 license,
+5,anthropics/claude-quickstarts,https://github.com/anthropics/claude-quickstarts,A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API,Python,20144,3326,551,daily,,2026-11-10T06:22:55+00:00,MIT license,
+6,garrytan/gbrain,https://github.com/garrytan/gbrain,Garry's Opinionated OpenClaw/Hermes Agent Brain,TypeScript,32293,4779,216,daily,,2026-11-10T06:22:55+00:00,MIT license,
+7,vercel-labs/agent-browser,https://github.com/vercel-labs/agent-browser,Browser automation CLI for AI agents,Rust,48692,3317,916,daily,,2026-11-10T06:22:55+00:00,Apache-2.0 license,
+8,ruvnet/RuView,https://github.com/ruvnet/RuView,"RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection",Rust,103639,13425,172,daily,,2026-11-10T06:22:55+00:00,MIT license,
+9,ZhuLinsen/daily_stock_analysis,https://github.com/ZhuLinsen/daily_stock_analysis,"LLM-powered multi-market stock analysis system with multi-source market data, real-time news, a decision dashboard, automated notifications, and cost-free scheduled runs",Python,69191,56465,506,daily,,2026-11-10T06:22:55+00:00,MIT license,
+10,homeassistant-ai/ha-mcp,https://github.com/homeassistant-ai/ha-mcp,"Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",Python,6149,300,31,daily,,2026-11-10T06:22:55+00:00,MIT license,
+11,milind-soni/OpenMausBot,https://github.com/milind-soni/OpenMausBot,Open-source Grok Bot alternative with a virtual machine that bots can use,TypeScript,20047,2738,1587,daily,,2026-11-10T06:22:55+00:00,Apache-2.0 license,
