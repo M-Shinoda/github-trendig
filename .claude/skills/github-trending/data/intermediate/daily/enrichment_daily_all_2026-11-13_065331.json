@@ -1,0 +1,67 @@
+{
+  "GoogleChrome/modern-web-guidance-src": {
+    "overview": "GoogleChrome/modern-web-guidance-srcは、コーディングエージェントに最新のWebベストプラクティスを教え込むための「modern-web-guidance」プロジェクトのソースリポジトリです。CSS・HTML・JavaScriptなど250以上のモダンなWeb機能と203の実用的なユースケースをガイドとしてまとめ、CLI経由でエージェントのコンテキストに注入できるようにしています。Google Chrome、Microsoft Edge、Mozilla Firefox、MDNの各チームが共同でメンテナンスしている点も特徴です。",
+    "highlights": "・Chrome・Edge・Firefox・MDNという複数のブラウザベンダーが共同運営する珍しい体制で、ベンダー中立性と信頼性が高い。・`search`/`retrieve`/`legacy-scan`などのCLIコマンドで、古いパターンを検出し最新APIへの置き換えを提案できる。・LLMが既に知っている内容を削ぎ落としてガイドを最小化するなど、トークン効率を意識した設計がされている。",
+    "usage_ideas": "Claude CodeやCursorなどのコーディングエージェントに`npx modern-web-guidance@latest install`で導入し、レガシーなポリフィルやjQuery的実装を避けて、ネイティブのWeb APIを使うコードを自動生成させる用途に向いています。アクセシビリティやパフォーマンス、PWAなど分野別のベストプラクティス適用を自動化したいチームにも有用で、今後他のAIコーディングツールの「ナレッジプラグイン」のモデルケースになる可能性があります。"
+  },
+  "openai/codex-security": {
+    "overview": "openai/codex-securityは、OpenAIが提供するセキュリティ脆弱性の検出・検証・修正を行うCLIおよびTypeScript SDKです。Codexのワークフローとして、またはターミナルから`cs scan .`で直接、リポジトリ全体や差分に対して脆弱性スキャンを実行できます。",
+    "highlights": "・単発スキャンに加え、同じスキャンを繰り返して重複を除去する「Deepスキャン」や、既存の修正を検証する機能を備える。・SECURITY.mdのドラフト作成や脅威モデルの保存、Linear・Jira・GitHubとの連携、SARIF/JSON/CSV出力など、実務のセキュリティ運用に組み込みやすい設計。・OpenAIだけでなくAmazon Bedrock、OpenRouter、Fireworks AIなど複数のモデルプロバイダーに対応している。",
+    "usage_ideas": "CI/CDパイプラインに組み込んで、プルリクエストごとに脆弱性の検出とパッチ生成を自動化する使い方が想定されます。セキュリティチームが手動で行っていたトリアージ作業(重複判定・深刻度評価・担当者の推定)をAIが支援することで、脆弱性対応のリードタイム短縮に寄与しそうです。"
+  },
+  "nvm-sh/nvm": {
+    "overview": "nvm-sh/nvmは、Node.jsの複数バージョンを切り替えて管理するためのPOSIX準拠のbashスクリプトです。長年にわたりNode.js開発者の定番ツールとして使われており、現在はOpenJS Foundationの傘下で管理されています。",
+    "highlights": "・`.nvmrc`ファイルによるプロジェクト単位でのバージョン固定や、LTSライン名での指定(例: `lts/argon`)など、実務でのバージョン管理を柔軟にサポートする。・`nvm exec`/`nvm run`/`nvm which`といったコマンドで、特定バージョンでのコマンド実行やバイナリ特定が可能。・オフラインインストールやカスタムミラー対応など、企業内のクローズドな環境でも使いやすい工夫がある。",
+    "usage_ideas": "複数のNode.jsプロジェクトを並行して開発するエンジニアにとって、バージョン差異によるトラブルを避けるための基盤ツールとして使われています。CIパイプラインやDockerビルドでも`.nvmrc`を読み込んでバージョンを揃える用途で広く利用されており、Voltaやfnmなど後発の高速な代替ツールとの比較対象としてもよく話題になります。"
+  },
+  "pookjw/HermesEnabler": {
+    "overview": "pookjw/HermesEnabler(HermesEnabler 2)は、本来Apple Watch Hermèsエディションの購入者のみが利用できるHermèsウォッチフェイスを、通常のApple Watchでも表示可能にするiPhone/Apple Watch用アプリです。watchOS 27.0〜27.3 beta 1を対象に、MobileGestaltのバックアップ・復元を利用してこの機能制限を解除する仕組みになっています。",
+    "highlights": "・MobileGestaltという内部設定データをバックアップ・改変・復元することで、デバイスに「Hermèsモデルである」という情報を一時的に認識させる技術的アプローチを採用している。・macOSではSideloadlyによるIPAサイドロード、Windowsではコミュニティ製のWatchBridgeを使うなど、複数プラットフォームからのインストール手順が整備されている。・Developer Mode有効化やBundle Identifier固定など、サイドロード特有の制約・注意点がREADMEに詳細にまとめられている。",
+    "usage_ideas": "Apple Watch無印モデルの所有者が、見た目だけの機能であるHermèsウォッチフェイスを試したい場合に使われるツールです。OSの内部設定を読み書きする手法自体は、他の「ロックされたハードウェア機能の有効化」系ツイークにも応用できる技術的な参考例として注目されています。"
+  },
+  "we-promise/sure": {
+    "overview": "we-promise/sureは、アーカイブされたMaybe Financeプロジェクトをフォークした、誰でも使えるセルフホスト型の個人向け財務管理アプリです。キャッシュフロー・資産(ネットワース)・支出の可視化に加えて、データについて質問できるAIアシスタント機能も備えています。",
+    "highlights": "・Dockerでの自前ホスティングに加え、Render経由のワンクリックデプロイ(AIなし/OpenAI利用の簡易AI/外部AI利用)やPikaPods、Hostimなど複数の導入手段が用意されている。・ブラウザ、macOSデスクトップアプリ、モバイルアプリ、API、さらにLLMエージェントからも利用できるマルチクライアント構成。・開発が止まったMaybe Financeの後継として立ち上がり、コミュニティ主導で活発に開発・議論(Discord)が続けられている。",
+    "usage_ideas": "プライバシーを重視して金融データを自分のサーバーに置きたい個人や、Mint・YNABなどのクラウド型家計簿サービスの代替を探しているユーザーに向いています。オープンソースかつセルフホストという特性から、企業の福利厚生ツールやFinTechプロトタイプのベースとしても活用され得ます。"
+  },
+  "QwenLM/qwen-code": {
+    "overview": "QwenLM/qwen-codeは、ターミナルで動作するオープンソースのAIコーディングエージェントです。Google Gemini CLI v0.8.2からフォークして開発が始まり、その後独自に進化を続けています。",
+    "highlights": "・OpenAI、Anthropic、Gemini、Qwenの各APIや、Ollama/vLLMによるローカルモデルまで、実行時に切り替え可能な複数プロバイダー対応を持つ。・auto-memory、auto-skills、サブエージェント、エージェントチーム、MCP対応など、高度なエージェント機能を搭載。・`qwen serve`によるデーモンモードで、エディタ・ブラウザ・SDK・自動化クライアントが同一のエージェントセッションを共有できる(実験的機能)。・SWE-bench Verifiedで平均76.40〜77.80%のスコアを報告している。",
+    "usage_ideas": "Claude CodeやGemini CLIの代替として、特にQwenモデルを使ったコーディングエージェントを求めるユーザーに向いています。VS CodeやZed、JetBrainsとの統合やTelegram・WeChatなどのチャットチャネル対応もあり、ターミナル作業に閉じない「どこでも使えるコーディングエージェント」を目指すプロジェクトとして注目されています。"
+  },
+  "ashhart/TensorFold": {
+    "overview": "TensorFoldはZig言語で書かれたLLM推論エンジンで、Apple Silicon(Metal)とNVIDIA GPU(CUDA)上でPythonやMLXのインストールなしに単一バイナリからモデルを提供できる。OpenAI・Anthropic互換APIを備え、デスクトップアプリやエンタープライズ向けゲートウェイ(Starlight)も同梱している。",
+    "highlights": "・ZigによるフルスクラッチのカスタムカーネルでMetal/CUDAの両方に対応し、依存の少ない単一バイナリ配布を実現している点が技術的に注目される。\n・投機的デコーディング(speculative drafting)を採用しつつ、通常のエンジンと完全に同一の出力を保つと主張している。\n・Qwen、Nemotron、GLM、Gemma、LFM2.5など多数の最新モデルファミリーを量子化対応で幅広くサポートしている。",
+    "usage_ideas": "ローカルやオンプレでLLM推論を行いたい開発者が、Pythonスタックなしで高速なサービングを実現する用途に向く。MLXやllama.cppなど既存の推論基盤に代わる軽量な選択肢として検討できる。デスクトップアプリとAPI互換性を活かし、既存のOpenAI/Anthropic向けクライアントをそのまま接続するのも容易だろう。"
+  },
+  "nodejs/node": {
+    "overview": "Node.jsはChrome V8エンジンをベースにした、オープンソースかつクロスプラットフォームのJavaScriptランタイムである。本リポジトリはNode.js本体のソースコードを管理し、OpenJS FoundationとTSC(技術運営委員会)によるオープンなガバナンス体制のもとで開発が続けられている。",
+    "highlights": "・12万を超えるスターと5万弱のコミットを抱える、JavaScript/Node.jsエコシステム全体を支える基盤的インフラであること自体が強み。\n・Alpha・Current・LTS・Nightlyという明確なリリースモデルと、SHA256チェックサム・PGP署名によるリリース検証の仕組みを備えている。\n・lib(JS)/src(C++)/deps/testなど整理された構成と、GYP/GNビルドシステムによる長年の実運用知見が蓄積されている。",
+    "usage_ideas": "サーバーサイドAPI、CLIツール、フロントエンドのビルドチェーンなど、事実上すべてのJavaScript/TypeScript開発の基盤として利用される。トレンド入りの背景には新機能リリースやセキュリティ修正、バージョンアップのタイミングなど継続的な活発な開発がある。"
+  },
+  "addyosmani/agent-skills": {
+    "overview": "agent-skillsは、AIコーディングエージェント向けに「本番品質」のエンジニアリングワークフローをまとめたスキル集で、SKILL.md形式で仕様策定からリリースまでの手順・検証ゲート・よくある手抜きの言い訳集を定義している。Claude Code、Cursor、Gemini CLI、Codexなど複数のツールに対応するアダプタを備える。",
+    "highlights": "・25個のスキルと/spec, /plan, /build, /test, /review, /shipなど9つのスラッシュコマンドで、ソフトウェア開発ライフサイクル全体をカバーしている点が特徴的。\n・code-reviewer、test-engineer、security-auditorなど4つのレビュアー人格(ペルソナ)を用意し、エージェントの出力を多角的に検証できる設計。\n・npx skillsコマンドや各ツール向けネイティブ統合により導入が容易で、公開後すぐに10万超のスターを獲得するなど急速に話題になっている。",
+    "usage_ideas": "Claude CodeやCursorなどのコーディングエージェントに一貫した開発規律を持たせたいチームが、仕様→実装→テスト→レビューという型を標準化する目的で導入できる。既存のプロンプトエンジニアリングやガードレール手法と組み合わせ、エージェントの出力品質・再現性を高める実験にも向いている。"
+  },
+  "meta/astryx": {
+    "overview": "AstryxはMeta社内で8年かけて育てられたデザインシステムをオープンソース化したもので、150以上のアクセシブルなReactコンポーネント、テーマ機能、ダークモード、テンプレート、CLIを提供する。React 19以降とStyleXをベースに構築されており、現在はベータ版。",
+    "highlights": "・ビルドプラグイン不要で事前ビルド済みCSSと型付きReactコンポーネントをそのままインポートできる手軽さと、Tailwindやプレーンなclassでの再スタイリングの柔軟性を両立している。\n・swizzleコマンドでコンポーネントのソースをプロジェクトへ直接コピーできるなど「エージェントフレンドリー」を意識した設計が、AI時代のデザインシステムとして注目されている。\n・neutral、butter、chocolate、matchaなど7種類のテーマを標準搭載し、長年の実運用で磨かれたアクセシビリティ品質を強みとする。",
+    "usage_ideas": "新規プロダクトのUI構築を素早く立ち上げたいチームや、AIコーディングエージェントにUIコンポーネントを生成・編集させたい開発者に向く。MaterialやChakra UIなど既存デザインシステムの代替として、特にエージェント主導の開発フローとの親和性を評価する価値がある。"
+  },
+  "CopilotKit/OpenBot": {
+    "overview": "OpenBotはCopilotKitが開発する、セルフホスト可能なオープンソースの「AIコワーカー」基盤で、各エージェントに専用のブラウザ・ファイル・ツールを持つ仮想コンピュータを与える。すべてのアクションは実行前にポリシーで許可判定され、実行後に記録が残る仕組みを持つ。",
+    "highlights": "・CEL(Common Expression Language)ベースのポリシーでツール呼び出しをゲートウェイが検査し、ポリシー未設定時は何も許可しない「フェイルクローズ」設計が、AIエージェントのガバナンス・監査面での技術的な強みになっている。\n・AG-UIという公開プロトコルを採用し、LangGraph、CrewAI、Pydantic AI、Google ADK、Mastraなど外部フレームワーク製エージェントも「Bot」として接続できる柔軟な拡張性を持つ。\n・デスクトップアプリ・Docker・Kubernetes(Helm)の3形態で動かせ、Google/Microsoft/Okta/SAMLなど企業向けSSOやロール管理にも対応している。",
+    "usage_ideas": "社内向けに安全性と監査性を重視したAIエージェント運用基盤を構築したい企業が検討しやすい。既存のAG-UI対応エージェント(LangGraphなど)をそのまま持ち込めるため、マルチフレームワークなエージェント運用のハブとしての活用が考えられる。"
+  },
+  "Alishahryar1/free-claude-code": {
+    "overview": "free-claude-code(FCC)は、Claude Code・Codex・Cline・Aiderなど12種類のコーディングハーネスからのリクエストをローカルプロキシ経由で、NVIDIA NIM・OpenRouter・Groq・Google AI Studioやローカルサーバー(Ollama、LM Studio)など61のプロバイダへ振り分けるルーティングツールである。READMEでは「月1.3B(13億)トークン以上が無料」とうたっているが、その算出根拠は明示されていない。",
+    "highlights": "・各プロバイダのAPIキー取得やOAuth連携(ChatGPT、GitHub Copilotなど)はユーザー自身が行う前提で、FCC自体はルーティングとフォールバック設定のみを担う、既存の「無料枠アグリゲーター」系ツール(freellmapi等)と同様の仕組みを採用している。\n・Claude CodeのFable/Opus/Sonnet/Haikuという各モデル階層を、任意のプロバイダのモデルに差し替えられるマッピング機能を持つ。\n・READMEは「Anthropicとの提携・承認はない独立プロジェクト」であることや「各プロバイダの利用規約(TOS)に従い、許可されなくなった連携は削除する」こと、一部プランが個人・対話的コーディング用途限定であることを明記している。",
+    "usage_ideas": "複数の無料・サブスクリプション型LLMプロバイダを使い分けてコストを抑えたい個人開発者の実験・学習用途に向く。ただし無料枠の可用性や上限は各プロバイダの裁量で変動し、失敗したリクエストが複数プロバイダの利用量を消費しうる点もREADME自身が注意している。また、各ハーネス(Claude Codeなど)やプロバイダ側の想定(個人・対話的利用など)を超えた使い方になる場合、それぞれのサービスの利用規約に抵触する可能性がある点には留意したい。"
+  },
+  "ggml-org/llama.cpp": {
+    "overview": "llama.cpp は、C/C++で実装された軽量な大規模言語モデル(LLM)推論エンジンです。ggml ライブラリをベースに、外部依存なしでLLMや視覚言語モデル(VLM)をローカルやクラウドなど多様な環境で動かすことを目的としています。",
+    "highlights": "・Apple Silicon(ARM NEON/Metal)、x86(AVX/AVX512/AMX)、RISC-Vなど幅広いハードウェアに対応し、CUDA・HIP・Vulkan・SYCLなど約20種のバックエンドを持つ。・1.5bit〜8bitの量子化により省メモリ・高速推論を実現し、VRAMに収まらないモデルもCPU+GPUハイブリッド推論で扱える。・Hugging Faceからモデルを直接実行するCLIやOpenAI互換APIサーバーなど実用的なツール群を備え、13万以上のスターを持つ定番プロジェクトとして継続的に進化している。",
+    "usage_ideas": "個人のPCやエッジデバイスでクラウドを使わずにLLMを動かしたい場合の定番選択肢であり、ローカルAIアシスタントやオフライン推論基盤の構築に広く利用できます。OpenAI互換サーバー機能を使えば既存のLLMアプリをそのままローカル推論に切り替えることも可能で、量子化モデルの研究・比較のベースとしても有用です。"
+  }
+}

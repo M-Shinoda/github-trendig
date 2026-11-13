@@ -1,0 +1,12 @@
+rank,repository,url,description,language,stars_total,forks_total,stars_period,since,language_filter,scraped_at,license,first_commit_date
+1,anthropics/skills,https://github.com/anthropics/skills,Public repository for Agent Skills,Python,193827,22806,6055,weekly,,2026-11-13T06:53:31+00:00,,
+2,milind-soni/OpenMausBot,https://github.com/milind-soni/OpenMausBot,Open-source Grok Bot alternative with a virtual machine that bots can use,TypeScript,21848,3034,9104,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+3,vercel-labs/agent-browser,https://github.com/vercel-labs/agent-browser,Browser automation CLI for AI agents,Rust,50429,3511,4601,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+4,NVIDIA/auto-ontology,https://github.com/NVIDIA/auto-ontology,"A Python framework for building semantic, graph-based reasoning layers over data, aimed at deterministic query generation and explainable AI for LLM and agent workflows.",Python,12337,1015,5802,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+5,cloudflare/security-audit-skill,https://github.com/cloudflare/security-audit-skill,"A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",JavaScript,71372,4751,10700,weekly,,2026-11-13T06:53:31+00:00,MIT license,
+6,vercel-labs/agent-desktop,https://github.com/vercel-labs/agent-desktop,Computer use CLI for AI agents,Rust,22891,1696,6414,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+7,mattpocock/skills,https://github.com/mattpocock/skills,Skills for Real Engineers. Straight from my .agents directory.,Shell,323218,27117,8731,weekly,,2026-11-13T06:53:31+00:00,MIT license,
+8,zed-industries/zed,https://github.com/zed-industries/zed,"Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",Rust,94882,11674,2339,weekly,,2026-11-13T06:53:31+00:00,GPL-3.0 license,
+9,google-deepmind/mujoco,https://github.com/google-deepmind/mujoco,Multi-Joint dynamics with Contact. A general purpose physics simulator.,C++,17802,2183,1671,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+10,google/skills,https://github.com/google/skills,Agent Skills for Google products and technologies,Python,24100,2006,1933,weekly,,2026-11-13T06:53:31+00:00,Apache-2.0 license,
+11,D4Vinci/Scrapling,https://github.com/D4Vinci/Scrapling,The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl!,Python,102278,10644,4743,weekly,,2026-11-13T06:53:31+00:00,BSD-3-Clause license,
