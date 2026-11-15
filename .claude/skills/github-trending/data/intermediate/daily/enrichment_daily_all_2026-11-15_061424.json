@@ -1,0 +1,77 @@
+{
+  "backnotprop/plannotator": {
+    "overview": "AIコーディングエージェントが出したプランや作業結果をブラウザで開き、注釈・コメントを付けて構造化されたフィードバックをワンクリックでエージェントに返せるローカルのレビュー用ワークスペースです。プランやMarkdown、HTML成果物のレビューに加え、ローカル変更やGitHub/GitLabのPR・MRを差分ビューアでレビューする機能や、エージェントからの質問を受け取るInboxも備えています。",
+    "highlights": "・Claude Code、Codex、Gemini CLI、Copilot CLI、OpenCode、Ampなど多数のエージェントにプラグイン、フック、スラッシュコマンド、MCPで連携する・共有内容はAES-256-GCMで暗号化し、テレメトリはなく、SLSA来歴やSBOMも付けるなどプライバシーとサプライチェーンに配慮している・Bun製のローカルサーバーとブラウザUIで動き、Git/Jujutsu/Perforceへの対応やTUI、Vim風キー操作も揃っている",
+    "usage_ideas": "Claude Codeのプランモードで出たプランを、承認前に行単位でコメントして差し戻すHuman-in-the-loopの仕組みとして使えます。エージェントの作業をチームでレビューするときや、仕様書・ドキュメントの共同レビューにも向いています。エージェント開発で「人間がレビューする工程」をUI化する流れを代表するツールです。"
+  },
+  "GoogleChrome/modern-web-guidance-src": {
+    "overview": "Google Chromeチームが公開している、コーディングエージェントに最新のWebベストプラクティスを教えるためのスキル群(modern-web-guidance)の作成・評価用ソースリポジトリです。CSS、HTML、JavaScriptの約250のモダン機能と約200のユースケースガイドを収録しています。CLIを通して、必要なガイドだけをエージェントのコンテキストに渡します。",
+    "highlights": "・古い書き方やポリフィルに頼りがちなLLMの出力を、モダンなWeb Platform APIへ誘導する・評価(eval)を使い、モデルがすでに知っている内容を削ってトークン効率を高めている・search、retrieve、legacy-scanの各コマンドで、ガイドの検索・取得や既存コードの古いパターンの検出ができる",
+    "usage_ideas": "`npx modern-web-guidance@latest install` で導入でき、Claude CodeやCursorでフロントエンドを実装するときに、アクセシビリティや性能に配慮したモダンなコードを書かせやすくなります。legacy-scanは既存プロジェクトのモダン化の棚卸しにも使えます。ブラウザベンダー自身がエージェント向けの知識供給に乗り出した点が注目どころです。"
+  },
+  "tradermonty/claude-trading-skills": {
+    "overview": "株式投資家やトレーダー向けに、相場環境の分析、スクリーニング、チャート分析、トレード計画、売買記録(ジャーナル)、戦略の検証(バックテスト)などを行うClaude Skillsを約74個集めたツールキットです。長期投資、ETF、配当株を主な対象とし、規律あるスイングトレードを補助として位置づけています。売買判断や完全自動売買はせず、意思決定のプロセスを支援することを目的にしています。",
+    "highlights": "・CANSLIM、VCP、Stockbee、配当スクリーナー、市場天井検出など、著名な手法をスキルとして体系化している・FMP、FINVIZ、Alpaca、SEC EDGAR、yfinanceなどのデータと連携しつつ、有料APIなしで使えるスターター構成もある・Edge Pipelineなど、戦略アイデアの抽出から設計、レビュー、バックテストまでをエージェントで回すメタなスキル群を持つ",
+    "usage_ideas": "個人投資家が毎朝の市場レビューや銘柄スクリーニングをClaude Codeに任せ、トレード日誌と事後検証(ポストモーテム)で改善のサイクルを回す使い方が考えられます。専門領域の業務をSkillsとしてパッケージ化する好例でもあり、自分の業務ドメインでスキル集を設計する際の参考にもなります。教育・研究目的の位置づけなので、投資判断は自己責任です。"
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+    "overview": "コーディングエージェントが実際のChromeブラウザを操作・検査できるようにする、Chrome DevTools公式のMCPサーバー兼CLIです。パフォーマンスのトレース、ネットワークリクエストの分析、コンソールログの取得、スクリーンショット、Puppeteerによる自動操作などをエージェントから実行できます。",
+    "highlights": "・DevToolsのトレースから、LCPなどの改善につながる性能上の知見を抽出できる・ソースマップを反映したスタックトレース付きでコンソールを読めるため、エージェントが自分でフロントエンドのバグを再現・修正できる・アクセシビリティ監査、メモリリーク調査、Cookie/認証などの同梱スキルがあり、Claude Code、Cursor、Copilot、Gemini CLIに対応している",
+    "usage_ideas": "Webアプリ開発で、エージェントが実装後に自分でブラウザを開いて動作確認し、性能改善やデバッグまで行うループを作れます。E2Eテストの下書き作成やCore Web Vitalsの改善作業にも有効です。ブラウザの内容がMCPクライアントに渡るため、機密データを扱うセッションでは使わないよう注意が必要です。"
+  },
+  "alibaba/open-code-review": {
+    "overview": "Alibaba社内のレビュー支援ツールをオープンソース化した、AIコードレビュー用のCLIです。Gitの差分を読んで、変更ファイルを設定したLLMで解析し、行単位のレビューコメントを返します。`ocr scan` を使えばファイル全体も監査できます。",
+    "highlights": "・ファイル選択、レビュー単位への分割、ルールの適用、コメント位置の検証を決定的なパイプラインが担い、文脈の取得などの動的な判断だけをLLMエージェントに任せるハイブリッド構成をとる・AACR-Benchで、同じモデルを使ったClaude Codeより高い精度とF1を示し、トークン消費は約1/9と報告されている・GitHub Actions、GitLab CI、GerritなどのCI/CDとの連携、MCPサーバー、OpenTelemetryに対応し、OpenAI/Anthropic互換のプロバイダーで動く",
+    "usage_ideas": "PRごとにCIで自動レビューを走らせ、ヌルポインタ、スレッド安全性、XSS、SQLインジェクションなどの指摘を低コストで受け取れます。Claude CodeやCodexからスキルとして呼び出し、ホストエージェントのモデルにレビューを任せる使い方もできます。プロンプトだけに頼るエージェントの品質のばらつきを、決定的な処理で抑えるという設計方針は他のエージェント開発にも応用できます。"
+  },
+  "QwenLM/qwen-code": {
+    "overview": "Qwen Code は Alibaba の Qwen チームが開発している、ターミナルで動くオープンソースの AI コーディングエージェントです。Gemini CLI v0.8.2 から派生し、v0.1 以降は独自に開発されています。Qwen に加えて OpenAI・Anthropic・Gemini の API や、Ollama・vLLM で動かすローカルモデルを実行中に切り替えて使えます。",
+    "highlights": "・サブエージェント、Agent Teams、Git worktree でモデルを比べる Agent Arena、セッションをまたぐ Auto-Memory、Skills、Hooks、MCP、LSP など、エージェント機能を幅広く揃えている・`qwen serve` のデーモンモードで Web Shell と HTTP/SSE の API を提供し、VS Code・Zed・JetBrains 連携や Python/TS/Java の SDK もある・同じ Qwen 3.7 Max モデルを使った7バージョンで SWE-bench Verified の平均スコアが 76〜78% と公表されており、スター数は約3万",
+    "usage_ideas": "Claude Code や Codex CLI の代わりになるオープンソースのツールで、社内のローカル LLM や好きな API で同じ操作感のエージェントを動かしたい場合に向いています。ヘッドレスモードや SDK を使えば CI への組み込みや社内ボット化もしやすいです。デーモンモードはループバック接続に既定では認証がないため、共有ホストで使うときはトークンの設定が必要です。"
+  },
+  "dream-num/univer": {
+    "overview": "Univer は、スプレッドシートやドキュメントの編集・計算・共同編集・ファイル処理を自社のプロダクトに組み込むための Office SDK です。このリポジトリにはオープンソースの Web SDK のコア（プラグイン基盤、数式エンジン、Canvas 描画エンジン、Facade API、Sheets/Docs の編集機能）が入っています。Server SDK や一部の AI SDK 拡張などは商用で、別のライセンスです。",
+    "highlights": "・依存性注入（DI）とコマンド/ミューテーションの仕組みでプラグインを組み合わせる設計で、Undo/Redo や JSON スナップショットでの保存・復元に対応している・Node.js 上でヘッドレスに計算・操作でき、`univerAPI` の Facade を人のアプリと AI エージェントの両方から同じように呼べる・AI SDK、Univer CLI、コーディングエージェント向け SDK Skills、エージェントが下書きを作って人がレビューする Worktree drafts など、「AI エージェント向け Office」路線を打ち出していることが注目の理由",
+    "usage_ideas": "社内の業務 SaaS に Excel 風の表計算やドキュメント編集を組み込んだり、LLM エージェントにスプレッドシートを作らせて集計させるツールの基盤として使えます。ヘッドレスで動くので、サーバー側での帳票生成やデータ加工にも使えそうです。商用モジュールとの境界は事前に確認しておく必要があります。"
+  },
+  "ag-ui-protocol/ag-ui": {
+    "overview": "AG-UI (Agent-User Interaction Protocol) は、AI エージェントのバックエンドとユーザー向けのフロントエンドアプリをつなぐ、軽量なイベントベースのオープンプロトコルです。約16種類の標準イベントを SSE・WebSocket・Webhook など任意の通信手段で流し、ストリーミングチャットや状態の同期を実現します。",
+    "highlights": "・MCP（エージェントとツール）、A2A（エージェント同士）に続く「エージェントと UI」の層を担う標準として位置付けられている・LangChain、CrewAI、Microsoft Agent Framework、Google ADK、AWS Strands、Mastra、Pydantic AI、Claude Agent SDK など対応フレームワークが多い・双方向の状態同期、生成 UI、フロントエンド側のツール実行、ヒューマンインザループに対応し、Kotlin、Go、Rust、.NET など多言語の SDK もある",
+    "usage_ideas": "自作のエージェントを CopilotKit などの UI につなぎ、ストリーミング表示や承認フローを持つアプリを作る土台に使えます。`npx create-ag-ui-app` で始められ、Dojo のサンプルで各機能を確認できます。バックエンドのフレームワークを入れ替えてもフロントエンドを変えずに済むので、マルチベンダー構成の設計に役立ちます。"
+  },
+  "ashhart/TensorFold": {
+    "overview": "TensorFold は Zig で書かれた LLM 推論エンジンで、Python や MLX をインストールせずに単一のバイナリでモデルを配信できます。Apple Silicon の Metal と NVIDIA の CUDA を主に対象とし、AMD (HIP) にも一部対応しています。OpenAI 互換と Anthropic Messages 互換の API を提供します。",
+    "highlights": "・MLX の4/6/8bit、NVFP4、FP8、EXL3 などの量子化チェックポイントを読み込み、Qwen3.x、GLM-5.3、Gemma 4、Nemotron 3.5、MiniMax-M3.1 など最新のモデルに対応している・外部ドラフタ（MTP、DFlash2 など）による投機的デコーディングを、通常出力とトークン単位で一致させる形で実装し、プレフィックスキャッシュの永続化や複数の GPU/Mac への分散にも対応している・Python を使わない Zig 製の高速な推論サーバーという点が新しく、Living Weights（知識をチェックポイントに書き込む実験機能）などもある",
+    "usage_ideas": "Mac Studio や DGX Spark (GB10) のような手元のマシンで、Python 環境なしに最新モデルの API サーバーを立てたい場合の選択肢になります。Anthropic 互換のエンドポイントがあるので、Claude Code 系のツールのバックエンドをローカルモデルに差し替える実験にも使えます。説明文には Vulkan とありますが README には記載がなく、具体的な性能の数値も示されていないため、実際の速度は自分で測る必要があります。"
+  },
+  "JuliusBrussee/caveman": {
+    "overview": "Caveman は、コーディングエージェントに「原始人風」の簡潔な文体で返答させ、さらにエージェントが読むログや JSON などの入力も圧縮して、トークンの消費を大きく減らすツールキットです。プロンプトを差し替えるスキル（`/caveman`）と、ローカルで動く CLI/プロキシの二つで構成されています。",
+    "highlights": "・コード、コマンド、パス、エラーメッセージは正確なまま残し、説明の文章だけを短くするという分かりやすい発想で「65%削減」をうたっている（自前の計測では入力トークン33%削減など。条件によって効果は変わる）・CLI がログやテスト出力の圧縮、Web ページの圧縮、スクリプトの再利用 (Blocks)、モデルや effort の自動選択 (Auto) などを提供する・Claude Code、Codex、Gemini CLI、OpenCode、Aider など30以上のエージェントに対応し、トークンのコスト削減に関心が集まっていることが注目の理由",
+    "usage_ideas": "トークン従量課金で Claude Code などを多く使うチームのコスト削減策として試す価値があります。ただし、ルールの追加で入力が約1,160トークン増えることや、リクエスト単位で課金されるサービスでは効果がないことに注意が必要です。CLI は既定で匿名の利用統計を送信し、Auto を有効にするとプロンプトもクラウドに送られるため、社内で使う場合はその設定を確認してください。"
+  },
+  "louislam/uptime-kuma": {
+    "overview": "Uptime Kumaは、Webサイトやサーバーの死活監視ができるセルフホスト型の監視ツールです。HTTP(s)・TCP・Ping・DNS・WebSocket・Dockerコンテナ・Steamゲームサーバーなど多くの監視方式に対応し、見やすいUIと複数のステータスページを備えています。",
+    "highlights": "・Telegram、Discord、Slack、メールなど90以上の通知先に標準で対応し、20秒間隔での監視もできる・Docker Composeで手早く導入できる。最新のDockerイメージはv2系(louislam/uptime-kuma:2)・ステータスページを独自ドメインに割り当てられ、2FAやプロキシにも対応しており、商用SaaSの代わりとして定番になっている",
+    "usage_ideas": "個人サーバーや社内サービス、ホームラボの死活監視とSSL証明書の期限確認を、無料のセルフホストでまとめて行えます。外部向けステータスページを作ってSlackやDiscordに障害を通知すれば、小規模チームの簡単な監視・障害対応の基盤になります。Pushモニターを使えばcronジョブやバッチ処理の生存確認にも使えます。"
+  },
+  "we-promise/sure": {
+    "overview": "Sureは、開発が止まったMaybe Financeのオープンソース版をコミュニティが引き継いだ個人向け家計・資産管理アプリです。Ruby on RailsとPostgreSQL・Redisで動き、キャッシュフロー・純資産・支出をダッシュボードで可視化できます。",
+    "highlights": "・放棄されたOSS(Maybe)をコミュニティがフォークして開発を続けている例・Dockerでのセルフホストに加え、Render、PikaPods、Hostimのワンクリックデプロイに対応・ブラウザ、macOSアプリ、モバイルアプリ、API、LLMエージェントから使え、AIアシスタントも内蔵",
+    "usage_ideas": "家計や資産のデータをクラウドの家計簿サービスに預けたくない人が、自宅サーバーで管理する用途に向きます。APIとLLMエージェント経由のアクセスがあるため、AIで支出を分析したり、自動で仕訳するワークフローを組み込んだりもできそうです。ライセンスがAGPLv3なので、改変版をサービスとして公開する場合はソースコード公開の義務に注意が必要です。"
+  },
+  "Tencent/LoopForge": {
+    "overview": "LoopForgeは、Claude Code・Codex・CodeBuddyなど既存のコーディングエージェントCLIを束ねて、開発作業をワークフローとして実行するセルフホスト型の基盤です。Agent・Script・人間による承認(Human-gate)・サブSOPの各ノードを組み合わせたSOP(標準作業手順)を、Dockerサンドボックス内で動かします。",
+    "highlights": "・10種類のエージェントCLIを実行役として切り替えられ、特定のベンダーに縛られない・承認ゲートで実行を止めてレビューでき、差し戻しや再実行もできる。ツールの実行トレースやログも見える・要件との紐付けやトークンコストのレポート、HTTP/MCP API、サーバー不要で動くloopforge-cliを備える。Tencentが公開している",
+    "usage_ideas": "チャットでタスクを依頼するとエージェントがリポジトリを操作してPRを作る、という流れを、チーム全体のレビュー体制と監査ログ付きで運用できます。バグ修正やフロントエンド・バックエンド開発の定型SOPを社内で整えれば、AIエージェントを開発に導入するときの品質管理に役立ちます。ただし標準構成はホストのDockerソケットを使うため、信頼できるチーム内での利用が前提です。"
+  },
+  "Likely7/Veyra-NRVideo": {
+    "overview": "Veyraは、Windows向けにGPUでリアルタイムに映像を高画質化するプレイヤー兼キャプチャツールです。ローカル動画、キャプチャカード、PS5リモートプレイ、Sunshine経由のPCストリームなどを同じパイプラインで処理し、超解像・ノイズ除去・HDR化・フレーム生成をかけられます。",
+    "highlights": "・RTX Video Super Resolution/HDR、DLSS、XeSS、FSR、NVIDIAのノイズ除去モデルなど、各社のアップスケーラーをまとめて扱える・C++とQt Quickで作られ、DirectX 12で描画する。処理順を固定したList処理と、ノードグラフで組むNode処理の両方に対応・「PS5の映像をDLSS 5で120FPSに」という宣伝文句が話題を集めたが、README自身が公式のDLSS 5統合ではないと断っている",
+    "usage_ideas": "家庭用ゲーム機のキャプチャ映像や古い低解像度の動画を、手元のGPUでリアルタイムに高画質化して視聴・録画・配信する用途が考えられます。色補正やLUT、エクスポートキューもあるので、簡単な映像アップコンバートツールとしても使えます。一部機能は実験段階で、Windows 11と対応GPUが前提である点には注意が必要です。"
+  },
+  "martin-olivier/airgorah": {
+    "overview": "Airgorahは、Rustで書かれたLinux向けのWiFiセキュリティ監査ツールです。周辺のWiFi通信のキャプチャ、接続中のクライアントの検出、Deauth攻撃、ハンドシェイクやPMKIDの取得、パスワード解析をGUIから行えます。",
+    "highlights": "・GUIはGTK4(gtk-rs)で作られており、従来はCLI中心だった無線LAN監査をGUIで操作できる・GUIは一般ユーザー権限で動き、特権が必要な処理だけをpolkit経由で起動する小さなエージェント(airgorah-agent)に任せる設計・crates.ioとAURで配布されている",
+    "usage_ideas": "自宅や自社の無線LANについて、パスワードの強度やWPAハンドシェイクを狙った攻撃への耐性を手早く確かめるのに使えます。セキュリティ教育やペネトレーションテストの入門用としても分かりやすい一方、監視モードとパケットインジェクションに対応した無線カードが必要です。自分が管理していないネットワークへの使用は違法になり得るため、許可された範囲でのみ使うべきです。"
+  }
+}
