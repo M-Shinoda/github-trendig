@@ -1,0 +1,58 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+cursor/plugins,TypeScript,CursorのプラグインとMCPサーバー、エージェントスキル、ルールを束ねる公式マーケットプレイスのリポジトリです。各プラグインはplugin.jsonやSKILL.md、mcp.jsonなどを含む独立したディレクトリとして管理され、ルートのmarketplace.jsonで一覧化されています。,https://github.com/cursor/plugins,314,"・コードレビューや反復ループ、CLI設計、並列クラウドエージェントなど開発者向けプラグインを多数収録
+・Google Workspace、GitHub、Salesforce、HubSpotなどSaaS連携プラグインも豊富
+・公開直後からスター1.7万超と急速に伸びており、Cursorエコシステムの公式リファレンスとして注目されている",自分のCursor環境にプラグインを追加したり、独自のエージェントスキルやMCPサーバーを公開する際の仕様書・テンプレートとして活用できます。Cursor以外のAIコーディングツールのプラグイン設計を検討する際の参考実装としても有用です。,,
+HKUDS/CLI-Anything,Python,既存のソフトウェア（GIMP、Blender、LibreOffice、Zoomなど）をAIエージェントが操作できるよう、CLIを自動生成するHKUDSのオープンソースプロジェクトです。7段階のパイプラインでコードベースを解析し、テストやドキュメント付きのPython製CLIを生成します。,https://github.com/HKUDS/CLI-Anything,389,"・Claude Code、Cursor、Codexなど多数のコーディングエージェント向けにプラグイン/スキル形式で提供
+・生成したCLIはJSON出力やREPL、SKILL.md自動生成に対応しエージェントとの連携を前提に設計
+・CLI-Hubというパッケージマネージャで共有CLIの検索・インストールも可能で、公開直後からスター6万超と急成長",GUI操作が主体のレガシーソフトをAIエージェントから自動操作したい場合の土台として利用できます。社内ツールや業務アプリをエージェント対応化するための自動CLI生成基盤としても応用できそうです。,Apache-2.0 license,
+mvanhorn/last30days-skill,Python,Reddit、X、YouTube、Hacker News、Polymarket、Web検索などを横断して直近30日の話題を調査し、エンゲージメントに基づいて要約するAIエージェント向けスキルです。SEO的な関連性ではなく実際の反応量で情報をランク付けすることを目指しています。,https://github.com/mvanhorn/last30days-skill,1059,"・複数プラットフォームを並列検索し、同一トピックの重複記事をクラスタリングして統合
+・いいね数・閲覧数・予測市場のオッズなどでスコアリングし話題の実態を可視化
+・Claude Code、Gemini CLI、Cursorなど多数のエージェント環境にインストール可能で、SQLiteへの保存によるウォッチリスト機能も備える",特定企業や技術トレンドの最新動向を定期的にモニタリングするリサーチエージェントの一部として組み込めます。マーケティングや投資判断のための「今何が話題か」を素早く掴むダッシュボード生成にも応用できます。,MIT license,
+getarcaneapp/arcane,Go,「誰のためにもデザインされたモダンなDocker管理」を掲げるセルフホスト型のWeb UIで、Go製バックエンドとSvelteKitフロントエンドで構成されています。Docker Composeやコンテナ管理を直感的なダッシュボードから行えます。,https://github.com/getarcaneapp/arcane,547,"・v3へのメジャーアップデートが進行中で、SBOM公開やセキュリティポリシーなど運用面の整備も充実
+・GitHub Discussionsでの機能提案やCrowdinによる多言語翻訳など活発なコミュニティ運営
+・スター9900超、コミット4500超と自ホストDocker管理ツールとして着実に支持を獲得",PortainerなどのDocker GUI管理ツールの代替として、自宅サーバーや小規模チームのコンテナ運用管理に利用できます。セルフホスト愛好者がシンプルかつモダンなUIでDockerを管理したい場合の選択肢になります。,BSD-3-Clause license,
+NVIDIA/SkillEvaluator,Python,NVIDIAが公開した、AIエージェント向けスキルやプラグインを評価するための多層フレームワークです。静的な品質・セキュリティチェックから、実際のエージェントタスクへの効果測定まで段階的に評価できます。,https://github.com/NVIDIA/SkillEvaluator,312,"・Tier1では500以上の静的ルールで品質・セキュリティ・PII・ライセンスなどをLLM不要でチェック
+・Tier3ではDockerサンドボックス内でスキル有無によるエージェントの挙動差を比較評価
+・GitHub/GitLab向けCIテンプレートを備え、skillevaluator ci initでPRを自動作成できる実務指向の設計",自作のClaude CodeスキルやMCPプラグインを公開前に品質・セキュリティ面で検証するCIパイプラインに組み込めます。企業内でエージェントスキルのカタログを管理する際の品質ゲートとしても活用できます。,Apache-2.0 license,
+nvm-sh/nvm,Shell,POSIX準拠のbashスクリプトで複数のNode.jsバージョンを切り替え管理できる、定番のNodeバージョンマネージャーです。.nvmrcによるプロジェクト単位のバージョン固定や、LTSエイリアスなどをサポートします。,https://github.com/nvm-sh/nvm,237,"・sh、bash、zsh、kshなど多様なシェルやLinux/macOS/Windows(WSL等)で動作
+・オフラインインストールやカスタムミラー、グローバルnpmパッケージの移行機能を備える
+・長年Node.js開発者の標準ツールとして定着しており、継続的に高い人気を維持",複数プロジェクトで異なるNode.jsバージョンを使い分ける開発環境構築に不可欠なツールです。CI環境やオンボーディング手順の中で.nvmrcと組み合わせて再現性のあるNode環境を提供する用途にも適しています。,MIT license,
+astral-sh/uv,Rust,Rustで書かれた非常に高速なPythonパッケージ・プロジェクト管理ツールで、pip、poetry、pyenv、virtualenvなど複数ツールの機能を一つに統合します。Astral社が開発を主導しています。,https://github.com/astral-sh/uv,258,"・ユニバーサルロックファイルやCargo風ワークスペースによるプロジェクト管理機能
+・インラインメタデータ付き単一スクリプトの実行やPythonバージョン自体の管理も可能
+・uvxによるツール実行やグローバルキャッシュによる高速・省容量な依存解決が評価され、スター9万超の支持を得ている",pipやpoetryなど既存のPythonツールチェーンを置き換え、高速なCI/CDやローカル開発環境の構築に利用できます。マルチプロジェクトを抱える組織での依存関係管理の統一基盤としても広く採用が進んでいます。,"Apache-2.0 license, MIT license",
+google-research/paper-orchestra,Python,PaperOrchestraはGoogle Cloud AI Researchが開発したマルチエージェントフレームワークで、アイデアや実験ログといった素材からAI研究論文のドラフトを自動生成する。アウトライン作成、文献レビュー、執筆、推敲、図表生成を担当する専用エージェントが連携し、LaTeX形式の論文原稿を出力する。,https://github.com/google-research/paper-orchestra,1524,"・アウトライン・文献調査・執筆・推敲・プロット生成を分業する専用エージェントのパイプライン構成
+・Semantic Scholar APIを使った文献検索とランキングを統合し、関連研究を論文に自動的に組み込む
+・Gemini(Vertex AI/APIキー)とOpenAIモデルの両方に対応し、cvpr2025などの会議テンプレートに合わせたLaTeX出力が可能",研究者が実験結果やメモから論文の初稿を素早く生成する下書きツールとして使えそうで、文献調査や図表作成といった定型作業の時間短縮に向いている。AutoGenやLangGraphのようなマルチエージェント基盤と組み合わせたワークフロー自動化の一例としても注目に値する。,Apache-2.0 license,
+google-labs-code/stitch-skills,TypeScript,stitch-skillsは、GoogleのデザインツールStitchのMCPサーバーと連携するAgent Skillsのライブラリである。Claude Code、Cursor、Codex、Gemini CLIなど複数のコーディングエージェントで利用できるAgent Skillsのオープン標準に準拠している。,https://github.com/google-labs-code/stitch-skills,365,"・stitch-design(デザイン作成・編集)、stitch-build(React/React Nativeコード生成)、stitch-utilities(DESIGN.md生成など)の3プラグイン構成
+・テキストや画像からの画面生成、既存コードからのデザインシステム抽出など多様なデザインワークフローをサポート
+・npxやCLIから簡単にインストールでき、SKILL.mdを中心とした標準的なスキル構成を採用",デザインとコード生成を橋渡ししたいチームが、エージェント経由でUIデザインからReactコードまで一気通貫で生成する用途に向いている。Figmaプラグインやv0のようなAIデザイン支援ツールと比較検討される存在になりそうだ。,Apache-2.0 license,
+sveltejs/svelte,JavaScript,Svelteは「the rest of us(普通の開発者)のためのWeb開発」を掲げるオープンソースのWebフレームワークで、宣言的なコンポーネントをコンパイル時に効率的なJavaScriptへ変換するコンパイラである。ランタイムに依存せずDOMを直接的に更新する点が特徴。,https://github.com/sveltejs/svelte,692,"・仮想DOMを使わず、コンパイル時にDOMを直接更新するコードを生成するアプローチ
+・pnpmワークスペースによるモノレポ構成で、コアパッケージ・ドキュメント・ベンチマークなどを一元管理
+・8.9万を超えるスター数を持つ定番フレームワークとして継続的に高い注目を集めている",軽量かつ高速なフロントエンドを求めるプロジェクトでReactやVueの代替として採用されることが多く、SvelteKitと組み合わせたフルスタック開発の基盤としても広く使われている。パフォーマンス重視のWebアプリやダッシュボード構築に適している。,MIT license,
+jquery/jquery,JavaScript,jQueryはDOM操作やイベント処理、Ajax通信を簡潔に書けるようにする老舗のJavaScriptライブラリである。現在はjQuery 4.0.0が最新版で、ブラウザだけでなくNode.jsなど非ブラウザ環境でも動作する。,https://github.com/jquery/jquery,266,"・ajax、css、effectsなど不要なモジュールを除外してビルドできるカスタムビルド機能
+・標準スクリプト、スリム版、ESモジュール、ファクトリーモードなど複数の出力形式を提供
+・QUnitを用いたユニットテストとPHPサーバーを使ったテスト環境を備え、長年のメンテナンス体制が続く",レガシーなWebサイトの保守やブラウザ互換性が重要なプロジェクトで今も広く使われており、モダンフレームワークへの移行前の既存コードベースとの橋渡し役としても有用である。軽量なDOM操作だけを行いたい小規模プロジェクトにも適している。,MIT license,
+appwrite/appwrite,TypeScript,Appwriteは認証、データベース、ストレージ、サーバーレス関数、メッセージング、リアルタイム通信などを統合したオープンソースのバックエンドプラットフォームで、エージェントや開発者向けのクラウドとして自己ホストまたはマネージドサービスとして利用できる。,https://github.com/appwrite/appwrite,232,"・REST、WebSocket、GraphQLの各APIを備えたハイブリッドなモノリシック/マイクロサービス構成
+・コーディングエージェントがOAuthでライブプロジェクトを操作できるホスト型MCPサーバーを提供
+・Web、Flutter、Apple、Androidなど多様なクライアント/サーバーSDKと、Dockerベースの簡単なセルフホスト導入",Firebaseの代替として、モバイルやWebアプリのバックエンド全体(認証・DB・ストレージ・関数)を自前のインフラでまとめて構築したいチームに向いている。AIエージェントがMCP経由で直接バックエンド操作を行うようなエージェント連携アプリの基盤としても注目されている。,BSD-3-Clause license,
+openvinotoolkit/openvino,C++,OpenVINOはIntelが主導するオープンソースのAI推論最適化・デプロイツールキットで、コンピュータビジョンや生成AI、自然言語処理などの深層学習モデルをCPU・GPU・NPUなど多様なハードウェア上で高速に実行できるようにする。,https://github.com/openvinotoolkit/openvino,24,"・PyTorch、TensorFlow、ONNX、Keras、PaddlePaddleなど多数のフレームワークからのモデル変換・最適化に対応
+・Intel製CPU/GPU/NPUをはじめとする幅広いハードウェアターゲットをサポートし、C++/Python/C/NodeJSの各APIを提供
+・NNCFによる量子化・スパース化や、vLLM・LangChain・Optimum Intelなどのエコシステム連携も充実",エッジデバイスや省電力環境でのAI推論を高速化したい組織が、学習済みモデルを本番展開する際の最適化レイヤーとして利用できる。ONNX RuntimeやTensorRTのような他の推論エンジンと比較されつつ、Intelハードウェア中心の推論基盤として採用が進みそうだ。,Apache-2.0 license,
+obra/superpowers,Shell,Superpowersはコーディングエージェント向けのスキルベースのソフトウェア開発手法で、要件確認・設計・実装計画・コード実装・自己レビューまでを一連のワークフローとしてエージェントに実行させるフレームワークである。,https://github.com/obra/superpowers,822,"・TDD、体系的デバッグ、完了前の検証、コードレビューなどを個別スキルとして定義し自動的にトリガーする設計
+・Claude Code、Codex、Cursor、Gemini CLIなど多数のエージェントハーネスに対応したインストール手順を提供
+・セッションの振る舞いを診断するdiagnosing-superpowersスキルや、スクラブ済みバグレポートの自動生成機能も搭載",自律的なコーディングエージェントに、人間のエンジニアリングチームのような設計・実装・レビューのプロセスを組み込みたい開発者に向いている。AutoGenやClaude Code自体の運用ルールと組み合わせ、エージェント開発のベストプラクティス集として活用できそうだ。,MIT license,
+affaan-m/ECC,JavaScript,ECCは、Claude CodeやCodex、Cursorなど様々なAIコーディングエージェント向けに、計画→テスト→実装→レビュー→検証→記憶→改善という開発サイクルを組み込むためのツールキットです。72種のサブエージェント、327のスキル、98のスラッシュコマンドを備え、エージェントの性能とセキュリティを高めることを目的としています。,https://github.com/affaan-m/ECC,1108,"・72種類の専門サブエージェントと327のスキル、98のコマンドを提供し、計画立案からコードレビュー・セキュリティ検査まで幅広い工程を自動化
+・AgentShieldによるプロンプト・フック・MCP設定・権限・シークレットのスキャン機能でエージェントの安全性を強化
+・Claude Code以外にもCodex、Qoder、Cursor、OpenCode、Geminiなど複数のハーネスに対応するマルチハーネス設計とMemory Vaultによるコンテキスト共有",AIコーディングエージェントを本番開発に導入する際の品質・セキュリティ管理基盤として活用できます。研究開発を重視したワークフローを求めるチームが、Claude CodeやCursorなどの既存エージェントにプラグインとして組み込むことで、再現性のあるエージェント運用を実現できそうです。,MIT license,
+DeanChensj/jiangshan-map,JavaScript,江山地図(jiangshan-map)は、紀元前403年の戦国時代から現代までの中国史を対象とした、インタラクティブな歴史地図Webアプリです。18の歴史時代・198の領土スナップショットを収録し、時代ごとの国境変化や人物の足跡を地図上で辿ることができます。,https://github.com/DeanChensj/jiangshan-map,218,"・タイムラインをスクラブして王朝の興亡や国境変化を可視化し、「ゴースト境界」で前後の時代を比較表示
+・人物・事件を検索して地図上の移動経路を追跡できる「人物紀年」機能や、古代都市を当てる地図クイズを搭載
+・MCPサーバーやエージェントスキル、CLIレンダラー、ブラウザAPIを備え、LLMやAIエージェントからのデータ利用・GeoJSON出力にも対応",歴史教育や中国史コンテンツ制作、デジタル人文学の研究データ可視化に利用できます。MCPサーバー対応により、AIエージェントが歴史的文脈を参照するナレッジソースとしても応用できそうです。,GPL-3.0 license,
+n8n-io/n8n,TypeScript,n8nは、ビジュアルなワークフロー構築とカスタムコードを組み合わせたフェアコードのワークフロー自動化・AIエージェント構築プラットフォームです。セルフホストまたはクラウドで利用でき、1500以上の連携と9000以上のテンプレートを備えています。,https://github.com/n8n-io/n8n,325,"・複数のLLMプロバイダーに対応し、モデルを切り替えてもワークフロー構成を変更せずに済むAIネイティブな自動化基盤
+・ビジュアルキャンバスとJavaScript/Pythonのカスタムコードを組み合わせられる柔軟性、人による承認ステップや可観測性機能も搭載
+・ロールベースアクセス制御や監査ログなどエンタープライズ向け機能を備え、プロトタイプから本番運用までをカバー",社内業務の自動化やAIエージェントを組み込んだ業務フローの構築、SaaS間のデータ連携パイプライン構築に活用できます。ZapierやMakeの代替として、よりコード的な柔軟性とセルフホスト性を重視するチームに向いています。,,
+solidjs/solid,TypeScript,SolidはJavaScriptでUIを構築するための宣言的で効率的なライブラリで、仮想DOMを使わずテンプレートを実DOMへコンパイルし、細粒度のリアクティビティで変更箇所だけを更新します。,https://github.com/solidjs/solid,40,"・仮想DOMの差分計算を排除し、signal・memo・storeなどのリアクティブプリミティブで依存関係を自動追跡する細粒度更新モデル
+・コンポーネントは一度だけ実行され、以降は式単位でリアクティブに更新されるためパフォーマンスが高い
+・ストリーミングSSRやプログレッシブハイドレーション、非DOM環境向けのユニバーサルレンダラーもサポート",ReactやVueに代わる高パフォーマンスなフロントエンドフレームワークとして、パフォーマンス重視のWebアプリやダッシュボード開発に適しています。SolidStartなど周辺エコシステムと組み合わせることでフルスタック開発も可能です。,MIT license,
+punkpeye/awesome-mcp-servers,,punkpeye/awesome-mcp-serversは、Model Context Protocol(MCP)に対応したサーバーを集めたキュレーションリストです。多言語の翻訳README(日本語・韓国語・中国語など)も用意され、glama.aiのMCPサーバーディレクトリとも連携しています。,https://github.com/punkpeye/awesome-mcp-servers,53,"・9.8万以上のスターを獲得する人気リポジトリで、MCPエコシステムの事実上のカタログとして広く参照されている
+・カテゴリ別に整理されたMCPサーバーのリンク集で、コントリビューションガイドラインとGitHub Actionsによる管理体制を整備
+・複数言語への翻訳が充実しており、グローバルなMCP開発者コミュニティのハブとなっている",Claude DesktopやClaude CodeなどMCP対応クライアントに接続できるサーバーを探す際のリファレンスとして活用できます。新しいMCPサーバーを開発する際の実装例の収集先としても有用です。,MIT license,
