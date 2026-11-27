@@ -1,0 +1,49 @@
+リポジトリ名,主要言語,概要,GitHubURL,Star増分,注目ポイント/要約,活用アイデア/関連性/所感,ライセンス,first commit日
+elementalsouls/Claude-BugHunter,Python,Claude CodeをバグバウンティやWebアプリ・インターネット公開資産を狙う外部レッドチーム作業向けに強化するスキルバンドルです。偵察から脆弱性探索、トリアージ、レポート作成までをカバーします。内部AD攻撃・C2・ポストエクスプロイト・回避技術は対象外と明記されています。,https://github.com/elementalsouls/Claude-BugHunter,1597,"・85スキル、16スラッシュコマンドに加え、24の脆弱性クラスにわたる681件の公開HackerOneレポートのパターンを収録しています。58個のhunt-*スキルには検出パターン、ペイロード、バイパス表、攻撃チェーンのテンプレートが含まれます
+・M365/Entra、Okta、vCenter、SSL VPN、SharePoint、クラウドIAMなど企業向け攻撃チェーンに対応しています。所見を検証する「7-Question Gate」と、VRTに沿った深刻度判定・各プラットフォーム形式のレポート出力も備えます
+・Burp MCPとHackerOne MCPに対応し、Claude Code、OpenCode、Codex CLIなど複数のエージェントハーネスに同じスキルを導入できます",バグバウンティハンターやペネトレーションテスターが、許可された範囲の偵察・脆弱性探索・報告書作成をAIエージェントで効率化する用途に向いています。実際の報告事例に基づくナレッジを体系化しているので、Webセキュリティ学習の教材としても価値があります。一方で攻撃的な用途にも使えるため、スコープ管理と倫理面への配慮が欠かせません。,MIT,
+obra/superpowers,Shell,AIコーディングエージェント向けに、組み合わせ可能な「スキル」群と開発方法論を提供するフレームワークです。ブレインストーミングと設計、git worktreeの準備、実装計画、タスク実行、TDD、コードレビューまでの構造化された開発フローをエージェントにたどらせます。,https://github.com/obra/superpowers,854,"・スキルがセッション中に自動で発動するので、ユーザーが手動で呼び出す必要がありません
+・タスクごとに新しいサブエージェントを起動し、タスク間にレビューを挟むサブエージェント駆動の実行方式を採用しています
+・Claude Code、Codex、Cursor、Gemini CLI、Copilot CLIなど多くのハーネスに対応し、スキル挙動の評価ハーネスと、セッションの不具合を診断するスキルも備えています",Claude Codeなどでの開発に規律あるワークフロー(設計→計画→TDD→レビュー)を持ち込み、品質を安定させたいときに最適です。チームでエージェント運用の方法論を統一する土台にもなります。スター数が非常に多く、エージェント開発における事実上の定番スキル集になりつつある印象です。,MIT,
+HKUDS/CLI-Anything,Python,既存ソフトウェアをAIエージェントから操作できるよう、CLIを自動生成するプロジェクトです。「すべてのソフトウェアをエージェントネイティブに」を掲げ、コミュニティ製CLIのレジストリ「CLI-Hub」も同梱しています。,https://github.com/HKUDS/CLI-Anything,746,"・ソースコード解析からコマンド設計、ClickベースのCLI実装、テスト、ドキュメント作成、パッケージ公開までを、7フェーズのパイプラインで自動化します
+・LibreOffice、Blender、MLTなど実際のアプリケーションをバックエンドとして呼び出し、--jsonによる構造化出力、REPL、undo/redo付きのステートフルなセッションに対応しています
+・エージェントが見つけられるSKILL.mdを生成し、Claude Code、Cursor、Codexなど幅広いエージェントと連携できます",GUI中心のデスクトップアプリや社内ツールをエージェントから自動操作したいときに、CLI化の足がかりとして使えます。画面操作型のcomputer-useより確実で再現性のある自動化を組めるのが利点です。CLI-Hubからの検索・インストールも手軽で、エコシステムの広がりに期待できます。,Apache-2.0,
+jingyaogong/minimind,Python,約64Mパラメータの小型言語モデルをゼロから学習できるオープンソースプロジェクトです。RTX 3090 1枚で約2時間、GPUレンタル代にして約3元程度で学習できるとしています。トークナイザー、データ処理、学習の各段階をネイティブPyTorchで実装しており、LLMの仕組みを学ぶ教材も兼ねています。,https://github.com/jingyaogong/minimind,702,"・Qwen3系に倣ったアーキテクチャ(RMSNorm、SwiGLU、RoPE、YaRN)で、Dense版(約64M)とMoE版(総約198M、アクティブ約64M)を用意しています
+・事前学習、SFT、LoRA、DPO、PPO、GRPO、CISPO、ツール利用を含むマルチターンのエージェントRL、蒸留まで、一連の学習パイプラインを網羅しています
+・OpenAI互換APIサーバーとStreamlit UIを備え、llama.cpp、vLLM、Ollama、MNNへのエクスポートにも対応しています",LLMの事前学習から強化学習までを手元のGPUで一通り体験したい学習者や研究者に最適です。社内勉強会のハンズオン教材や、新しい学習手法を小規模に試す実験台にも使えます。性能より理解を重視した設計で、教育的価値が非常に高いと感じます。,Apache-2.0,
+cursor/plugins,TypeScript,Cursorのプラグイン仕様と公式プラグインをまとめたマーケットプレイス型リポジトリです。各プラグインは.cursor-plugin/plugin.jsonマニフェストを持つ独立したディレクトリで、ルートのmarketplace.jsonが全体を束ねています。,https://github.com/cursor/plugins,270,"・1つのプラグインにエージェントスキル(SKILL.md)、Cursorルール(.mdc)、MCPサーバー定義(mcp.json)をまとめて同梱できます
+・開発ツール、生産性、CRM・決済などのSaaS連携、金融・法務まで、100を超えるプラグインを収録しています
+・スキーマや検証スクリプト、CIワークフローを備え、.claude-pluginディレクトリも含まれていて他エコシステムとの互換性もうかがえます",Cursorで使う外部サービス連携やチーム独自のルール・スキルを、プラグインとして配布するときの公式リファレンスになります。既存プラグインの構成は、自作プラグインやMCP連携を設計する際のお手本として参考になります。エージェント拡張の標準化が進んでいることを示す動きとして注目です。,MIT,
+firecrawl/firecrawl,TypeScript,Webサイトをクリーンで、LLMがそのまま扱えるデータに変換する、AIエージェント向けのナレッジ基盤です。検索、スクレイピング、クロール、550以上のデータプロバイダーへのアクセスを1つのAPIで提供します。ローカル版、クラウド版、セルフホスト版の3形態があります。,https://github.com/firecrawl/firecrawl,1046,"・Rust製の「Firecrawl Local」は、DBやコンテナなしで手元のChromeを使ってJSをレンダリングし、PDFやOffice文書もローカルで解析できます
+・initコマンドでClaude Code、Cursor、CodexなどにMCPサーバーとして登録でき、serveでv2互換APIをlocalhostに立ち上げられます
+・Python、Node、Go、Rustなど9言語の公式SDKがあり、Docker Compose、Kubernetes、Helmでのセルフホストにも対応しています",RAGの構築や、エージェントにWeb調査をさせるときのデータ取得層として、そのまま組み込めます。ローカル版の登場でAPIキーやクラウドに頼らず試しやすくなりました。AGPLライセンスなので、商用のSaaSに組み込む際はライセンス条件を確認する必要があります。,AGPL-3.0,
+nginx/nginx,C,世界的に広く使われているWebサーバーNGINX Open Sourceの公式ソースリポジトリです。Webサーバーのほか、ロードバランサー、リバースプロキシ、APIゲートウェイ、コンテンツキャッシュとしても動作します。商用版やサポートはF5社が提供しています。,https://github.com/nginx/nginx,150,"・マスタープロセスとワーカープロセスによるイベント駆動型の高性能アーキテクチャで、共有メモリゾーンを使ったレート制限なども実装しています
+・HTTP/2、HTTP/3、QUIC、TLS、メールプロキシ、TCP/UDPプロキシに対応し、モジュールは静的リンクと動的モジュールの両方で組み込めます
+・njsモジュールを使えばJavaScriptで機能を拡張できます",Webサービスのフロントに置くリバースプロキシや負荷分散、静的配信の基盤として、引き続き定番の選択肢です。公式リポジトリはソースからのビルドやモジュール開発、セキュリティ修正の追跡に役立ちます。GitHubでの開発が活発になり、コミュニティ参加の窓口が広がった点も注目されています。,BSD-2-Clause,
+openvinotoolkit/openvino,C++,Intelが主導する、AI推論の最適化とデプロイのためのオープンソースツールキットです。画像認識、音声、NLP、生成AIのモデルを、Intel CPU(x86/ARM)、GPU、NPU上で高速に実行できます。,https://github.com/openvinotoolkit/openvino,176,"・PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAXのモデルを読み込み、元のフレームワークなしで変換・デプロイできます
+・Optimum Intel経由でHugging Faceと連携でき、生成AI向けのGenAI APIも提供しています
+・NNCFによる量子化、OpenVINO Model Server、torch.compile、ONNX Runtime、vLLMのバックエンドなど、周辺エコシステムが充実しています",NPU搭載のAI PCやエッジデバイスで、LLMや画像モデルをローカル推論したい場合に有力な選択肢です。量子化と組み合わせれば、GPUなしの環境でも実用的な速度を狙えます。オンデバイスAIへの関心が高まるなかで、改めて注目されている印象です。,Apache-2.0,
+cathrynlavery/diagram-design,HTML,Claude Code、Codex、Copilot、CursorなどのAIコーディングエージェントに、エディトリアル風の図を描かせるためのエージェントスキル。自然言語で説明すると、インラインSVGを含む自己完結型のHTMLファイル1つが出力される。アーキテクチャ図、フローチャート、シーケンス図、チャートなど52種類の図に対応している。,https://github.com/cathrynlavery/diagram-design,955,"・アクセントカラー1色、1pxの細線、影なし、4pxグリッドという固定のデザインシステムで、統一感のある図を作れる
+・WebサイトのパレットとフォントからブランドトークンをつくりWCAG AAのコントラストを確認するオンボーディング機能、draw.io/Mermaid/Excalidraw/PlantUMLの描き直し、SVG/PNG(Playwright)の書き出しに対応
+・SVGのアクセシビリティ対応や、レイアウト・ジオメトリを検証するCIなど品質管理も整っており、エージェントスキルが流行する中で注目されている",設計ドキュメント、技術ブログ、READMEに載せるアーキテクチャ図やフロー図を、エージェントとのやり取りだけで見栄えよく作るのに使える。既存のMermaidやdraw.ioの図を統一トーンに描き直す用途にも向く。ビルド不要の単一HTMLで出力されるので、共有や埋め込みがしやすい。,MIT,
+mvanhorn/last30days-skill,Python,あるトピックについて、直近30日間のReddit、X、YouTube、Hacker News、Polymarket、Webなど20以上のソースを並列に調べ、まとめたブリーフを作るAIエージェントスキル。エンゲージメントで結果をランク付けし、同じ話題の重複はクラスタにまとめる。Claude Code、Codex、Cursor、Gemini CLIなどで動く。,https://github.com/mvanhorn/last30days-skill,759,"・いいね数、upvote、予測市場の出来高といったエンゲージメント指標に、関連度と鮮度を組み合わせてスコアリングする
+・検索の前に関連するハンドル、subreddit、リポジトリを特定してクエリを広げる。トピックなしでトレンドを見つけるDiscoveryモードもある
+・SQLiteを使ったウォッチリストや定期ブリーフィング、`--emit=json`による構造化出力、MCPバンドル(.mcpb)での配布に対応",新しい技術、製品、市場の話題について「今コミュニティで何が語られているか」を短時間でつかむリサーチに使える。定期ブリーフィングを設定すれば、競合調査やトレンド監視を自動化できる。SNSとHNと予測市場を横断できる点が、一般的なWeb検索より強い。,MIT,
+google-labs-code/stitch-skills,TypeScript,GoogleのデザインツールStitchのMCPサーバーと組み合わせて使う、エージェントスキルとプラグインのライブラリ。デザインの作成と編集、デザインシステムの管理、コード生成をコーディングエージェントから扱える。Claude Code、Cursor、Codex、Gemini CLI、Antigravityなどに対応している。,https://github.com/google-labs-code/stitch-skills,309,"・各スキルは`SKILL.md`を中心としたオープン標準のフォルダ構成になっている
+・stitch-design(デザイン作成とDESIGN.mdの抽出)、stitch-build(React/React Native/Viteのコード生成、shadcn/uiのガイド、Remotionでの動画作成)、stitch-utilities(プロンプト強化、複数ページのサイト生成)の3プラグイン構成
+・Google Labs発でスター数は約1.3万。デザインからコードまでをエージェントでつなぐ流れとして注目されている(Googleの公式サポート製品ではない)",Stitchで作ったUIデザインを、エージェントにReactやReact Nativeのコードへ変換させるワークフローを組むのに使える。既存のフロントエンドからDESIGN.mdを抽出して、デザイン規約をエージェントに守らせる使い方も便利そう。プロトタイプ作りを速くしたいチームに向いている。,Apache-2.0,
+mjmirza/app-store-compliance,Shell,App StoreやGoogle Playでのリジェクトを申請前に見つけるための、オープンソースのプレイブックと事前チェッカー。125件のリジェクトパターン(検出シグナルと修正方法付き)を収録し、bashスクリプトでアプリのフォルダをスキャンして判定を返す。承認を保証するものではないとREADMEに明記されている。,https://github.com/mjmirza/app-store-compliance,562,"・スキャン結果をBLOCKED/CLEARなどで判定し、重大度順に該当ファイルと行を示すガードスクリプトを持つ
+・Claude Code、Codex、Cursorなど約12種類のAIコーディングツールにフックを導入でき、fastlaneや`eas submit`による申請コマンドをブロックできる
+・EU AI Act、DSA、COPPAなど117件の規制期限データベースと、ポリシー変更を監視するスクリプト群がある",モバイルアプリの申請前チェックをCIやエージェントのワークフローに組み込めば、リジェクトによる手戻りを減らせる。AIで量産されるアプリが増える中、エージェントが申請まで進める前の安全装置として役立ちそう。ただし独自ライセンス(大企業はロイヤリティが必要)なので、商用利用の前に条件を確認する必要がある。,LicenseRef-OpenRoots-ORA-2.3,
+Tracer-Cloud/opensre,Python,CI/CDの信頼性のためのオープンソースCLIエージェント。パイプラインが失敗すると、失敗した実行を読んで原因を推定し、修正をPRブランチにpushしてレビューに回せる。セルフホストと独自モデルの利用に対応しており、現在はパブリックアルファ。,https://github.com/Tracer-Cloud/opensre,327,"・失敗したチェック、CIログ、最近のコミットやデプロイ、ログ/メトリクス/トレースを集めて仮説を検証し、CI起因かコード起因かを切り分ける
+・対話シェル、ヘッドレスの`opensre ask`、Python APIの3つのインターフェースを持ち、Grafana、Datadog、Kubernetes、AWS、GitHubなど60以上のツールと連携する
+・外部LLMに送る前に機密情報をマスクでき、結果をSlack、PagerDuty、Telegramに通知する",CIの失敗が多いチームで、不安定なテストや設定ミスの一次調査を自動化するのに役立つ。オブザーバビリティツールと連携させれば、SREのインシデント初動対応のアシスタントとしても使えそう。アルファ版なので、まずは非本番のパイプラインで試すのが無難。,Apache-2.0,
+toeverything/AFFiNE,TypeScript,ドキュメント、ホワイトボード、データベースを1つにまとめた、プライバシー重視でローカルファーストのオープンソースのナレッジベース兼ワークスペース。NotionやMiroの代替を目指している。Web版とデスクトップ版があり、Dockerでセルフホストもできる。,https://github.com/toeverything/AFFiNE,525,"・ドキュメントとホワイトボードが統合されたエッジレスキャンバスに、テキスト、付箋、DB、図形、スライドを自由に配置できる
+・Yjsと、Rust製のy-octo/OctoBaseを使ったCRDTで、ローカルファーストのまま競合なくリアルタイムに同期できる
+・BlockSuiteエディタ、React、Electronで構成され、AIによるスライドやマインドマップの生成、要約機能も持つ",データを手元に置きたい個人やチームが、Notionの代わりのナレッジ管理ツールとして使える。ドキュメントからそのままホワイトボードに展開できるので、企画やブレストに向いている。セルフホストすれば社内Wikiとして運用することもできる。,MIT,
+XiaoYouChR/Ghost-Downloader-3,Python,HTTP、BitTorrent/マグネット、FTP、M3U8、MPEG-DASH、eD2kなど多くのプロトコルに対応した、クロスプラットフォームのダウンロードマネージャー。Windows、macOS、Linux、Androidで動き、YouTubeやBilibiliの動画ダウンロードにも対応している。Feature Packsというプラグインの仕組みで機能を拡張できる。,https://github.com/XiaoYouChR/Ghost-Downloader-3,889,"・ファイル結合が不要なチャンク分割ダウンロード、帯域の自動検出、ダウンロード中のURL/ヘッダー/プロキシ変更に対応
+・wreqによる実ブラウザのTLSフィンガープリント偽装、ブラウザ拡張による認証状態の引き継ぎ、GitHubやHuggingFaceのミラー高速化を備える
+・aria2互換のRPC APIと`ghd` CLIで自動化でき、PySide6とFluent UIで作られている",動画、トレント、大きなモデルファイルなど用途ごとに分かれていたダウンローダーを1つにまとめたい人に向いている。aria2互換APIがあるので、既存のスクリプトや他ツールとの連携もしやすい。HuggingFaceのモデル取得を速くする用途でも便利そう。,GPL-3.0,
+zhouxiaoka/autoclip,Python,ポッドキャスト、インタビュー、講義、ゲーム配信などの長い動画から、AIで縦型のショートクリップを自動で切り出すローカルファーストのデスクトップツール。字幕、カバー、投稿文も作り、TikTok、Reels、YouTube Shorts、抖音、小紅書などに向けて書き出せる。「オープンソースのOpusClip代替」を名乗っている。,https://github.com/zhouxiaoka/autoclip,774,"・切り出しとレンダリングはローカルで行われ、クラウドAPIのほかOllamaやLM Studio、Whisper/SenseVoiceを使ってオフラインでも動く
+・MCPサーバーとCLI(`autoclip produce`)を内蔵しており、Claude CodeなどのAIエージェントから動画編集を実行できる
+・OBS WebSocketでの自動キャプチャやTwitch/YouTube/Kickのアーカイブ取り込みに対応し、Tauri、FastAPI、React、FFmpegで構成されている",配信者やポッドキャスターが、長い収録をショート動画にして複数のプラットフォームへ展開する作業を自動化するのに使える。MCP経由でエージェントに動画制作のパイプラインを任せる、という使い方も面白い。有料のSaaSに頼らずローカルで処理できるので、コストやプライバシーの面でもメリットがある。,MIT,
